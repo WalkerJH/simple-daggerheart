@@ -9,7 +9,7 @@ export class SimpleActorSheet extends foundry.appv1.sheets.ActorSheet {
   /** @inheritdoc */
   static get defaultOptions() {
     return foundry.utils.mergeObject(super.defaultOptions, {
-      classes: ["simple-daggerheart", "sheet", "actor"],
+      classes: ["simple-daggerheart__sheet"],
       template: "systems/simple-daggerheart/templates/actor-sheet.html",
       width: 600,
       height: 600,

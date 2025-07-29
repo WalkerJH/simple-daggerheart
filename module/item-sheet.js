@@ -9,7 +9,7 @@ export class SimpleItemSheet extends foundry.appv1.sheets.ItemSheet {
   /** @inheritdoc */
   static get defaultOptions() {
     return foundry.utils.mergeObject(super.defaultOptions, {
-      classes: ["simple-daggerheart", "sheet", "item"],
+      classes: ["simple-daggerheart__sheet"],
       template: "systems/simple-daggerheart/templates/item-sheet.html",
       width: 520,
       height: 480,

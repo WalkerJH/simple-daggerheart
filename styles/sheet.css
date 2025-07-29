@@ -1,14 +1,4 @@
-.simple-daggerheart {
-  .window-content {
-    height: 100%;
-    padding: 5px;
-    overflow-y: hidden;
-  }
-
-  form {
-    height: 100%;
-  }
-
+.simple-daggerheart__sheet {
   .sheet-header {
     flex: 0 0 100px;
     overflow: hidden;
@@ -16,12 +6,10 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-start;
-    margin-bottom: 10px;
 
     .profile-img {
       flex: 0 0 100px;
       height: 100px;
-      margin-right: 10px;
     }
 
     .header-fields {
@@ -32,21 +20,21 @@
     h1.charname {
       height: 50px;
       padding: 0px;
-      margin: 5px 0;
       border-bottom: 0;
 
       input {
         width: 100%;
         height: 100%;
-        margin: 0;
       }
     }
   }
 
+  form {
+    height: 100%;
+  }
   .resource {
     width: 50%;
     height: 40px;
-    margin-top: 10px;
     float: left;
     text-align: center;
 
@@ -83,7 +71,6 @@
 
   .item-list {
     list-style: none;
-    margin: 7px 0;
     padding: 0;
     overflow-y: auto;
 
@@ -96,7 +83,6 @@
 
       img {
         flex: 0 0 24px;
-        margin-right: 5px;
       }
     }
 
@@ -147,7 +133,6 @@
 
     .group-prefix {
       height: 31px;
-      margin-right: 10px;
     }
 
     .button {
@@ -173,7 +158,6 @@
     left: 0;
     align-items: center;
     padding: 0 5px;
-    margin: 5px 0;
     background: #cfcdc2;
     border: 1px solid #aaa;
     border-radius: 2px;
@@ -188,7 +172,6 @@
     padding: 0;
 
     li > * {
-      margin: 0 3px;
       height: 28px;
       line-height: 24px;
       background: transparent;
@@ -217,11 +200,9 @@
   }
   .groups-list {
     list-style: none;
-    margin: 0;
     padding: 0;
   }
   .group {
-    margin: 5px 0 0;
     padding: 0;
   }
   .group-header {
@@ -238,7 +219,6 @@
     border-bottom: 1px solid #aaa;
     background: transparent;
     border-radius: 0;
-    margin-right: 6px;
   }
   .group-key {
     opacity: 0.75;
@@ -249,7 +229,6 @@
   .group-dtype {
     height: 24px;
     flex: 0 0 116px;
-    margin: 0 5px;
   }
   &.sheet.actor {
     min-width: 560px;

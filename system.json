@@ -12,7 +12,7 @@
     }
   ],
   "esmodules": ["module/simple.js"],
-  "styles": ["styles/simple.css"],
+  "styles": ["styles/styles.css"],
   "packs": [],
   "languages": [
     {
