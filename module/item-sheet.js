@@ -32,13 +32,14 @@ export class SimpleItemSheet extends foundry.appv1.sheets.ItemSheet {
     EntitySheetHelper.getAttributeData(context.data);
     context.systemData = context.data.system;
     context.dtypes = ATTRIBUTE_TYPES;
-    context.descriptionHTML = await TextEditor.enrichHTML(
-      context.systemData.description,
-      {
-        secrets: this.document.isOwner,
-        async: true,
-      }
-    );
+    context.descriptionHTML =
+      await foundry.applications.ux.TextEditor.implementation.enrichHTML(
+        context.systemData.description,
+        {
+          secrets: this.document.isOwner,
+          async: true,
+        }
+      );
     return context;
   }
 

@@ -37,13 +37,14 @@ export class SimpleActorSheet extends foundry.appv1.sheets.ActorSheet {
     );
     context.systemData = context.data.system;
     context.dtypes = ATTRIBUTE_TYPES;
-    context.biographyHTML = await TextEditor.enrichHTML(
-      context.systemData.biography,
-      {
-        secrets: this.document.isOwner,
-        async: true,
-      }
-    );
+    context.biographyHTML =
+      await foundry.applications.ux.TextEditor.implementation.enrichHTML(
+        context.systemData.biography,
+        {
+          secrets: this.document.isOwner,
+          async: true,
+        }
+      );
     return context;
   }
 
