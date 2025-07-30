@@ -5,13 +5,14 @@ export class SimpleDHCharacterSheet extends api.HandlebarsApplicationMixin(
 ) {
   static DEFAULT_OPTIONS = {
     tag: 'form',
+    label: '',
     classes: ['simple-daggerheart', 'character-sheet'],
     form: {
       submitOnChange: true,
       closeOnSubmit: false
     },
     position: {
-      width: 600,
+      width: 700,
       height: 800
     }
   };
@@ -28,4 +29,9 @@ export class SimpleDHCharacterSheet extends api.HandlebarsApplicationMixin(
         'systems/simple-daggerheart/templates/character-sheet/character-sheet-stats.hbs'
     }
   };
+
+  async _onRender(context, options) {
+    console.log(context, options);
+    debugger;
+  }
 }

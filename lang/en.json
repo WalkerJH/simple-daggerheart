@@ -1,7 +1,7 @@
 {
   "SIMPLE_DAGGERHEART": {
     "CharacterSheet": {
-      "Character": "Character",
+      "Heading": "Character Sheet",
       "Name": "Name",
       "Pronouns": "Pronouns",
       "Ancestry": "Ancestry",
@@ -14,7 +14,7 @@
       "Armor": "Armor",
       "Agility": {
         "Label": "Agility",
-        "Examples": "Sprint",
+        "Example1": "Sprint",
         "Example2": "Leap",
         "Example3": "Maneuver"
       },

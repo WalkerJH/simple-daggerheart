@@ -1,11 +1,54 @@
-<header class='sheet-header'>
+<header class='character-header'>
+  {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Heading'}}
+
   <img
-    class='profile-img'
+    class='character-img'
     src='{{document.img}}'
     data-action='editImage'
     title='{{document.name}}'
   />
-  Hello from the Header
 
-  <input type='text' name='name' value='{{document.name}}' placeholder='NAME' />
+  <div class='flexrow'>
+    <input
+      type='text'
+      name='name'
+      value='{{document.name}}'
+      placeholder='{{localize "SIMPLE_DAGGERHEART.CharacterSheet.Name"}}'
+    />
+
+    <input
+      type='text'
+      name='system.pronouns'
+      value='{{document.system.pronouns}}'
+      placeholder='{{localize "SIMPLE_DAGGERHEART.CharacterSheet.Pronouns"}}'
+    />
+
+    <input
+      type='text'
+      name='system.ancestry'
+      value='{{document.system.ancestry}}'
+      placeholder='{{localize "SIMPLE_DAGGERHEART.CharacterSheet.Ancestry"}}'
+    />
+
+    <input
+      type='text'
+      name='system.class'
+      value='{{document.system.class}}'
+      placeholder='{{localize "SIMPLE_DAGGERHEART.CharacterSheet.Class"}}'
+    />
+
+    <input
+      type='text'
+      name='system.subclass'
+      value='{{document.system.subclass}}'
+      placeholder='{{localize "SIMPLE_DAGGERHEART.CharacterSheet.Subclass"}}'
+    />
+  </div>
+
+  <input
+    type='number'
+    name='system.level.value'
+    value='{{document.system.level}}'
+    placeholder='{{localize "SIMPLE_DAGGERHEART.CharacterSheet.Level"}}'
+  />
 </header>

@@ -10,7 +10,7 @@
       "url": "https://github.com/WalkerJH"
     }
   ],
-  "esmodules": ["module/simple-daggerheart.js"],
+  "esmodules": ["module/SimpleDaggerheart.js"],
   "styles": ["styles/styles.css"],
   "languages": [
     {
