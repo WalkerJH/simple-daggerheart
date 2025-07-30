@@ -11,7 +11,7 @@ function setupConfig() {
   CONFIG.INIT = true;
 }
 
-function setupData() {
+function registerDataModels() {
   Object.assign(CONFIG.Actor.dataModels, {
     character: SimpleDHCharacter
   });
@@ -27,7 +27,8 @@ function registerSheets() {
   Actors.unregisterSheet('core', foundry.applications.sheets.ActorSheetV2);
   Actors.registerSheet(SIMPLE_DAGGERHEART_SYSTEM.id, SimpleDHCharacterSheet, {
     types: ['character'],
-    makeDefault: true
+    makeDefault: true,
+    label: 'Character'
   });
 }
 
@@ -43,7 +44,7 @@ Hooks.once('init', async () => {
   );
 
   setupConfig();
-  setupData();
+  registerDataModels();
   registerSheets();
   // preloadTemplates();
 });

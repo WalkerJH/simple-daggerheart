@@ -30,8 +30,7 @@ export class SimpleDHCharacterSheet extends api.HandlebarsApplicationMixin(
     }
   };
 
-  async _onRender(context, options) {
-    console.log(context, options);
-    debugger;
+  get title() {
+    return game.i18n.localize('Character Sheet');
   }
 }

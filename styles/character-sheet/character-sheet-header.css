@@ -1,0 +1,23 @@
+.simple-daggerheart.character-sheet {
+  .character-header {
+    .character-img {
+      cursor: pointer;
+      max-width: 120px;
+      max-height: 120px;
+    }
+
+    .secondary-field {
+      width: calc(100% / 3);
+    }
+
+    .character-level {
+      max-width: var(--size-med);
+
+      input {
+        height: var(--size-med);
+        font-size: var(--font-size-xl);
+        text-align: center;
+      }
+    }
+  }
+}
