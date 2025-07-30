@@ -3,7 +3,7 @@ import { SimpleDHCardSheet } from './sheets/card-sheet.js';
 import { SimpleDHCharacterSheet } from './sheets/character-sheet.js';
 
 const { Items, Actors } = foundry.documents.collections;
-const { loadTemplates } = foundry.applications.handlebars;
+// const { loadTemplates } = foundry.applications.handlebars;
 
 function setupConfig() {
   CONFIG.SIMPLE_DAGGERHEART_SYSTEM = SIMPLE_DAGGERHEART_SYSTEM;
@@ -25,10 +25,7 @@ function registerSheets() {
 }
 
 // function preloadTemplates() {
-//   const templatePaths = [
-//     'templates/character-sheet/character-sheet-header.hbs',
-//     'templates/character-sheet/character-sheet-stats.hbs'
-//   ];
+//   const templatePaths = [];
 
 //   return loadTemplates(templatePaths);
 // }

@@ -1,9 +1,11 @@
 <header class='sheet-header'>
   <img
     class='profile-img'
-    src='{{data.img}}'
+    src='{{document.img}}'
     data-action='editImage'
-    title='{{data.name}}'
+    title='{{document.name}}'
   />
   Hello from the Header
+
+  <input type='text' name='name' value='{{document.name}}' placeholder='NAME' />
 </header>
