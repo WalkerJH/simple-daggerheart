@@ -14,7 +14,7 @@
       "Armor": "Armor",
       "Agility": {
         "Label": "Agility",
-        "Example1": "Sprint",
+        "Examples": "Sprint",
         "Example2": "Leap",
         "Example3": "Maneuver"
       },

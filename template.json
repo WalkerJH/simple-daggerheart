@@ -1,7 +1,6 @@
 {
   "Actor": {
     "types": ["character"],
-    "htmlFields": ["biography"],
     "templates": {
       "character": {
         "name": "",
@@ -16,9 +15,19 @@
           "max": 10
         },
         "hp": {
-          "value": 4,
+          "value": 1,
           "min": 0,
           "max": 12
+        },
+        "stress": {
+          "value": 0,
+          "min": 0,
+          "max": 12
+        },
+        "hope": {
+          "value": 0,
+          "min": 0,
+          "max": 6
         },
         "evasion": {
           "value": 10,
@@ -30,89 +39,78 @@
           "min": 1,
           "max": 12
         },
+        "proficiency": {
+          "value": 1,
+          "min": 1,
+          "max": 6
+        },
         "markedArmorSlots": {
           "value": 0,
           "min": 0,
           "max": 12
         },
         "agility": {
-          "value": 0,
-          "min": -1,
-          "max": 10
+          "stat": {
+            "value": 0,
+            "min": -1,
+            "max": 10
+          },
+          "marker": false
         },
-        "agilityMarker": false,
         "strength": {
-          "value": 0,
-          "min": -1,
-          "max": 10
+          "stat": {
+            "value": 0,
+            "min": -10,
+            "max": 10
+          },
+          "marker": false
         },
-        "strengthMarker": false,
         "finesse": {
-          "value": 0,
-          "min": -1,
-          "max": 10
+          "stat": {
+            "value": 0,
+            "min": -10,
+            "max": 10
+          },
+          "marker": false
         },
-        "finesseMarker": false,
         "instinct": {
-          "value": 0,
-          "min": -1,
-          "max": 10
+          "stat": {
+            "value": 0,
+            "min": -10,
+            "max": 10
+          },
+          "marker": false
         },
-        "instinctMarker": false,
         "presence": {
-          "value": 0,
-          "min": -1,
-          "max": 10
+          "stat": {
+            "value": 0,
+            "min": -10,
+            "max": 10
+          },
+          "marker": false
         },
-        "presenceMarker": false,
         "knowledge": {
-          "value": 0,
-          "min": -1,
-          "max": 10
+          "stat": {
+            "value": 0,
+            "min": -10,
+            "max": 10
+          },
+          "marker": false
         },
-        "knowledgeMarker": false,
         "features": [],
         "experiences": [],
         "items": [],
-        "weapons": []
+        "weapons": [],
+        "activeWeaponIndex": 0
       }
     }
   },
   "Item": {
-    "types": ["item", "consumable", "weapon", "armor", "card"],
-    "htmlFields": ["description"],
+    "types": ["card", "item"],
     "templates": {
       "item": {
         "name": "",
-        "description": "",
-        "quantity": {
-          "value": 1,
-          "min": 1,
-          "max": 99
-        }
-      },
-      "consumable": {
-        "name": "",
-        "description": "",
-        "quantity": {
-          "value": 1,
-          "min": 1,
-          "max": 4
-        }
-      },
-      "weapon": {
-        "name": "",
-        "trait": "",
-        "range": "",
-        "damageDice": "",
-        "features": ""
-      },
-      "armor": {
-        "name": "",
-        "firstThreshold": 0,
-        "secondThreshold": 0,
-        "baseScore": 0,
-        "features": ""
+        "description": ""
       },
       "card": {
         "level": {
