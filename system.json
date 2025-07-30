@@ -1,8 +1,7 @@
 {
   "id": "simple-daggerheart",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "title": "Simple Daggerheart",
-  "url": "https://github.com/WalkerJH/simple-daggerheart",
   "description": "A simple system for Daggerheart with a character sheet and other essentials.",
   "license": "LICENSE.txt",
   "authors": [
@@ -11,9 +10,8 @@
       "url": "https://github.com/WalkerJH"
     }
   ],
-  "esmodules": ["module/simple.js"],
+  "esmodules": ["module/simple-daggerheart.js"],
   "styles": ["styles/styles.css"],
-  "packs": [],
   "languages": [
     {
       "lang": "en",
@@ -22,7 +20,7 @@
     }
   ],
   "compatibility": {
-    "minimum": "10",
+    "minimum": "13",
     "verified": "13"
   },
   "grid": {
@@ -31,6 +29,7 @@
   },
   "primaryTokenAttribute": "health",
   "secondaryTokenAttribute": "power",
+  "url": "https://github.com/WalkerJH/simple-daggerheart",
   "manifest": "https://raw.githubusercontent.com//WalkerJH/simple-daggerheart/master/system.json",
-  "download": ""
+  "download": "https://raw.githubusercontent.com//WalkerJH/simple-daggerheart/releases/download/system.zip"
 }

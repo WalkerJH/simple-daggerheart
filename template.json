@@ -2,30 +2,128 @@
   "Actor": {
     "types": ["character"],
     "htmlFields": ["biography"],
-    "character": {
-      "biography": "",
-      "health": {
-        "value": 10,
-        "min": 0,
-        "max": 10
-      },
-      "power": {
-        "value": 5,
-        "min": 0,
-        "max": 5
-      },
-      "attributes": {},
-      "groups": {}
+    "templates": {
+      "character": {
+        "name": "",
+        "pronouns": "",
+        "ancestry": "",
+        "class": "",
+        "subclass": "",
+        "biography": "",
+        "level": {
+          "value": 1,
+          "min": 1,
+          "max": 10
+        },
+        "hp": {
+          "value": 4,
+          "min": 0,
+          "max": 12
+        },
+        "evasion": {
+          "value": 10,
+          "min": 1,
+          "max": 30
+        },
+        "armor": {
+          "value": 1,
+          "min": 1,
+          "max": 12
+        },
+        "markedArmorSlots": {
+          "value": 0,
+          "min": 0,
+          "max": 12
+        },
+        "agility": {
+          "value": 0,
+          "min": -1,
+          "max": 10
+        },
+        "agilityMarker": false,
+        "strength": {
+          "value": 0,
+          "min": -1,
+          "max": 10
+        },
+        "strengthMarker": false,
+        "finesse": {
+          "value": 0,
+          "min": -1,
+          "max": 10
+        },
+        "finesseMarker": false,
+        "instinct": {
+          "value": 0,
+          "min": -1,
+          "max": 10
+        },
+        "instinctMarker": false,
+        "presence": {
+          "value": 0,
+          "min": -1,
+          "max": 10
+        },
+        "presenceMarker": false,
+        "knowledge": {
+          "value": 0,
+          "min": -1,
+          "max": 10
+        },
+        "knowledgeMarker": false,
+        "features": [],
+        "experiences": [],
+        "items": [],
+        "weapons": []
+      }
     }
   },
   "Item": {
-    "types": ["item"],
+    "types": ["item", "consumable", "weapon", "armor", "card"],
     "htmlFields": ["description"],
-    "item": {
-      "description": "",
-      "quantity": 1,
-      "attributes": {},
-      "groups": {}
+    "templates": {
+      "item": {
+        "name": "",
+        "description": "",
+        "quantity": {
+          "value": 1,
+          "min": 1,
+          "max": 99
+        }
+      },
+      "consumable": {
+        "name": "",
+        "description": "",
+        "quantity": {
+          "value": 1,
+          "min": 1,
+          "max": 4
+        }
+      },
+      "weapon": {
+        "name": "",
+        "trait": "",
+        "range": "",
+        "damageDice": "",
+        "features": ""
+      },
+      "armor": {
+        "name": "",
+        "firstThreshold": 0,
+        "secondThreshold": 0,
+        "baseScore": 0,
+        "features": ""
+      },
+      "card": {
+        "level": {
+          "value": 1,
+          "min": 1,
+          "max": 10
+        },
+        "domain": "",
+        "recallCost": 1,
+        "description": ""
+      }
     }
   }
 }
