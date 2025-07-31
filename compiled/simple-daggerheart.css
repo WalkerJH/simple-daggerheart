@@ -42,34 +42,42 @@
 }
 
 body.theme-dark .application {
-  --background: hsl(240, 40%, 4%);
+  --background: linear-gradient(hsl(240, 40%, 5%), hsl(240, 40%, 4.5%), hsl(240, 40%, 4%), hsl(240, 40%, 3.5%), hsl(240, 40%, 3%));
 }
 
 .themed.theme-dark {
-  --sidebar-background: hsl(240, 40%, 4%);
+  --sidebar-background: linear-gradient(hsl(240, 40%, 5%), hsl(240, 40%, 4.5%), hsl(240, 40%, 4%), hsl(240, 40%, 3.5%), hsl(240, 40%, 3%));
 }
 
 body.theme-light .application {
-  --background: hsl(36, 10%, 90%);
+  --background: hsl(36, 10%, 88%);
 }
 
 .themed.theme-light {
-  --sidebar-background: hsl(36, 10%, 90%);
+  --sidebar-background: hsl(36, 10%, 88%);
+}
+
+.chat-message {
+  --chat-message-background: hsl(36, 10%, 84%);
 }
 body.theme-dark .application {
-  --background: hsl(240, 40%, 4%);
+  --background: linear-gradient(hsl(240, 40%, 5%), hsl(240, 40%, 4.5%), hsl(240, 40%, 4%), hsl(240, 40%, 3.5%), hsl(240, 40%, 3%));
 }
 
 .themed.theme-dark {
-  --sidebar-background: hsl(240, 40%, 4%);
+  --sidebar-background: linear-gradient(hsl(240, 40%, 5%), hsl(240, 40%, 4.5%), hsl(240, 40%, 4%), hsl(240, 40%, 3.5%), hsl(240, 40%, 3%));
 }
 
 body.theme-light .application {
-  --background: hsl(36, 10%, 90%);
+  --background: hsl(36, 10%, 88%);
 }
 
 .themed.theme-light {
-  --sidebar-background: hsl(36, 10%, 90%);
+  --sidebar-background: hsl(36, 10%, 88%);
+}
+
+.chat-message {
+  --chat-message-background: hsl(36, 10%, 84%);
 }
 
 

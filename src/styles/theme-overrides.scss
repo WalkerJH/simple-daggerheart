@@ -1,13 +1,13 @@
-@use "variables.scss";
+@use 'variables.scss';
 
 body.theme-dark {
   .application {
-    --background: #{variables.$color-dark-background};
+    --background: #{variables.$gradient-dark-background};
   }
 }
 
 .themed.theme-dark {
-  --sidebar-background: #{variables.$color-dark-background};
+  --sidebar-background: #{variables.$gradient-dark-background};
 }
 
 body.theme-light {
@@ -18,4 +18,8 @@ body.theme-light {
 
 .themed.theme-light {
   --sidebar-background: #{variables.$color-light-background};
+}
+
+.chat-message {
+  --chat-message-background: #{variables.$color-chat-background};
 }

@@ -1,3 +1,5 @@
+@use 'sass:color';
+
 $spacing-small: 5px;
 $spacing-med: 11px;
 $spacing-large: 15px;
@@ -11,6 +13,14 @@ $size-xl: 120px;
 $font-size-large: 16pt;
 $font-size-xl: 20pt;
 
-$color-dark-background: hsl(240 40% 4%);
-$color-light-background: hsl(36 10% 90%);
+$color-dark-background: hsl(240 40% 3%);
+$gradient-dark-background: linear-gradient(
+  color.adjust($color-dark-background, $lightness: 2%),
+  color.adjust($color-dark-background, $lightness: 1.5%),
+  color.adjust($color-dark-background, $lightness: 1%),
+  color.adjust($color-dark-background, $lightness: 0.5%),
+  $color-dark-background
+);
+$color-light-background: hsl(36 10% 88%);
 $color-gold-accent: hsl(36 70% 55%);
+$color-chat-background: hsl(36 10% 84%);

@@ -7,6 +7,6 @@
     "sass": "^1.89.2"
   },
   "scripts": {
-    "compile": "gulp styles"
+    "style": "gulp styles"
   }
 }

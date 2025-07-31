@@ -1,3 +1,5 @@
 <div>
-These are the stats.
+  {{#each document.system.character.traits as |trait|}}
+    {{trait.dataKey}}
+  {{/each}}
 </div>
