@@ -21,12 +21,12 @@ export class SimpleDHCharacterSheet extends api.HandlebarsApplicationMixin(
     header: {
       id: 'header',
       template:
-        'systems/simple-daggerheart/templates/character-sheet/character-sheet-header.hbs'
+        'systems/simple-daggerheart/src/templates/character-sheet/character-sheet-header.hbs'
     },
     stats: {
       id: 'stats',
       template:
-        'systems/simple-daggerheart/templates/character-sheet/character-sheet-stats.hbs'
+        'systems/simple-daggerheart/src/templates/character-sheet/character-sheet-stats.hbs'
     }
   };
 

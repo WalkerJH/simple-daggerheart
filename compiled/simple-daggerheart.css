@@ -1,0 +1,113 @@
+.gap-small {
+  gap: 5px;
+}
+
+.gap-med {
+  gap: 11px;
+}
+
+.gap-large {
+  gap: 15px;
+}
+.gap-small {
+  gap: 5px;
+}
+
+.gap-med {
+  gap: 11px;
+}
+
+.gap-large {
+  gap: 15px;
+}
+
+.simple-daggerheart.character-sheet input {
+  margin: 5px 0;
+}
+.simple-daggerheart.character-sheet .character-header .character-img {
+  cursor: pointer;
+  max-width: 120px;
+  max-height: 120px;
+}
+.simple-daggerheart.character-sheet .character-header .secondary-field {
+  width: 33.3333333333%;
+}
+.simple-daggerheart.character-sheet .character-header .character-level {
+  max-width: 50px;
+}
+.simple-daggerheart.character-sheet .character-header .character-level input {
+  height: 50px;
+  font-size: 20pt;
+  text-align: center;
+}
+
+body.theme-dark .application {
+  --background: hsl(240, 40%, 4%);
+}
+
+.themed.theme-dark {
+  --sidebar-background: hsl(240, 40%, 4%);
+}
+
+body.theme-light .application {
+  --background: hsl(36, 10%, 90%);
+}
+
+.themed.theme-light {
+  --sidebar-background: hsl(36, 10%, 90%);
+}
+body.theme-dark .application {
+  --background: hsl(240, 40%, 4%);
+}
+
+.themed.theme-dark {
+  --sidebar-background: hsl(240, 40%, 4%);
+}
+
+body.theme-light .application {
+  --background: hsl(36, 10%, 90%);
+}
+
+.themed.theme-light {
+  --sidebar-background: hsl(36, 10%, 90%);
+}
+
+
+.simple-daggerheart.character-sheet input {
+  margin: 5px 0;
+}
+.simple-daggerheart.character-sheet .character-header .character-img {
+  cursor: pointer;
+  max-width: 120px;
+  max-height: 120px;
+}
+.simple-daggerheart.character-sheet .character-header .secondary-field {
+  width: 33.3333333333%;
+}
+.simple-daggerheart.character-sheet .character-header .character-level {
+  max-width: 50px;
+}
+.simple-daggerheart.character-sheet .character-header .character-level input {
+  height: 50px;
+  font-size: 20pt;
+  text-align: center;
+}
+.simple-daggerheart.character-sheet input {
+  margin: 5px 0;
+}
+.simple-daggerheart.character-sheet .character-header .character-img {
+  cursor: pointer;
+  max-width: 120px;
+  max-height: 120px;
+}
+.simple-daggerheart.character-sheet .character-header .secondary-field {
+  width: 33.3333333333%;
+}
+.simple-daggerheart.character-sheet .character-header .character-level {
+  max-width: 50px;
+}
+.simple-daggerheart.character-sheet .character-header .character-level input {
+  height: 50px;
+  font-size: 20pt;
+  text-align: center;
+}

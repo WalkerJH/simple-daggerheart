@@ -1,0 +1,13 @@
+@use "variables.scss";
+
+.gap-small {
+  gap: variables.$spacing-small;
+}
+
+.gap-med {
+  gap: variables.$spacing-med;
+}
+
+.gap-large {
+  gap: variables.$spacing-large;
+}

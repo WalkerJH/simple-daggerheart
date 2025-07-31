@@ -1,4 +1,10 @@
+@use "../variables.scss";
+
 .simple-daggerheart.character-sheet {
+  input {
+    margin: variables.$spacing-small 0;
+  }
+
   .character-header {
     .character-img {
       cursor: pointer;
@@ -11,11 +17,11 @@
     }
 
     .character-level {
-      max-width: var(--size-med);
+      max-width: variables.$size-med;
 
       input {
-        height: var(--size-med);
-        font-size: var(--font-size-xl);
+        height: variables.$size-med;
+        font-size: variables.$font-size-xl;
         text-align: center;
       }
     }

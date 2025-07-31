@@ -1,0 +1,21 @@
+@use "variables.scss";
+
+body.theme-dark {
+  .application {
+    --background: #{variables.$color-dark-background};
+  }
+}
+
+.themed.theme-dark {
+  --sidebar-background: #{variables.$color-dark-background};
+}
+
+body.theme-light {
+  .application {
+    --background: #{variables.$color-light-background};
+  }
+}
+
+.themed.theme-light {
+  --sidebar-background: #{variables.$color-light-background};
+}

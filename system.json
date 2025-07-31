@@ -10,13 +10,13 @@
       "url": "https://github.com/WalkerJH"
     }
   ],
-  "esmodules": ["module/SimpleDaggerheart.js"],
-  "styles": ["styles/styles.css"],
+  "esmodules": ["src/module/SimpleDaggerheart.js"],
+  "styles": ["compiled/simple-daggerheart.css"],
   "languages": [
     {
       "lang": "en",
       "name": "English",
-      "path": "lang/en.json"
+      "path": "src/lang/en.json"
     }
   ],
   "compatibility": {
