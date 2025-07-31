@@ -1,3 +1,6 @@
 # IDE
 .idea/
 .vs/
+
+# NPM
+node_modeles/
