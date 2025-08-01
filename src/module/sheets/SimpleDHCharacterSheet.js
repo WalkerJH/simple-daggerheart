@@ -33,4 +33,21 @@ export class SimpleDHCharacterSheet extends api.HandlebarsApplicationMixin(
   get title() {
     return game.i18n.localize('Character Sheet');
   }
+
+  async _prepareContext(_options) {
+    const context = await super._prepareContext(_options);
+
+    context.traits = CONFIG.SIMPLE_DAGGERHEART_SYSTEM.character.traits.map(
+      (traitTemplate) => ({
+        name: `system.traits.${traitTemplate.dataKey}.value`,
+        label: `${traitTemplate.localizationKey}.Label`,
+        examples: ['1', '2', '3'].map(
+          (num) => `${traitTemplate.localizationKey}.Example${num}`
+        ),
+        value: this.document.system.traits[traitTemplate.dataKey].value
+      })
+    );
+
+    return context;
+  }
 }

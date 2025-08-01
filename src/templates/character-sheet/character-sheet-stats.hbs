@@ -1,5 +1,13 @@
-<div>
-  {{#each document.system.character.traits as |trait|}}
-    {{trait.dataKey}}
+<div class='flexrow gap-med'>
+  {{#each this.traits as |trait|}}
+    <label>
+      {{localize trait.label}}
+      <input type='number' name='{{trait.name}}' value='{{trait.value}}' />
+      <ul>
+        {{#each trait.examples as |example|}}
+          <li>{{localize example}}</li>
+        {{/each}}
+      </ul>
+    </label>
   {{/each}}
 </div>

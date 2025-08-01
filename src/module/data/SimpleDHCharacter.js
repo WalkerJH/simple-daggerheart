@@ -24,12 +24,14 @@ export class SimpleDHCharacter extends TypeDataModel {
       markedArmorSlots: createResourceField({ initial: 0, min: 0, max: 12 }),
       proficiency: createResourceField({ initial: 1, min: 1, max: 6 }),
 
-      agility: createAttributeField(),
-      strength: createAttributeField(),
-      finesse: createAttributeField(),
-      instinct: createAttributeField(),
-      presence: createAttributeField(),
-      knowledge: createAttributeField(),
+      traits: new SchemaField({
+        agility: createAttributeField(),
+        strength: createAttributeField(),
+        finesse: createAttributeField(),
+        instinct: createAttributeField(),
+        presence: createAttributeField(),
+        knowledge: createAttributeField()
+      }),
 
       features: new ArrayField(new StringField()),
       experiences: new ArrayField(
