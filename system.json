@@ -11,7 +11,7 @@
     }
   ],
   "esmodules": ["src/module/SimpleDaggerheart.js"],
-  "styles": ["compiled/simple-daggerheart.css"],
+  "styles": ["compiled/simple-daggerheart-styles.css"],
   "languages": [
     {
       "lang": "en",
