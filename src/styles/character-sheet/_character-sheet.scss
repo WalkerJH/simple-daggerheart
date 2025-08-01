@@ -8,7 +8,16 @@
   }
 
   .simple-daggerheart.character-sheet-section {
-    border: 1px solid variables.$color-gold-accent;
+    border: 1px solid transparent;
+    background:
+      linear-gradient(var(--background), var(--background)) padding-box,
+      linear-gradient(
+          to right,
+          variables.$color-gold-accent,
+          variables.$color-gold-accent-heavy
+        )
+        border-box;
+
     border-radius: variables.$border-radius;
     padding: variables.$spacing-3;
   }

@@ -32,7 +32,8 @@
   gap: 20px;
 }
 .simple-daggerheart.character-sheet .simple-daggerheart.character-sheet-section {
-  border: 1px solid hsl(48, 75%, 67%);
+  border: 1px solid transparent;
+  background: linear-gradient(var(--background), var(--background)) padding-box, linear-gradient(to right, hsl(48, 75%, 77%), hsl(48, 78%, 67%)) border-box;
   border-radius: 10px;
   padding: 15px;
 }
