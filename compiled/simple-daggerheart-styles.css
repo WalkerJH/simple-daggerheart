@@ -1,53 +1,60 @@
-.gap-small {
+.gap-1 {
   gap: 5px;
 }
 
-.gap-med {
-  gap: 11px;
+.gap-2 {
+  gap: 10px;
 }
 
-.gap-large {
+.gap-3 {
   gap: 15px;
 }
 
-.simple-daggerheart.character-sheet input {
+.simple-daggerheart.character-sheet-header input {
   margin: 5px 0;
 }
-.simple-daggerheart.character-sheet .character-header .character-img {
+.simple-daggerheart.character-sheet-header .character-img {
   cursor: pointer;
   max-width: 120px;
   max-height: 120px;
 }
-.simple-daggerheart.character-sheet .character-header .secondary-field {
-  width: 33.3333333333%;
+.simple-daggerheart.character-sheet-header .character-level {
+  max-width: 40px;
 }
-.simple-daggerheart.character-sheet .character-header .character-level {
-  max-width: 50px;
-}
-.simple-daggerheart.character-sheet .character-header .character-level input {
-  height: 50px;
+.simple-daggerheart.character-sheet-header .character-level input {
+  height: 40px;
   font-size: 20pt;
   text-align: center;
 }
 
+.simple-daggerheart.character-sheet .window-content {
+  padding: 20px;
+  gap: 20px;
+}
+.simple-daggerheart.character-sheet .simple-daggerheart.character-sheet-section {
+  border: 1px solid hsl(48, 75%, 67%);
+  border-radius: 10px;
+  padding: 15px;
+}
+
 body.theme-dark .application {
-  --background: linear-gradient(hsl(240, 40%, 5%), hsl(240, 40%, 4.5%), hsl(240, 40%, 4%), hsl(240, 40%, 3.5%), hsl(240, 40%, 3%));
+  --background: hsl(228, 40%, 4%);
 }
 
 .themed.theme-dark {
-  --sidebar-background: linear-gradient(hsl(240, 40%, 5%), hsl(240, 40%, 4.5%), hsl(240, 40%, 4%), hsl(240, 40%, 3.5%), hsl(240, 40%, 3%));
+  --sidebar-background: hsl(228, 40%, 4%);
 }
 
 body.theme-light .application {
-  --background: hsl(36, 10%, 88%);
+  --background: hsl(40, 10%, 88%);
 }
 
 .themed.theme-light {
-  --sidebar-background: hsl(36, 10%, 88%);
+  --sidebar-background: hsl(40, 10%, 88%);
 }
 
 .chat-message {
-  --chat-message-background: hsl(36, 10%, 84%);
+  --chat-message-background: hsl(40, 10%, 88%);
 }
 
 /*# sourceMappingURL=simple-daggerheart-styles.css.map */

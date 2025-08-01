@@ -1,3 +1,5 @@
+import { DataUtils } from '../utils/DataUtils.js';
+
 const { api, sheets } = foundry.applications;
 
 export class SimpleDHCharacterSheet extends api.HandlebarsApplicationMixin(
@@ -17,16 +19,24 @@ export class SimpleDHCharacterSheet extends api.HandlebarsApplicationMixin(
     }
   };
 
+  static templatePrefix =
+    'systems/simple-daggerheart/src/templates/character-sheet';
+
   static PARTS = {
     header: {
       id: 'header',
-      template:
-        'systems/simple-daggerheart/src/templates/character-sheet/character-sheet-header.hbs'
+      template: `${this.templatePrefix}/character-sheet-header.hbs`,
+      classes: ['simple-daggerheart', 'character-sheet-section']
     },
     stats: {
       id: 'stats',
-      template:
-        'systems/simple-daggerheart/src/templates/character-sheet/character-sheet-stats.hbs'
+      template: `${this.templatePrefix}/character-sheet-stats.hbs`,
+      classes: ['simple-daggerheart', 'character-sheet-section']
+    },
+    statuses: {
+      id: 'statuses',
+      template: `${this.templatePrefix}/character-sheet-statuses.hbs`,
+      classes: ['simple-daggerheart', 'character-sheet-section']
     }
   };
 
@@ -41,13 +51,37 @@ export class SimpleDHCharacterSheet extends api.HandlebarsApplicationMixin(
       (traitTemplate) => ({
         baseName: `system.traits.${traitTemplate.dataKey}`,
         label: `${traitTemplate.localizationKey}.Label`,
-        examples: ['1', '2', '3'].map(
-          (num) => `${traitTemplate.localizationKey}.Example${num}`
+        examples: Array.from({ length: 3 }).map(
+          (_val, index) =>
+            `${traitTemplate.localizationKey}.Example${index + 1}`
         ),
         value: this.document.system.traits[traitTemplate.dataKey].value,
         marked: this.document.system.traits[traitTemplate.dataKey].marked
       })
     );
+
+    context.resourceArrays = {
+      hp: DataUtils.resourceToArray(
+        this.document.system.hp,
+        this.document.system.schema.fields.hp.max
+      ),
+      stress: DataUtils.resourceToArray(
+        this.document.system.stress,
+        this.document.system.schema.fields.stress.max
+      ),
+      hope: DataUtils.resourceToArray(
+        this.document.system.hope,
+        this.document.system.schema.fields.hope.max
+      ),
+      markedArmorSlots: DataUtils.resourceToArray(
+        this.document.system.markedArmorSlots,
+        this.document.system.schema.fields.markedArmorSlots.max
+      ),
+      proficienty: DataUtils.resourceToArray(
+        this.document.system.proficiency,
+        this.document.system.schema.fields.proficiency.max
+      )
+    };
 
     return context;
   }

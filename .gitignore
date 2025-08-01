@@ -1,6 +1,6 @@
 # IDE
 .idea/
-.vs/
+.vscode/
 
 # NPM
 node_modules/

@@ -1,3 +1,34 @@
-<div class='flexrow gap-med'>
+<div class='flexcol gap-2'>
+  <div class='flexrow'>
+    <span>HP</span>
+    {{#each this.resourceArrays.hp as |hpMarker|}}
+      {{#if hpMarker}}
+        <i class='fas fa-heart'></i>
+      {{else}}
+        <i class='fas fa-regular fa-heart'></i>
+      {{/if}}
+    {{/each}}
+  </div>
 
+  <div class='flexrow'>
+    <span>STRESS</span>
+    {{#each this.resourceArrays.stress as |stressMarker|}}
+      {{#if stressMarker}}
+        <i class='fas fa-rectangle'></i>
+      {{else}}
+        <i class='fas fa-regular fa-rectangle'></i>
+      {{/if}}
+    {{/each}}
+  </div>
+
+  <div class='flexrow'>
+    <span>HOPE</span>
+    {{#each this.resourceArrays.hope as |hopeMarker|}}
+      {{#if stressMarker}}
+        <i class='fas fa-diamond'></i>
+      {{else}}
+        <i class='fas fa-regular fa-diamond'></i>
+      {{/if}}
+    {{/each}}
+  </div>
 </div>

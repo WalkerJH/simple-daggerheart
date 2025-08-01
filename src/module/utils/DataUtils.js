@@ -23,7 +23,13 @@ const createAttributeField = () => {
   });
 };
 
+export const resourceToArray = (current, max) =>
+  Array.from({ length: max }).map((_val, index) =>
+    index <= current ? true : false
+  );
+
 export const DataUtils = {
   createResourceField,
-  createAttributeField
+  createAttributeField,
+  resourceToArray
 };

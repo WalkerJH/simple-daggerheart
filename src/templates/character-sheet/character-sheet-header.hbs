@@ -1,5 +1,5 @@
 <header class='character-header'>
-  <div class='flexrow gap-large'>
+  <div class='flexrow gap-3'>
     <img
       class='character-img'
       src='{{document.img}}'
@@ -8,8 +8,8 @@
       height='100px'
     />
 
-    <div class='flexcol gap-med'>
-      <div class='flexrow gap-med'>
+    <div class='flexcol gap-2'>
+      <div class='flexrow gap-2'>
         <label>
           {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Name'}}
           <input type='text' name='name' value='{{document.name}}' />
@@ -25,7 +25,7 @@
         </label>
       </div>
 
-      <div class='flexrow gap-med'>
+      <div class='flexrow gap-2'>
         <label class='secondary-field'>
           {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Ancestry'}}
           <input
@@ -54,6 +54,7 @@
         </label>
       </div>
     </div>
+
     <label class='character-level'>
       {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Level'}}
       <input

@@ -12,6 +12,7 @@ export class SimpleDHCharacter extends TypeDataModel {
       pronouns: new StringField(),
       ancestry: new StringField(),
       class: new StringField(),
+      domains: new ArrayField(new StringField()),
       subclass: new StringField(),
       biography: new StringField(),
 

@@ -1,1 +1,16 @@
-@use "character-sheet-header.scss";
+@use '../variables.scss';
+
+@use 'character-sheet-header.scss';
+
+.simple-daggerheart.character-sheet {
+  .window-content {
+    padding: variables.$spacing-4;
+    gap: variables.$spacing-4;
+  }
+
+  .simple-daggerheart.character-sheet-section {
+    border: 1px solid variables.$color-gold-accent;
+    border-radius: variables.$border-radius;
+    padding: variables.$spacing-3;
+  }
+}
