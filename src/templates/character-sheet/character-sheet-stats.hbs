@@ -1,26 +1,27 @@
 <div class='flexrow gap-med'>
   {{#each this.traits as |trait|}}
 
-    <input
-      type='checkbox'
-      name='{{concat trait.baseName ".marked"}}'
-      {{checked trait.marked}}
-    />
-
-    <label>
-      {{localize trait.label}}
-
+    <div class='flexcol'>
       <input
-        type='number'
-        name='{{concat trait.baseName ".value"}}'
-        value='{{trait.value}}'
+        type='checkbox'
+        name='{{concat trait.baseName ".marked"}}'
+        {{checked trait.marked}}
       />
+
+      <label>
+        {{localize trait.label}}
+        <input
+          type='number'
+          name='{{concat trait.baseName ".value"}}'
+          value='{{trait.value}}'
+        />
+      </label>
 
       <ul>
         {{#each trait.examples as |example|}}
           <li>{{localize example}}</li>
         {{/each}}
       </ul>
-    </label>
+    </div>
   {{/each}}
 </div>
