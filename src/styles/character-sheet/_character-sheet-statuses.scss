@@ -1,0 +1,12 @@
+@use '../variables.scss';
+
+.simple-daggerheart.character-sheet-statuses {
+  .character-status-label {
+    max-width: 65px;
+  }
+  .character-status {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, variables.$size-2);
+    font-size: variables.$font-size-large;
+  }
+}

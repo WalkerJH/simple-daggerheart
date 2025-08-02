@@ -27,13 +27,22 @@
   text-align: center;
 }
 
+.simple-daggerheart.character-sheet-statuses .character-status-label {
+  max-width: 65px;
+}
+.simple-daggerheart.character-sheet-statuses .character-status {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 40px);
+  font-size: 16pt;
+}
+
 .simple-daggerheart.character-sheet .window-content {
   padding: 20px;
   gap: 20px;
 }
 .simple-daggerheart.character-sheet .simple-daggerheart.character-sheet-section {
   border: 1px solid transparent;
-  background: linear-gradient(var(--background), var(--background)) padding-box, linear-gradient(to right, hsl(48, 75%, 77%), hsl(48, 78%, 67%)) border-box;
+  background: linear-gradient(var(--background), var(--background)) padding-box, linear-gradient(to bottom right, hsl(48, 75%, 77%), hsl(48, 78%, 67%)) border-box;
   border-radius: 10px;
   padding: 15px;
 }

@@ -1,5 +1,6 @@
 @use '../variables.scss';
 @use 'character-sheet-header.scss';
+@use 'character-sheet-statuses.scss';
 
 .simple-daggerheart.character-sheet {
   .window-content {
@@ -12,7 +13,7 @@
     background:
       linear-gradient(var(--background), var(--background)) padding-box,
       linear-gradient(
-          to right,
+          to bottom right,
           variables.$color-gold-accent,
           variables.$color-gold-accent-heavy
         )
