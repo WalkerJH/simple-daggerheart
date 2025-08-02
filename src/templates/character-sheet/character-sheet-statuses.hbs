@@ -1,40 +1,35 @@
 <div class='flexcol gap-2 character-sheet-statuses'>
   <div class='flexrow'>
-    <span class='character-status-label'>HP</span>
-    <div class='character-status'>
-      {{#each this.resourceArrays.hp as |hpMarker|}}
-        {{#if hpMarker}}
-          <i class='fas fa-heart'></i>
-        {{else}}
-          <i class='fas fa-regular fa-heart'></i>
-        {{/if}}
-      {{/each}}
-    </div>
+    <span class='character-status-label'>
+      {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.HP'}}
+    </span>
+    <input type='number' name='system.hp' value='{{document.system.hp}}' />
+    /
+    <input type='number' name='system.hp' value='{{document.system.maxHp}}' />
   </div>
 
   <div class='flexrow'>
-    <span class='character-status-label'>STRESS</span>
-    <div class='character-status'>
-      {{#each this.resourceArrays.stress as |stressMarker|}}
-        {{#if stressMarker}}
-          <i class='fas fa-rectangle'></i>
-        {{else}}
-          <i class='fas fa-regular fa-rectangle'></i>
-        {{/if}}
-      {{/each}}
-    </div>
+    <span class='character-status-label'>
+      {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Stress'}}
+    </span>
+    <input
+      type='number'
+      name='system.stress'
+      value='{{document.system.stress}}'
+    />
+    /
+    <input
+      type='number'
+      name='system.maxStress'
+      value='{{document.system.maxStress}}'
+    />
   </div>
 
   <div class='flexrow'>
-    <span class='character-status-label'>HOPE</span>
-    <div class='character-status'>
-      {{#each this.resourceArrays.hope as |hopeMarker|}}
-        {{#if stressMarker}}
-          <i class='fas fa-diamond'></i>
-        {{else}}
-          <i class='fas fa-regular fa-diamond'></i>
-        {{/if}}
-      {{/each}}
-    </div>
+    <span class='character-status-label'>
+      {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Hope'}}
+    </span>
+    <input type='number' name='system.hope' value='{{document.system.hope}}' />
+    / 6
   </div>
 </div>

@@ -60,29 +60,6 @@ export class SimpleDHCharacterSheet extends api.HandlebarsApplicationMixin(
       })
     );
 
-    context.resourceArrays = {
-      hp: DataUtils.resourceToArray(
-        this.document.system.hp,
-        this.document.system.schema.fields.hp.max
-      ),
-      stress: DataUtils.resourceToArray(
-        this.document.system.stress,
-        this.document.system.schema.fields.stress.max
-      ),
-      hope: DataUtils.resourceToArray(
-        this.document.system.hope,
-        this.document.system.schema.fields.hope.max
-      ),
-      markedArmorSlots: DataUtils.resourceToArray(
-        this.document.system.markedArmorSlots,
-        this.document.system.schema.fields.markedArmorSlots.max
-      ),
-      proficienty: DataUtils.resourceToArray(
-        this.document.system.proficiency,
-        this.document.system.schema.fields.proficiency.max
-      )
-    };
-
     return context;
   }
 }

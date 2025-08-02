@@ -17,8 +17,10 @@ export class SimpleDHCharacter extends TypeDataModel {
       biography: new StringField(),
 
       level: createResourceField({ initial: 1, min: 1, max: 10 }),
-      hp: createResourceField({ initial: 5, min: 0, max: 10 }),
+      hp: createResourceField({ initial: 1, min: 0, max: 10 }),
+      maxHp: createResourceField({ initial: 5, min: 0, max: 10 }),
       stress: createResourceField({ min: 0, max: 12 }),
+      maxStress: createResourceField({ initial: 6, min: 0, max: 12 }),
       hope: createResourceField({ min: 0, max: 6 }),
       evasion: createResourceField({ initial: 1, min: 1, max: 30 }),
       armor: createResourceField({ min: 1, max: 12 }),

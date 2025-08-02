@@ -27,15 +27,6 @@
   text-align: center;
 }
 
-.simple-daggerheart.character-sheet-statuses .character-status-label {
-  max-width: 65px;
-}
-.simple-daggerheart.character-sheet-statuses .character-status {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, 40px);
-  font-size: 16pt;
-}
-
 .simple-daggerheart.character-sheet .window-content {
   padding: 20px;
   gap: 20px;
