@@ -14,11 +14,10 @@
       linear-gradient(var(--background), var(--background)) padding-box,
       linear-gradient(
           to bottom right,
-          variables.$color-gold-accent,
-          variables.$color-gold-accent-heavy
+          var(--simple-daggerheart-accent),
+          var(--simple-daggerheart-accent-heavy)
         )
         border-box;
-
     border-radius: variables.$border-radius;
     padding: variables.$spacing-3;
   }

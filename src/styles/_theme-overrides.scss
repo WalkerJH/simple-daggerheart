@@ -3,6 +3,8 @@
 body.theme-dark {
   .application {
     --background: #{variables.$color-dark-background};
+    --simple-daggerheart-accent: #{variables.$color-gold-accent};
+    --simple-daggerheart-accent-heavy: #{variables.$color-gold-accent-heavy};
   }
 }
 
@@ -13,6 +15,8 @@ body.theme-dark {
 body.theme-light {
   .application {
     --background: #{variables.$color-light-background};
+    --simple-daggerheart-accent: #{variables.$color-purple-accent};
+    --simple-daggerheart-accent-heavy: #{variables.$color-purple-accent-heavy};
   }
 }
 

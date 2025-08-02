@@ -42,13 +42,15 @@
 }
 .simple-daggerheart.character-sheet .simple-daggerheart.character-sheet-section {
   border: 1px solid transparent;
-  background: linear-gradient(var(--background), var(--background)) padding-box, linear-gradient(to bottom right, hsl(48, 75%, 77%), hsl(48, 78%, 67%)) border-box;
+  background: linear-gradient(var(--background), var(--background)) padding-box, linear-gradient(to bottom right, var(--simple-daggerheart-accent), var(--simple-daggerheart-accent-heavy)) border-box;
   border-radius: 10px;
   padding: 15px;
 }
 
 body.theme-dark .application {
   --background: hsl(228, 40%, 4%);
+  --simple-daggerheart-accent: hsl(48, 75%, 77%);
+  --simple-daggerheart-accent-heavy: hsl(48, 78%, 67%);
 }
 
 .themed.theme-dark {
@@ -57,6 +59,8 @@ body.theme-dark .application {
 
 body.theme-light .application {
   --background: hsl(40, 10%, 88%);
+  --simple-daggerheart-accent: hsl(228, 20%, 60%);
+  --simple-daggerheart-accent-heavy: hsl(228, 28%, 40%);
 }
 
 .themed.theme-light {
