@@ -1,24 +1,23 @@
-.gap-1 {
+.simple-daggerheart .gap-1 {
   gap: 5px;
 }
-
-.gap-2 {
+.simple-daggerheart .gap-2 {
   gap: 10px;
 }
-
-.gap-3 {
+.simple-daggerheart .gap-3 {
   gap: 15px;
 }
 
 .simple-daggerheart .large-input-field,
 .simple-daggerheart .large-text-container {
-  display: inline-block;
   width: 3rem;
   height: 3rem;
   text-align: center;
   font-size: 1.7rem;
 }
 .simple-daggerheart .large-text-container {
+  display: inline-block;
+  line-height: 3rem;
   border: 1px solid var(--color-border);
   border-radius: 4px;
 }
