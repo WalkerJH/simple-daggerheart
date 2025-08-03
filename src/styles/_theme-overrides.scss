@@ -2,28 +2,38 @@
 
 body.theme-dark {
   .application {
-    --background: #{variables.$color-dark-background};
+    --background: #{variables.$color-dark-1};
+    --color-border: #{variables.$color-dark-2};
     --simple-daggerheart-accent: #{variables.$color-gold-accent};
     --simple-daggerheart-accent-heavy: #{variables.$color-gold-accent-heavy};
+  }
+
+  input {
+    --input-background-color: #{variables.$color-dark-2};
   }
 }
 
 .themed.theme-dark {
-  --sidebar-background: #{variables.$color-dark-background};
+  --sidebar-background: #{variables.$color-dark-1};
 }
 
 body.theme-light {
   .application {
-    --background: #{variables.$color-light-background};
+    --background: #{variables.$color-light-1};
+    --color-boder: #{variables.$color-light-3};
     --simple-daggerheart-accent: #{variables.$color-purple-accent};
     --simple-daggerheart-accent-heavy: #{variables.$color-purple-accent-heavy};
+  }
+
+  input {
+    --input-background-color: #{variables.$color-light-3};
   }
 }
 
 .themed.theme-light {
-  --sidebar-background: #{variables.$color-light-background};
+  --sidebar-background: #{variables.$color-light-1};
 }
 
 .chat-message {
-  --chat-message-background: #{variables.$color-light-background};
+  --chat-message-background: #{variables.$color-light-1};
 }

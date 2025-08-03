@@ -10,29 +10,42 @@
   gap: 15px;
 }
 
+.simple-daggerheart .large-input-field,
+.simple-daggerheart .large-text-container {
+  display: inline-block;
+  width: 3rem;
+  height: 3rem;
+  text-align: center;
+  font-size: 1.7rem;
+}
+.simple-daggerheart .large-text-container {
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+}
+
 .simple-daggerheart.character-sheet-header .character-img {
   cursor: pointer;
   max-width: 120px;
   max-height: 120px;
+  border: 2px solid var(--color-border);
+  padding: 2px;
 }
 .simple-daggerheart.character-sheet-header .character-level {
-  max-width: 35px;
-}
-.simple-daggerheart.character-sheet-header .character-level input {
-  font-size: 20pt;
-  height: 35px;
-  width: 50px;
-  text-align: center;
+  max-width: min-content;
 }
 
-.simple-daggerheart.character-sheet-statuses .character-status-label {
-  width: 100%;
-}
 .simple-daggerheart.character-sheet-statuses .character-status {
-  font-size: 20pt;
-  height: 35px;
-  max-width: 50px;
+  max-width: max-content;
+}
+.simple-daggerheart.character-sheet-statuses .character-status .character-status-label {
+  width: 100%;
   text-align: center;
+  margin-bottom: 5px;
+}
+.simple-daggerheart.character-sheet-statuses .character-status .divider {
+  text-align: center;
+  padding: 0 5px;
+  font-size: 1.7rem;
 }
 
 .simple-daggerheart.character-sheet .window-content {
@@ -42,14 +55,18 @@
 .simple-daggerheart.character-sheet .simple-daggerheart.character-sheet-section {
   border: 1px solid transparent;
   background: linear-gradient(var(--background), var(--background)) padding-box, linear-gradient(to bottom right, var(--simple-daggerheart-accent), var(--simple-daggerheart-accent-heavy)) border-box;
-  border-radius: 10px;
+  border-radius: 8px;
   padding: 20px;
 }
 
 body.theme-dark .application {
   --background: hsl(228, 40%, 4%);
+  --color-border: hsl(228, 28%, 18%);
   --simple-daggerheart-accent: hsl(48, 75%, 77%);
   --simple-daggerheart-accent-heavy: hsl(48, 78%, 67%);
+}
+body.theme-dark input {
+  --input-background-color: hsl(228, 28%, 18%);
 }
 
 .themed.theme-dark {
@@ -58,8 +75,12 @@ body.theme-dark .application {
 
 body.theme-light .application {
   --background: hsl(40, 10%, 88%);
+  --color-boder: hsl(228, 40%, 12%);
   --simple-daggerheart-accent: hsl(228, 20%, 60%);
   --simple-daggerheart-accent-heavy: hsl(228, 28%, 40%);
+}
+body.theme-light input {
+  --input-background-color: hsl(228, 40%, 12%);
 }
 
 .themed.theme-light {

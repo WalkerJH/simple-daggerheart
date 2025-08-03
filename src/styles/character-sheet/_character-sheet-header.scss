@@ -5,16 +5,11 @@
     cursor: pointer;
     max-width: 120px;
     max-height: 120px;
+    border: 2px solid var(--color-border);
+    padding: 2px;
   }
 
   .character-level {
-    max-width: 35px;
-
-    input {
-      font-size: variables.$font-size-extra-large;
-      height: 35px;
-      width: 50px;
-      text-align: center;
-    }
+    max-width: min-content;
   }
 }

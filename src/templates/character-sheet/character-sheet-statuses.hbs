@@ -1,18 +1,18 @@
 <div class='flexrow gap-2 character-sheet-statuses'>
-  <div class='flexcol'>
-    <span class='character-status-label'>
+  <div class='flexcol character-status'>
+    <div class='character-status-label'>
       {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.HP'}}
-    </span>
-    <div class='flexrow'>
+    </div>
+    <div>
       <input
-        class='character-status'
+        class='large-input-field'
         type='number'
         name='system.hp'
         value='{{document.system.hp}}'
       />
-      /
+      <span class='divider'>/</span>
       <input
-        class='character-status'
+        class='large-input-field'
         type='number'
         name='system.maxHp'
         value='{{document.system.maxHp}}'
@@ -20,20 +20,20 @@
     </div>
   </div>
 
-  <div class='flexcol'>
-    <span class='character-status-label'>
+  <div class='flexcol character-status'>
+    <div class='character-status-label'>
       {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Stress'}}
-    </span>
-    <div class='flexrow'>
+    </div>
+    <div>
       <input
-        class='character-status'
+        class='large-input-field'
         type='number'
         name='system.stress'
         value='{{document.system.stress}}'
       />
-      /
+      <span class='divider'>/</span>
       <input
-        class='character-status'
+        class='large-input-field'
         type='number'
         name='system.maxStress'
         value='{{document.system.maxStress}}'
@@ -41,18 +41,19 @@
     </div>
   </div>
 
-  <div class='flexcol'>
-    <span class='character-status-label'>
+  <div class='flexcol character-status'>
+    <div class='character-status-label'>
       {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Hope'}}
-    </span>
-    <div class='flexrow'>
+    </div>
+    <div>
       <input
-        class='character-status'
+        class='large-input-field'
         type='number'
         name='system.hope'
         value='{{document.system.hope}}'
       />
-      / 6
+      <span class='divider'>/</span>
+      <span class='large-text-container'>6</span>
     </div>
   </div>
 </div>
