@@ -1,11 +1,10 @@
-@use '../variables.scss';
 @use 'character-sheet-header.scss';
 @use 'character-sheet-statuses.scss';
 
 .simple-daggerheart.character-sheet {
   .window-content {
-    padding: variables.$spacing-4;
-    gap: variables.$spacing-4;
+    padding: 20px;
+    gap: 20px;
   }
 
   .simple-daggerheart.character-sheet-section {
@@ -18,7 +17,7 @@
           var(--simple-daggerheart-accent-heavy)
         )
         border-box;
-    border-radius: variables.$border-radius;
-    padding: variables.$spacing-3;
+    border-radius: 10px;
+    padding: 20px;
   }
 }

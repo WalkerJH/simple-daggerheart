@@ -10,20 +10,28 @@
   gap: 15px;
 }
 
-.simple-daggerheart.character-sheet-header input {
-  margin: 5px 0;
-}
 .simple-daggerheart.character-sheet-header .character-img {
   cursor: pointer;
   max-width: 120px;
   max-height: 120px;
 }
 .simple-daggerheart.character-sheet-header .character-level {
-  max-width: 40px;
+  max-width: 35px;
 }
 .simple-daggerheart.character-sheet-header .character-level input {
-  height: 40px;
   font-size: 20pt;
+  height: 35px;
+  width: 50px;
+  text-align: center;
+}
+
+.simple-daggerheart.character-sheet-statuses .character-status-label {
+  width: 100%;
+}
+.simple-daggerheart.character-sheet-statuses .character-status {
+  font-size: 20pt;
+  height: 35px;
+  max-width: 50px;
   text-align: center;
 }
 
@@ -35,7 +43,7 @@
   border: 1px solid transparent;
   background: linear-gradient(var(--background), var(--background)) padding-box, linear-gradient(to bottom right, var(--simple-daggerheart-accent), var(--simple-daggerheart-accent-heavy)) border-box;
   border-radius: 10px;
-  padding: 15px;
+  padding: 20px;
 }
 
 body.theme-dark .application {

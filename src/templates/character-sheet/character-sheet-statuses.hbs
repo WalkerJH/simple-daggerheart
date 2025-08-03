@@ -1,35 +1,58 @@
-<div class='flexcol gap-2 character-sheet-statuses'>
-  <div class='flexrow'>
+<div class='flexrow gap-2 character-sheet-statuses'>
+  <div class='flexcol'>
     <span class='character-status-label'>
       {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.HP'}}
     </span>
-    <input type='number' name='system.hp' value='{{document.system.hp}}' />
-    /
-    <input type='number' name='system.hp' value='{{document.system.maxHp}}' />
+    <div class='flexrow'>
+      <input
+        class='character-status'
+        type='number'
+        name='system.hp'
+        value='{{document.system.hp}}'
+      />
+      /
+      <input
+        class='character-status'
+        type='number'
+        name='system.maxHp'
+        value='{{document.system.maxHp}}'
+      />
+    </div>
   </div>
 
-  <div class='flexrow'>
+  <div class='flexcol'>
     <span class='character-status-label'>
       {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Stress'}}
     </span>
-    <input
-      type='number'
-      name='system.stress'
-      value='{{document.system.stress}}'
-    />
-    /
-    <input
-      type='number'
-      name='system.maxStress'
-      value='{{document.system.maxStress}}'
-    />
+    <div class='flexrow'>
+      <input
+        class='character-status'
+        type='number'
+        name='system.stress'
+        value='{{document.system.stress}}'
+      />
+      /
+      <input
+        class='character-status'
+        type='number'
+        name='system.maxStress'
+        value='{{document.system.maxStress}}'
+      />
+    </div>
   </div>
 
-  <div class='flexrow'>
+  <div class='flexcol'>
     <span class='character-status-label'>
       {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Hope'}}
     </span>
-    <input type='number' name='system.hope' value='{{document.system.hope}}' />
-    / 6
+    <div class='flexrow'>
+      <input
+        class='character-status'
+        type='number'
+        name='system.hope'
+        value='{{document.system.hope}}'
+      />
+      / 6
+    </div>
   </div>
 </div>

@@ -1,4 +1,13 @@
 @use '../variables.scss';
 
 .simple-daggerheart.character-sheet-statuses {
+  .character-status-label {
+    width: 100%;
+  }
+  .character-status {
+    font-size: variables.$font-size-extra-large;
+    height: 35px;
+    max-width: 50px;
+    text-align: center;
+  }
 }
