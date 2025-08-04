@@ -1,0 +1,29 @@
+.simple-daggerheart.character-sheet-statuses {
+  .character-stat {
+    align-items: center;
+
+    .character-stat-header {
+      width: 100%;
+      justify-content: space-between;
+
+      input {
+        max-width: min-content;
+      }
+    }
+    .character-stat-input {
+      width: 80%;
+      ::before {
+        content: '';
+        width: 100%;
+        display: block;
+        border: 2px solid var(--simple-daggerheart-accent);
+      }
+    }
+    ul {
+      list-style: none;
+      width: 100%;
+      text-align: center;
+      padding: 0;
+    }
+  }
+}

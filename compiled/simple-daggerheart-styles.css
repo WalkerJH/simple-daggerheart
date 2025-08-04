@@ -46,6 +46,32 @@
   font-size: 1.7rem;
 }
 
+.simple-daggerheart.character-sheet-statuses .character-stat {
+  align-items: center;
+}
+.simple-daggerheart.character-sheet-statuses .character-stat .character-stat-header {
+  width: 100%;
+  justify-content: space-between;
+}
+.simple-daggerheart.character-sheet-statuses .character-stat .character-stat-header input {
+  max-width: min-content;
+}
+.simple-daggerheart.character-sheet-statuses .character-stat .character-stat-input {
+  width: 80%;
+}
+.simple-daggerheart.character-sheet-statuses .character-stat .character-stat-input ::before {
+  content: "";
+  width: 100%;
+  display: block;
+  border: 2px solid var(--simple-daggerheart-accent);
+}
+.simple-daggerheart.character-sheet-statuses .character-stat ul {
+  list-style: none;
+  width: 100%;
+  text-align: center;
+  padding: 0;
+}
+
 .simple-daggerheart.character-sheet .window-content {
   padding: 20px;
   gap: 20px;

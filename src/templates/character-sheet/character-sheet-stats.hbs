@@ -1,8 +1,7 @@
-<fieldset class='flexrow gap-2'>
+<fieldset class='flexrow gap-3 character-sheet-statuses'>
   {{#each this.traits as |trait|}}
-
-    <div class='flexcol'>
-      <span>
+    <div class='flexcol character-stat'>
+      <div class='flexrow character-stat-header'>
         {{localize trait.label}}
 
         <input
@@ -10,9 +9,10 @@
           name='{{concat trait.baseName ".marked"}}'
           {{checked trait.marked}}
         />
-      </span>
+      </div>
 
       <input
+        class='character-stat-input'
         type='number'
         name='{{concat trait.baseName ".value"}}'
         value='{{trait.value}}'
