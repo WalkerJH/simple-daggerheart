@@ -1,90 +1,94 @@
-<fieldset class='flexrow gap-2 character-sheet-statuses'>
-  <div class='flexcol character-status'>
-    <label class='character-status-label'>
-      {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.HP'}}
-    </label>
-    <div>
-      <input
-        class='large-input-field'
-        type='number'
-        name='system.hp'
-        value='{{document.system.hp}}'
-      />
-      <span class='divider'>/</span>
-      <input
-        class='large-input-field'
-        type='number'
-        name='system.maxHp'
-        value='{{document.system.maxHp}}'
-      />
+<fieldset class='character-sheet-statuses'>
+  <div class='flexrow gap-2'>
+    <div class='flexcol character-status'>
+      <label class='character-status-label'>
+        {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.HP'}}
+      </label>
+      <div>
+        <input
+          class='large-input-field'
+          type='number'
+          name='system.hp'
+          value='{{document.system.hp}}'
+        />
+        <span class='divider'>/</span>
+        <input
+          class='large-input-field'
+          type='number'
+          name='system.maxHp'
+          value='{{document.system.maxHp}}'
+        />
+      </div>
+    </div>
+
+    <div class='flexcol character-status'>
+      <label class='character-status-label'>
+        {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Stress'}}
+      </label>
+      <div>
+        <input
+          class='large-input-field'
+          type='number'
+          name='system.stress'
+          value='{{document.system.stress}}'
+        />
+        <span class='divider'>/</span>
+        <input
+          class='large-input-field'
+          type='number'
+          name='system.maxStress'
+          value='{{document.system.maxStress}}'
+        />
+      </div>
+    </div>
+
+    <div class='flexcol character-status'>
+      <label class='character-status-label'>
+        {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Hope'}}
+      </label>
+      <div>
+        <input
+          class='large-input-field'
+          type='number'
+          name='system.hope'
+          value='{{document.system.hope}}'
+        />
+        <span class='divider'>/</span>
+        <span class='large-text-container'>6</span>
+      </div>
     </div>
   </div>
 
-  <div class='flexcol character-status'>
-    <label class='character-status-label'>
-      {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Stress'}}
+  <div class='flexrow gap-2'>
+    <label class='large-input-field-label'>
+      {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Evasion'}}
+      <input
+        class='large-input-field'
+        type='number'
+        name='system.evasion'
+        value='{{document.system.evasion}}'
+      />
     </label>
-    <div>
-      <input
-        class='large-input-field'
-        type='number'
-        name='system.stress'
-        value='{{document.system.stress}}'
-      />
-      <span class='divider'>/</span>
-      <input
-        class='large-input-field'
-        type='number'
-        name='system.maxStress'
-        value='{{document.system.maxStress}}'
-      />
-    </div>
-  </div>
 
-  <div class='flexcol character-status'>
-    <label class='character-status-label'>
-      {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Hope'}}
-    </label>
-    <div>
-      <input
-        class='large-input-field'
-        type='number'
-        name='system.hope'
-        value='{{document.system.hope}}'
-      />
-      <span class='divider'>/</span>
-      <span class='large-text-container'>6</span>
-    </div>
-  </div>
-
-  <label class='large-input-field-label'>
-    {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Evasion'}}
-    <input
-      class='large-input-field'
-      type='number'
-      name='system.evasion'
-      value='{{document.system.evasion}}'
-    />
-  </label>
-
-  <div class='flexcol character-status'>
-    <label class='character-status-label'>
-      {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Armor'}}
-    </label>
-    <div>
-      <input
-        class='large-input-field'
-        type='number'
-        name='system.armor.currentScore'
-        value='{{document.system.armor.currentScore}}'
-      />
-      <span class='divider'>/</span>
-      <input
-        class='large-input-field'
-        type='number'
-        name='system.armor.maxScore'
-        value='{{document.armor.maxScore}}'
-      />
+    <div class='flexcol character-status'>
+      <label class='character-status-label'>
+        {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Armor'}}
+      </label>
+      <div>
+        <input
+          class='large-input-field'
+          type='number'
+          name='system.armor.currentScore'
+          value='{{document.system.armor.currentScore}}'
+        />
+        <span class='divider'>/</span>
+        <input
+          class='large-input-field'
+          type='number'
+          name='system.armor.maxScore'
+          value='{{document.armor.maxScore}}'
+        />
+      </div>
     </div>
   </div>
 </fieldset>

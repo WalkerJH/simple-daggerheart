@@ -6,6 +6,7 @@ body.theme-light .application.simple-daggerheart.theme-dark {
   --color-border: #{variables.$color-dark-2};
   --simple-daggerheart-accent: #{variables.$color-gold-accent};
   --simple-daggerheart-accent-heavy: #{variables.$color-gold-accent-heavy};
+  --color-text-primary: #{variables.$color-light-1};
 
   input {
     --input-background-color: #{variables.$color-dark-2};
@@ -18,15 +19,15 @@ body.theme-light .application.simple-daggerheart.theme-dark {
 body.theme-light .application.simple-daggerheart,
 body.theme-dark .application.simple-daggerheart.theme-light {
   --background: #{variables.$color-light-1};
-  --color-border: #{variables.$color-purple-accent-heavy};
+  --color-border: #{variables.$color-light-3};
   --simple-daggerheart-accent: #{variables.$color-purple-accent};
   --simple-daggerheart-accent-heavy: #{variables.$color-purple-accent-heavy};
+  --color-text-primary: #{variables.$color-dark-1};
 
   input {
     --input-background-color: #{variables.$color-light-2};
-    --checkbox-background-color: #{variables.$color-light-2};
-    --checkbox-checked-color: #{variables.$color-purple-accent-heavy};
-    --input-border-color: #{variables.$color-purple-accent-heavy};
+    --input-border-color: #{variables.$color-light-3};
+    --checkbox-checked-color: #{variables.$color-light-2};
   }
 }
 

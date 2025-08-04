@@ -3,6 +3,9 @@
 @use 'character-sheet-stats.scss';
 
 .simple-daggerheart.character-sheet {
+  min-width: 700px;
+  min-height: 800px;
+
   .window-content {
     padding: 20px;
     gap: 20px;

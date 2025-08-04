@@ -5,7 +5,7 @@
   gap: 10px;
 }
 .simple-daggerheart .gap-3 {
-  gap: 15px;
+  gap: 20px;
 }
 
 .simple-daggerheart .large-input-field,
@@ -72,6 +72,10 @@
   padding: 0;
 }
 
+.simple-daggerheart.character-sheet {
+  min-width: 700px;
+  min-height: 800px;
+}
 .simple-daggerheart.character-sheet .window-content {
   padding: 20px;
   gap: 20px;
@@ -92,6 +96,7 @@ body.theme-light .application.simple-daggerheart.theme-dark {
   --color-border: hsl(228, 28%, 18%);
   --simple-daggerheart-accent: hsl(48, 75%, 77%);
   --simple-daggerheart-accent-heavy: hsl(48, 78%, 67%);
+  --color-text-primary: hsl(40, 10%, 92%);
 }
 body.theme-dark .application.simple-daggerheart input,
 body.theme-light .application.simple-daggerheart.theme-dark input {
@@ -103,21 +108,21 @@ body.theme-light .application.simple-daggerheart.theme-dark input {
 
 body.theme-light .application.simple-daggerheart,
 body.theme-dark .application.simple-daggerheart.theme-light {
-  --background: hsl(40, 10%, 90%);
-  --color-border: hsl(228, 20%, 30%);
+  --background: hsl(40, 10%, 92%);
+  --color-border: hsl(228, 20%, 45%);
   --simple-daggerheart-accent: hsl(228, 20%, 60%);
   --simple-daggerheart-accent-heavy: hsl(228, 20%, 30%);
+  --color-text-primary: hsl(228, 40%, 4%);
 }
 body.theme-light .application.simple-daggerheart input,
 body.theme-dark .application.simple-daggerheart.theme-light input {
-  --input-background-color: hsl(40, 10%, 86%);
-  --checkbox-background-color: hsl(40, 10%, 86%);
-  --checkbox-checked-color: hsl(228, 20%, 30%);
-  --input-border-color: hsl(228, 20%, 30%);
+  --input-background-color: hsl(40, 10%, 95%);
+  --input-border-color: hsl(228, 20%, 45%);
+  --checkbox-checked-color: hsl(40, 10%, 95%);
 }
 
 .chat-message {
-  --chat-message-background: hsl(40, 10%, 90%);
+  --chat-message-background: hsl(40, 10%, 92%);
 }
 
 /*# sourceMappingURL=simple-daggerheart-styles.css.map */
