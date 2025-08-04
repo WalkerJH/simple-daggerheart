@@ -1,37 +1,33 @@
 @use 'variables.scss';
 
-body.theme-dark {
-  .application {
-    --background: #{variables.$color-dark-1};
-    --color-border: #{variables.$color-dark-2};
-    --simple-daggerheart-accent: #{variables.$color-gold-accent};
-    --simple-daggerheart-accent-heavy: #{variables.$color-gold-accent-heavy};
-  }
+body.theme-dark .application.simple-daggerheart,
+body.theme-light .application.simple-daggerheart.theme-dark {
+  --background: #{variables.$color-dark-1};
+  --color-border: #{variables.$color-dark-2};
+  --simple-daggerheart-accent: #{variables.$color-gold-accent};
+  --simple-daggerheart-accent-heavy: #{variables.$color-gold-accent-heavy};
 
   input {
     --input-background-color: #{variables.$color-dark-2};
+    --checkbox-background-color: #{variables.$color-dark-2};
+    --checkbox-checked-color: #{variables.$color-gold-accent-heavy};
+    --input-border-color: #{variables.$color-dark-2};
   }
 }
 
-.themed.theme-dark {
-  --sidebar-background: #{variables.$color-dark-1};
-}
-
-body.theme-light {
-  .application {
-    --background: #{variables.$color-light-1};
-    --color-boder: #{variables.$color-light-3};
-    --simple-daggerheart-accent: #{variables.$color-purple-accent};
-    --simple-daggerheart-accent-heavy: #{variables.$color-purple-accent-heavy};
-  }
+body.theme-light .application.simple-daggerheart,
+body.theme-dark .application.simple-daggerheart.theme-light {
+  --background: #{variables.$color-light-1};
+  --color-border: #{variables.$color-purple-accent-heavy};
+  --simple-daggerheart-accent: #{variables.$color-purple-accent};
+  --simple-daggerheart-accent-heavy: #{variables.$color-purple-accent-heavy};
 
   input {
-    --input-background-color: #{variables.$color-light-3};
+    --input-background-color: #{variables.$color-light-2};
+    --checkbox-background-color: #{variables.$color-light-2};
+    --checkbox-checked-color: #{variables.$color-purple-accent-heavy};
+    --input-border-color: #{variables.$color-purple-accent-heavy};
   }
-}
-
-.themed.theme-light {
-  --sidebar-background: #{variables.$color-light-1};
 }
 
 .chat-message {

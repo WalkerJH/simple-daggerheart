@@ -9,6 +9,10 @@
     font-size: variables.$font-size-large;
   }
 
+  .large-input-field-label {
+    max-width: min-content;
+  }
+
   .large-text-container {
     display: inline-block;
     line-height: 3rem;

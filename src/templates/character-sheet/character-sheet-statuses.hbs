@@ -1,8 +1,8 @@
-<div class='flexrow gap-2 character-sheet-statuses'>
+<fieldset class='flexrow gap-2 character-sheet-statuses'>
   <div class='flexcol character-status'>
-    <div class='character-status-label'>
+    <label class='character-status-label'>
       {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.HP'}}
-    </div>
+    </label>
     <div>
       <input
         class='large-input-field'
@@ -21,9 +21,9 @@
   </div>
 
   <div class='flexcol character-status'>
-    <div class='character-status-label'>
+    <label class='character-status-label'>
       {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Stress'}}
-    </div>
+    </label>
     <div>
       <input
         class='large-input-field'
@@ -42,9 +42,9 @@
   </div>
 
   <div class='flexcol character-status'>
-    <div class='character-status-label'>
+    <label class='character-status-label'>
       {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Hope'}}
-    </div>
+    </label>
     <div>
       <input
         class='large-input-field'
@@ -56,4 +56,35 @@
       <span class='large-text-container'>6</span>
     </div>
   </div>
-</div>
+
+  <label class='large-input-field-label'>
+    {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Evasion'}}
+    <input
+      class='large-input-field'
+      type='number'
+      name='system.evasion'
+      value='{{document.system.evasion}}'
+    />
+  </label>
+
+  <div class='flexcol character-status'>
+    <label class='character-status-label'>
+      {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Armor'}}
+    </label>
+    <div>
+      <input
+        class='large-input-field'
+        type='number'
+        name='system.armor'
+        value='{{document.system.armor}}'
+      />
+      <span class='divider'>/</span>
+      <input
+        class='large-input-field'
+        type='number'
+        name='system.maxArmor'
+        value='{{document.system.maxArmor}}'
+      />
+    </div>
+  </div>
+</fieldset>
