@@ -23,8 +23,6 @@ export class SimpleDHCharacter extends TypeDataModel {
       maxStress: createResourceField({ initial: 6, min: 0, max: 12 }),
       hope: createResourceField({ min: 0, max: 6 }),
       evasion: createResourceField({ initial: 1, min: 1, max: 30 }),
-      armor: createResourceField({ min: 1, max: 12 }),
-      maxArmor: createResourceField({ min: 0, max: 12 }),
       proficiency: createResourceField({ initial: 1, min: 1, max: 6 }),
 
       traits: new SchemaField({
@@ -58,7 +56,8 @@ export class SimpleDHCharacter extends TypeDataModel {
         name: new StringField(),
         minorThreshold: createResourceField({ min: 0 }),
         majorThreshold: createResourceField({ min: 0 }),
-        score: createResourceField({ min: 0 })
+        currentScore: createResourceField({ min: 0 }),
+        maxScore: createResourceField({ initial: 1, min: 0 })
       })
     };
   }
