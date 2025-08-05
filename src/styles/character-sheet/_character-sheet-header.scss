@@ -1,11 +1,21 @@
 @use '../variables.scss';
 
 .simple-daggerheart.character-sheet-header {
+  align-items: start;
+
   .character-img {
     cursor: pointer;
     max-width: 120px;
     max-height: 120px;
-    border: 1px solid var(--color-border);
+    border: 1px solid variables.$color-dark-2;
     padding: 2px;
+  }
+
+  .character-level {
+    padding: 24px 12px 12px;
+    border-radius: 0 0 8px 8px;
+    border-top: none;
+    position: relative;
+    top: -24px;
   }
 }

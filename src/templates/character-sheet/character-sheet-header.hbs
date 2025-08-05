@@ -1,68 +1,66 @@
-<fieldset class='character-sheet-header'>
-  <div class='flexrow gap-3'>
-    <img
-      class='character-img'
-      src='{{document.img}}'
-      data-action='editImage'
-      data-tooltip='Change Character Image'
-      height='100px'
-    />
+<fieldset class='flexrow gap-3 character-sheet-header'>
+  <img
+    class='character-img'
+    src='{{document.img}}'
+    data-action='editImage'
+    data-tooltip='Change Character Image'
+    height='100px'
+  />
 
-    <div class='flexcol gap-2'>
-      <div class='flexrow gap-2'>
-        <label>
-          {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Name'}}
-          <input type='text' name='name' value='{{document.name}}' />
-        </label>
+  <div class='flexcol gap-2'>
+    <div class='flexrow gap-2'>
+      <label>
+        {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Name'}}
+        <input type='text' name='name' value='{{document.name}}' />
+      </label>
 
-        <label class='secondary-field'>
-          {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Pronouns'}}
-          <input
-            type='text'
-            name='system.pronouns'
-            value='{{document.system.pronouns}}'
-          />
-        </label>
-      </div>
-
-      <div class='flexrow gap-2'>
-        <label class='secondary-field'>
-          {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Ancestry'}}
-          <input
-            type='text'
-            name='system.ancestry'
-            value='{{document.system.ancestry}}'
-          />
-        </label>
-
-        <label class='secondary-field'>
-          {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Class'}}
-          <input
-            type='text'
-            name='system.class'
-            value='{{document.system.class}}'
-          />
-        </label>
-
-        <label class='secondary-field'>
-          {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Subclass'}}
-          <input
-            type='text'
-            name='system.subclass'
-            value='{{document.system.subclass}}'
-          />
-        </label>
-      </div>
+      <label class='secondary-field'>
+        {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Pronouns'}}
+        <input
+          type='text'
+          name='system.pronouns'
+          value='{{document.system.pronouns}}'
+        />
+      </label>
     </div>
 
-    <label class='large-input-field-label'>
-      {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Level'}}
-      <input
-        class='large-input-field'
-        type='number'
-        name='system.level'
-        value='{{document.system.level}}'
-      />
-    </label>
+    <div class='flexrow gap-2'>
+      <label class='secondary-field'>
+        {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Ancestry'}}
+        <input
+          type='text'
+          name='system.ancestry'
+          value='{{document.system.ancestry}}'
+        />
+      </label>
+
+      <label class='secondary-field'>
+        {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Class'}}
+        <input
+          type='text'
+          name='system.class'
+          value='{{document.system.class}}'
+        />
+      </label>
+
+      <label class='secondary-field'>
+        {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Subclass'}}
+        <input
+          type='text'
+          name='system.subclass'
+          value='{{document.system.subclass}}'
+        />
+      </label>
+    </div>
   </div>
+
+  <label class='large-input-field-label character-level card'>
+    {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Level'}}
+    <input
+      class='large-input-field'
+      type='number'
+      name='system.level'
+      value='{{document.system.level}}'
+    />
+  </label>
 </fieldset>

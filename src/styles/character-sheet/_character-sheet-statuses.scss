@@ -7,9 +7,6 @@
     .character-status {
       flex-grow: 0;
       padding: 12px;
-      background-color: variables.$color-dark-3;
-      border-top: 1px solid var(--color-border);
-      box-shadow: 0px 2px 4px black;
       border-radius: 8px;
 
       .character-status-inputs {
@@ -20,11 +17,6 @@
           max-width: 2rem;
           text-align: center;
           font-size: variables.$font-size-large;
-        }
-
-        .damage-button {
-          margin: 8px;
-          padding: 8px 6px;
         }
       }
 

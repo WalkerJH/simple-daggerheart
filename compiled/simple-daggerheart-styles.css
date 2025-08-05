@@ -30,13 +30,28 @@
   border: 1px solid var(--color-border);
   border-radius: 4px;
 }
+.simple-daggerheart .card {
+  background-color: hsl(228, 40%, 6%);
+  border-top: 1px solid var(--color-border);
+  box-shadow: 0px 2px 4px black;
+}
 
+.simple-daggerheart.character-sheet-header {
+  align-items: start;
+}
 .simple-daggerheart.character-sheet-header .character-img {
   cursor: pointer;
   max-width: 120px;
   max-height: 120px;
-  border: 1px solid var(--color-border);
+  border: 1px solid hsl(228, 28%, 16%);
   padding: 2px;
+}
+.simple-daggerheart.character-sheet-header .character-level {
+  padding: 24px 12px 12px;
+  border-radius: 0 0 8px 8px;
+  border-top: none;
+  position: relative;
+  top: -24px;
 }
 
 .simple-daggerheart.character-sheet-statuses .character-status-row {
@@ -45,9 +60,6 @@
 .simple-daggerheart.character-sheet-statuses .character-status-row .character-status {
   flex-grow: 0;
   padding: 12px;
-  background-color: hsl(228, 40%, 6%);
-  border-top: 1px solid var(--color-border);
-  box-shadow: 0px 2px 4px black;
   border-radius: 8px;
 }
 .simple-daggerheart.character-sheet-statuses .character-status-row .character-status .character-status-inputs {
@@ -59,36 +71,29 @@
   text-align: center;
   font-size: 1.7rem;
 }
-.simple-daggerheart.character-sheet-statuses .character-status-row .character-status .character-status-inputs .damage-button {
-  margin: 8px;
-  padding: 8px 6px;
-}
 .simple-daggerheart.character-sheet-statuses .character-status-row .character-status .character-status-label {
   text-align: center;
 }
 
-.simple-daggerheart.character-sheet-stats .character-stat {
+.simple-daggerheart.character-sheet-traits .character-stat {
   align-items: center;
-  padding: 12px 0;
-  background-color: hsl(228, 40%, 6%);
-  border-top: 1px solid var(--color-border);
-  box-shadow: 0px 2px 4px black;
+  padding: 12px 0.2rem;
 }
-.simple-daggerheart.character-sheet-stats .character-stat .character-stat-content {
+.simple-daggerheart.character-sheet-traits .character-stat .character-stat-content {
   width: 100%;
   justify-content: center;
 }
-.simple-daggerheart.character-sheet-stats .character-stat .character-stat-content .character-stat-value {
+.simple-daggerheart.character-sheet-traits .character-stat .character-stat-content .character-stat-value {
   max-width: 50%;
   text-align: center;
   margin: 0 4px;
 }
-.simple-daggerheart.character-sheet-stats .character-stat .character-stat-content .character-stat-checked {
+.simple-daggerheart.character-sheet-traits .character-stat .character-stat-content .character-stat-checked {
   flex: 0;
   width: 0;
   margin: 0;
 }
-.simple-daggerheart.character-sheet-stats .character-stat ul {
+.simple-daggerheart.character-sheet-traits .character-stat ul {
   list-style: none;
   width: 100%;
   text-align: center;
@@ -101,8 +106,8 @@
   min-height: 800px;
 }
 .simple-daggerheart.character-sheet .window-content {
-  padding: 20px;
-  gap: 20px;
+  padding: 24px;
+  gap: 24px;
 }
 .simple-daggerheart.character-sheet input {
   margin-top: 4px;
@@ -111,7 +116,7 @@
   border: 1px solid transparent;
   background: linear-gradient(var(--background), var(--background)) padding-box, linear-gradient(to bottom right, hsl(48, 75%, 77%), hsl(48, 78%, 67%)) border-box;
   border-radius: 8px;
-  padding: 20px;
+  padding: 24px;
 }
 
 .application.simple-daggerheart {
@@ -123,8 +128,16 @@
   --input-background-color: hsl(228, 28%, 16%);
   --checkbox-background-color: hsl(228, 28%, 16%);
   --checkbox-checked-color: hsl(48, 78%, 67%);
-  --input-border-color: hsl(228, 28%, 16%);
+  --input-border-color: transparent;
   --input-text-color: hsl(40, 10%, 92%);
+  --input-focus-outline-color: hsl(228, 20%, 60%);
+}
+.application.simple-daggerheart button {
+  --button-text-color: hsl(40, 10%, 92%);
+  --button-border-color: hsl(48, 78%, 67%);
+  --button-hover-text-color: hsl(40, 10%, 92%);
+  --button-hover-background-color: transparent;
+  --button-hover-border-color: hsl(48, 78%, 67%);
 }
 
 .chat-message {

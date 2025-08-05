@@ -1,6 +1,6 @@
 @use 'character-sheet-header.scss';
 @use 'character-sheet-statuses.scss';
-@use 'character-sheet-stats.scss';
+@use 'character-sheet-traits.scss';
 @use '../variables.scss';
 
 .simple-daggerheart.character-sheet {
@@ -8,8 +8,8 @@
   min-height: 800px;
 
   .window-content {
-    padding: 20px;
-    gap: 20px;
+    padding: 24px;
+    gap: 24px;
   }
 
   input {
@@ -27,6 +27,6 @@
         )
         border-box;
     border-radius: 8px;
-    padding: 20px;
+    padding: 24px;
   }
 }
