@@ -21,7 +21,7 @@ export class SimpleDHCharacter extends TypeDataModel {
       maxHp: createResourceField({ initial: 5, min: 0, max: 10 }),
       stress: createResourceField({ min: 0, max: 12 }),
       maxStress: createResourceField({ initial: 6, min: 0, max: 12 }),
-      hope: createResourceField({ min: 0, max: 6 }),
+      hope: createResourceField({ initial: 2, min: 0, max: 6 }),
       evasion: createResourceField({ initial: 1, min: 1, max: 30 }),
       proficiency: createResourceField({ initial: 1, min: 1, max: 6 }),
 
