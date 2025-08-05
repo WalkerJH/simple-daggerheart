@@ -1,22 +1,22 @@
-<fieldset class='flexrow character-sheet-statuses'>
+<fieldset class='flexrow gap-3 character-sheet-stats'>
   {{#each this.traits as |trait|}}
-    <div class='flexcol character-stat'>
-      <div class='flexrow character-stat-header'>
-        <span>{{localize trait.label}}</span>
+    <div class='flexcol gap-1 character-stat'>
+      <span>{{localize trait.label}}</span>
 
+      <div class='flexrow character-stat-content'>
         <input
+          class='character-stat-value'
+          type='number'
+          name='{{concat trait.baseName ".value"}}'
+          value='{{trait.value}}'
+        />
+        <input
+          class='character-stat-checked'
           type='checkbox'
           name='{{concat trait.baseName ".marked"}}'
           {{checked trait.marked}}
         />
       </div>
-
-      <input
-        class='character-stat-input'
-        type='number'
-        name='{{concat trait.baseName ".value"}}'
-        value='{{trait.value}}'
-      />
 
       <ul>
         {{#each trait.examples as |example|}}

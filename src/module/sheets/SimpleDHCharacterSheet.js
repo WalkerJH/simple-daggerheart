@@ -31,14 +31,14 @@ export class SimpleDHCharacterSheet extends api.HandlebarsApplicationMixin(
       template: `${this.templatePrefix}/character-sheet-header.hbs`,
       classes: ['simple-daggerheart', 'character-sheet-section']
     },
-    statuses: {
-      id: 'statuses',
-      template: `${this.templatePrefix}/character-sheet-statuses.hbs`,
-      classes: ['simple-daggerheart', 'character-sheet-section']
-    },
     stats: {
       id: 'stats',
       template: `${this.templatePrefix}/character-sheet-stats.hbs`,
+      classes: ['simple-daggerheart', 'character-sheet-section']
+    },
+    statuses: {
+      id: 'statuses',
+      template: `${this.templatePrefix}/character-sheet-statuses.hbs`,
       classes: ['simple-daggerheart', 'character-sheet-section']
     }
   };
