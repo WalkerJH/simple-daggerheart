@@ -14,6 +14,7 @@
       "Hope": "Hope",
       "Evasion": "Evasion",
       "Armor": "Armor",
+      "ArmorThresholds": "Armor Thresholds",
       "Agility": {
         "Label": "Agility",
         "Example1": "Sprint",

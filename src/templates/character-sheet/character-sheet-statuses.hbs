@@ -1,10 +1,10 @@
-<fieldset class='flexcol gap-4 character-sheet-statuses'>
+<fieldset class='flexcol gap-3 character-sheet-statuses'>
   <div class='flexrow character-status-row gap-3'>
     <div class='flexcol character-status'>
       <label class='character-status-label'>
         {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.HP'}}
       </label>
-      <div class='flexrow character-status-inputs'>
+      <div class='flexrow gap-2 character-status-inputs'>
         <input
           class='large-input-field'
           type='number'
@@ -25,7 +25,7 @@
       <label class='character-status-label'>
         {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Stress'}}
       </label>
-      <div class='flexrow character-status-inputs'>
+      <div class='flexrow gap-2 character-status-inputs'>
         <input
           class='large-input-field'
           type='number'
@@ -46,7 +46,7 @@
       <label class='character-status-label'>
         {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Hope'}}
       </label>
-      <div class='flexrow character-status-inputs'>
+      <div class='flexrow gap-2 character-status-inputs'>
         <input
           class='large-input-field'
           type='number'
@@ -74,7 +74,7 @@
       <label class='character-status-label'>
         {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Armor'}}
       </label>
-      <div class='flexrow character-status-inputs'>
+      <div class='flexrow gap-2 character-status-inputs'>
         <input
           class='large-input-field'
           type='number'
@@ -88,6 +88,29 @@
           name='system.armor.maxScore'
           value='{{document.armor.maxScore}}'
         />
+      </div>
+    </div>
+
+    <div class='flexcol character-status'>
+      <label class='character-status-label'>
+        {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.ArmorThresholds'}}
+      </label>
+      <div class='flexrow gap-2 character-status-inputs'>
+        <button class='damage-button'>-1 HP</button>
+        <input
+          class='large-input-field'
+          type='number'
+          name='system.armor.minorThreshold'
+          value='{{document.system.armor.minorThreshold}}'
+        />
+        <button class='damage-button'>-2 HP</button>
+        <input
+          class='large-input-field'
+          type='number'
+          name='system.armor.majorThreshold'
+          value='{{document.system.armor.majorThreshold}}'
+        />
+        <button class='damage-button'>-3 HP</button>
       </div>
     </div>
   </div>

@@ -54,6 +54,7 @@ export class SimpleDHCharacter extends TypeDataModel {
       activeWeaponIndex: new NumberField({ min: 0, max: 3, integer: true }),
       armor: new SchemaField({
         name: new StringField(),
+        feature: new StringField(),
         minorThreshold: createResourceField({ min: 0 }),
         majorThreshold: createResourceField({ min: 0 }),
         currentScore: createResourceField({ min: 0 }),

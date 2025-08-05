@@ -44,17 +44,24 @@
 }
 .simple-daggerheart.character-sheet-statuses .character-status-row .character-status {
   flex-grow: 0;
-  padding: 0 8px;
+  padding: 12px;
+  background-color: var(--simple-daggerheart-background);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid black;
+  border-radius: 8px;
 }
 .simple-daggerheart.character-sheet-statuses .character-status-row .character-status .character-status-inputs {
   width: max-content;
   justify-content: center;
 }
 .simple-daggerheart.character-sheet-statuses .character-status-row .character-status .character-status-inputs .divider {
-  padding: 0 6px;
   max-width: 2rem;
   text-align: center;
   font-size: 1.7rem;
+}
+.simple-daggerheart.character-sheet-statuses .character-status-row .character-status .character-status-inputs .damage-button {
+  margin: 8px;
+  padding: 8px 6px;
 }
 .simple-daggerheart.character-sheet-statuses .character-status-row .character-status .character-status-label {
   text-align: center;
@@ -105,35 +112,19 @@
   padding: 20px;
 }
 
-body.theme-dark .application.simple-daggerheart,
-body.theme-light .application.simple-daggerheart.theme-dark {
+.application.simple-daggerheart {
   --background: hsl(228, 40%, 4%);
-  --color-border: hsl(228, 28%, 18%);
+  --color-border: hsl(228, 28%, 16%);
+  --simple-daggerheart-background: hsl(228, 40%, 6%);
   --simple-daggerheart-accent: hsl(48, 75%, 77%);
   --simple-daggerheart-accent-heavy: hsl(48, 78%, 67%);
   --color-text-primary: hsl(40, 10%, 92%);
 }
-body.theme-dark .application.simple-daggerheart input,
-body.theme-light .application.simple-daggerheart.theme-dark input {
-  --input-background-color: hsl(228, 28%, 18%);
-  --checkbox-background-color: hsl(228, 28%, 18%);
+.application.simple-daggerheart input {
+  --input-background-color: hsl(228, 28%, 16%);
+  --checkbox-background-color: hsl(228, 28%, 16%);
   --checkbox-checked-color: hsl(48, 78%, 67%);
-  --input-border-color: hsl(228, 28%, 18%);
-}
-
-body.theme-light .application.simple-daggerheart,
-body.theme-dark .application.simple-daggerheart.theme-light {
-  --background: hsl(40, 10%, 92%);
-  --color-border: hsl(228, 20%, 45%);
-  --simple-daggerheart-accent: hsl(228, 20%, 60%);
-  --simple-daggerheart-accent-heavy: hsl(228, 20%, 30%);
-  --color-text-primary: hsl(228, 40%, 4%);
-}
-body.theme-light .application.simple-daggerheart input,
-body.theme-dark .application.simple-daggerheart.theme-light input {
-  --input-background-color: hsl(40, 10%, 95%);
-  --input-border-color: hsl(228, 20%, 45%);
-  --checkbox-checked-color: hsl(40, 10%, 95%);
+  --input-border-color: hsl(228, 28%, 16%);
 }
 
 .chat-message {
