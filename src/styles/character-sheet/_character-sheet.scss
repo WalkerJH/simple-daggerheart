@@ -1,6 +1,7 @@
 @use 'character-sheet-header.scss';
 @use 'character-sheet-statuses.scss';
 @use 'character-sheet-stats.scss';
+@use '../variables.scss';
 
 .simple-daggerheart.character-sheet {
   min-width: 800px;
@@ -21,8 +22,8 @@
       linear-gradient(var(--background), var(--background)) padding-box,
       linear-gradient(
           to bottom right,
-          var(--simple-daggerheart-accent),
-          var(--simple-daggerheart-accent-heavy)
+          variables.$color-gold-accent,
+          variables.$color-gold-accent-heavy
         )
         border-box;
     border-radius: 8px;

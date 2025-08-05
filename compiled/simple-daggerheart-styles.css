@@ -45,9 +45,9 @@
 .simple-daggerheart.character-sheet-statuses .character-status-row .character-status {
   flex-grow: 0;
   padding: 12px;
-  background-color: var(--simple-daggerheart-background);
+  background-color: hsl(228, 40%, 6%);
   border-top: 1px solid var(--color-border);
-  border-bottom: 1px solid black;
+  box-shadow: 0px 2px 4px black;
   border-radius: 8px;
 }
 .simple-daggerheart.character-sheet-statuses .character-status-row .character-status .character-status-inputs {
@@ -68,10 +68,11 @@
 }
 
 .simple-daggerheart.character-sheet-stats .character-stat {
-  border: 1px solid var(--color-border);
-  border-top: none;
   align-items: center;
-  padding: 4px 6px;
+  padding: 12px 0;
+  background-color: hsl(228, 40%, 6%);
+  border-top: 1px solid var(--color-border);
+  box-shadow: 0px 2px 4px black;
 }
 .simple-daggerheart.character-sheet-stats .character-stat .character-stat-content {
   width: 100%;
@@ -80,7 +81,7 @@
 .simple-daggerheart.character-sheet-stats .character-stat .character-stat-content .character-stat-value {
   max-width: 50%;
   text-align: center;
-  margin-right: 4px;
+  margin: 0 4px;
 }
 .simple-daggerheart.character-sheet-stats .character-stat .character-stat-content .character-stat-checked {
   flex: 0;
@@ -92,6 +93,7 @@
   width: 100%;
   text-align: center;
   padding: 0;
+  margin: 12px 0 0 0;
 }
 
 .simple-daggerheart.character-sheet {
@@ -107,7 +109,7 @@
 }
 .simple-daggerheart.character-sheet .character-sheet-section {
   border: 1px solid transparent;
-  background: linear-gradient(var(--background), var(--background)) padding-box, linear-gradient(to bottom right, var(--simple-daggerheart-accent), var(--simple-daggerheart-accent-heavy)) border-box;
+  background: linear-gradient(var(--background), var(--background)) padding-box, linear-gradient(to bottom right, hsl(48, 75%, 77%), hsl(48, 78%, 67%)) border-box;
   border-radius: 8px;
   padding: 20px;
 }
@@ -115,9 +117,6 @@
 .application.simple-daggerheart {
   --background: hsl(228, 40%, 4%);
   --color-border: hsl(228, 28%, 16%);
-  --simple-daggerheart-background: hsl(228, 40%, 6%);
-  --simple-daggerheart-accent: hsl(48, 75%, 77%);
-  --simple-daggerheart-accent-heavy: hsl(48, 78%, 67%);
   --color-text-primary: hsl(40, 10%, 92%);
 }
 .application.simple-daggerheart input {
@@ -125,6 +124,7 @@
   --checkbox-background-color: hsl(228, 28%, 16%);
   --checkbox-checked-color: hsl(48, 78%, 67%);
   --input-border-color: hsl(228, 28%, 16%);
+  --input-text-color: hsl(40, 10%, 92%);
 }
 
 .chat-message {

@@ -1,9 +1,12 @@
+@use '../variables.scss';
+
 .simple-daggerheart.character-sheet-stats {
   .character-stat {
-    border: 1px solid var(--color-border);
-    border-top: none;
     align-items: center;
-    padding: 4px 6px;
+    padding: 12px 0;
+    background-color: variables.$color-dark-3;
+    border-top: 1px solid var(--color-border);
+    box-shadow: 0px 2px 4px black;
 
     .character-stat-content {
       width: 100%;
@@ -11,7 +14,7 @@
       .character-stat-value {
         max-width: 50%;
         text-align: center;
-        margin-right: 4px;
+        margin: 0 4px;
       }
       .character-stat-checked {
         flex: 0;
@@ -25,6 +28,7 @@
       width: 100%;
       text-align: center;
       padding: 0;
+      margin: 12px 0 0 0;
     }
   }
 }

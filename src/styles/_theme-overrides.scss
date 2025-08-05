@@ -3,9 +3,6 @@
 .application.simple-daggerheart {
   --background: #{variables.$color-dark-1};
   --color-border: #{variables.$color-dark-2};
-  --simple-daggerheart-background: #{variables.$color-dark-3};
-  --simple-daggerheart-accent: #{variables.$color-gold-accent};
-  --simple-daggerheart-accent-heavy: #{variables.$color-gold-accent-heavy};
   --color-text-primary: #{variables.$color-light-1};
 
   input {
@@ -13,6 +10,7 @@
     --checkbox-background-color: #{variables.$color-dark-2};
     --checkbox-checked-color: #{variables.$color-gold-accent-heavy};
     --input-border-color: #{variables.$color-dark-2};
+    --input-text-color: #{variables.$color-light-1};
   }
 }
 
