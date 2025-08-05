@@ -1,10 +1,10 @@
-<fieldset class='character-sheet-statuses'>
-  <div class='flexrow gap-2'>
+<fieldset class='flexcol gap-4 character-sheet-statuses'>
+  <div class='flexrow character-status-row gap-3'>
     <div class='flexcol character-status'>
       <label class='character-status-label'>
         {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.HP'}}
       </label>
-      <div>
+      <div class='flexrow character-status-inputs'>
         <input
           class='large-input-field'
           type='number'
@@ -25,7 +25,7 @@
       <label class='character-status-label'>
         {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Stress'}}
       </label>
-      <div>
+      <div class='flexrow character-status-inputs'>
         <input
           class='large-input-field'
           type='number'
@@ -46,7 +46,7 @@
       <label class='character-status-label'>
         {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Hope'}}
       </label>
-      <div>
+      <div class='flexrow character-status-inputs'>
         <input
           class='large-input-field'
           type='number'
@@ -59,8 +59,8 @@
     </div>
   </div>
 
-  <div class='flexrow gap-2'>
-    <label class='large-input-field-label'>
+  <div class='flexrow character-status-row gap-3'>
+    <label class='character-status large-input-field-label'>
       {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Evasion'}}
       <input
         class='large-input-field'
@@ -74,7 +74,7 @@
       <label class='character-status-label'>
         {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Armor'}}
       </label>
-      <div>
+      <div class='flexrow character-status-inputs'>
         <input
           class='large-input-field'
           type='number'

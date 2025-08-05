@@ -11,7 +11,11 @@
     gap: 20px;
   }
 
-  .simple-daggerheart.character-sheet-section {
+  input {
+    margin-top: 4px;
+  }
+
+  .character-sheet-section {
     border: 1px solid transparent;
     background:
       linear-gradient(var(--background), var(--background)) padding-box,
@@ -23,9 +27,5 @@
         border-box;
     border-radius: 8px;
     padding: 20px;
-  }
-
-  input {
-    margin-top: 4px;
   }
 }
