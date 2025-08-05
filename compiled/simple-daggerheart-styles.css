@@ -31,9 +31,9 @@
   border-radius: 4px;
 }
 .simple-daggerheart .card {
-  background-color: hsl(228, 40%, 6%);
+  background-color: hsl(228, 40%, 7%);
   border-top: 1px solid var(--color-border);
-  box-shadow: 0px 2px 4px black;
+  box-shadow: 0 2px 4px black;
 }
 
 .simple-daggerheart.character-sheet-header {
@@ -47,6 +47,7 @@
   padding: 2px;
 }
 .simple-daggerheart.character-sheet-header .character-level {
+  text-align: center;
   padding: 24px 12px 12px;
   border-radius: 0 0 8px 8px;
   border-top: none;
@@ -75,25 +76,26 @@
   text-align: center;
 }
 
-.simple-daggerheart.character-sheet-traits .character-stat {
+.simple-daggerheart.character-sheet-traits .character-trait {
   align-items: center;
   padding: 12px 0.2rem;
+  border-radius: 2px;
 }
-.simple-daggerheart.character-sheet-traits .character-stat .character-stat-content {
+.simple-daggerheart.character-sheet-traits .character-trait .character-trait-content {
   width: 100%;
   justify-content: center;
 }
-.simple-daggerheart.character-sheet-traits .character-stat .character-stat-content .character-stat-value {
+.simple-daggerheart.character-sheet-traits .character-trait .character-trait-content .character-trait-value {
   max-width: 50%;
   text-align: center;
   margin: 0 4px;
 }
-.simple-daggerheart.character-sheet-traits .character-stat .character-stat-content .character-stat-checked {
+.simple-daggerheart.character-sheet-traits .character-trait .character-trait-content .character-trait-checkbox {
   flex: 0;
   width: 0;
   margin: 0;
 }
-.simple-daggerheart.character-sheet-traits .character-stat ul {
+.simple-daggerheart.character-sheet-traits .character-trait ul {
   list-style: none;
   width: 100%;
   text-align: center;
@@ -124,20 +126,45 @@
   --color-border: hsl(228, 28%, 16%);
   --color-text-primary: hsl(40, 10%, 92%);
 }
-.application.simple-daggerheart input {
+.application.simple-daggerheart .window-content input {
   --input-background-color: hsl(228, 28%, 16%);
   --checkbox-background-color: hsl(228, 28%, 16%);
   --checkbox-checked-color: hsl(48, 78%, 67%);
   --input-border-color: transparent;
   --input-text-color: hsl(40, 10%, 92%);
-  --input-focus-outline-color: hsl(228, 20%, 60%);
+  --input-focus-outline-color: hsl(40, 20%, 80%);
+  transition: 0.2s;
 }
-.application.simple-daggerheart button {
+.application.simple-daggerheart .window-content button {
   --button-text-color: hsl(40, 10%, 92%);
-  --button-border-color: hsl(48, 78%, 67%);
+  --button-border-color: transparent;
+  --button-background-color: hsl(228, 28%, 16%);
   --button-hover-text-color: hsl(40, 10%, 92%);
-  --button-hover-background-color: transparent;
-  --button-hover-border-color: hsl(48, 78%, 67%);
+  --button-hover-background-color: hsl(228, 28%, 16%);
+  --button-hover-border-color: transparent;
+  --button-focus-outline-color: transparent;
+  padding: 6px 0.6rem;
+  margin: 4px;
+  box-shadow: 0 1px 1px 1px black;
+  border-top: 1px solid hsl(228, 28%, 30%);
+  height: auto;
+  transition: none;
+}
+.application.simple-daggerheart .window-content button:active {
+  background-color: hsl(228, 40%, 7%);
+  border-top: 1px solid hsl(228, 28%, 16%);
+  position: relative;
+  top: 1px;
+  box-shadow: 0 0 1px 1px black;
+}
+.application.simple-daggerheart .window-content button:focus:not(:active)::after {
+  position: relative;
+  content: " ";
+  width: 110%;
+  height: 110%;
+  left: -10%;
+  top: -10%;
+  border: 1px dashed hsl(40, 20%, 80%);
 }
 
 .chat-message {
