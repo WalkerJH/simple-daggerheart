@@ -14,7 +14,7 @@ export class SimpleDHCharacterSheet extends api.HandlebarsApplicationMixin(
       closeOnSubmit: false
     },
     position: {
-      width: 700,
+      width: 800,
       height: 800
     },
     window: {

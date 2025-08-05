@@ -1,17 +1,26 @@
 .simple-daggerheart.character-sheet-statuses {
   .character-stat {
+    border: 1px solid var(--color-border);
+    border-top: none;
     align-items: center;
+    margin: 4px;
+    padding: 4px;
 
     .character-stat-header {
       width: 100%;
       justify-content: space-between;
+      span,
+      input {
+        margin: 3px;
+      }
 
       input {
         max-width: min-content;
       }
     }
     .character-stat-input {
-      width: 80%;
+      width: 60%;
+      text-align: center;
     }
     ul {
       list-style: none;

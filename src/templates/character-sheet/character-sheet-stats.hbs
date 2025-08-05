@@ -1,8 +1,8 @@
-<fieldset class='flexrow gap-3 character-sheet-statuses'>
+<fieldset class='flexrow character-sheet-statuses'>
   {{#each this.traits as |trait|}}
     <div class='flexcol character-stat'>
       <div class='flexrow character-stat-header'>
-        {{localize trait.label}}
+        <span>{{localize trait.label}}</span>
 
         <input
           type='checkbox'

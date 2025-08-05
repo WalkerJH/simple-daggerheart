@@ -61,17 +61,26 @@
 }
 
 .simple-daggerheart.character-sheet-statuses .character-stat {
+  border: 1px solid var(--color-border);
+  border-top: none;
   align-items: center;
+  margin: 4px;
+  padding: 4px;
 }
 .simple-daggerheart.character-sheet-statuses .character-stat .character-stat-header {
   width: 100%;
   justify-content: space-between;
 }
+.simple-daggerheart.character-sheet-statuses .character-stat .character-stat-header span,
+.simple-daggerheart.character-sheet-statuses .character-stat .character-stat-header input {
+  margin: 3px;
+}
 .simple-daggerheart.character-sheet-statuses .character-stat .character-stat-header input {
   max-width: min-content;
 }
 .simple-daggerheart.character-sheet-statuses .character-stat .character-stat-input {
-  width: 80%;
+  width: 60%;
+  text-align: center;
 }
 .simple-daggerheart.character-sheet-statuses .character-stat ul {
   list-style: none;
@@ -81,7 +90,7 @@
 }
 
 .simple-daggerheart.character-sheet {
-  min-width: 700px;
+  min-width: 800px;
   min-height: 800px;
 }
 .simple-daggerheart.character-sheet .window-content {
