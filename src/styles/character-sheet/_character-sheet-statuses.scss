@@ -1,28 +1,27 @@
 @use '../variables.scss';
 
-.simple-daggerheart.character-sheet-statuses {
-  .character-status-row {
-    justify-content: center;
+.simple-daggerheart .character-sheet-statuses {
+  min-width: 55%;
 
-    .character-status {
-      flex-grow: 0;
-      padding: 12px;
-      border-radius: 8px;
+  .character-status {
+    padding: 12px;
+    border-radius: 8px;
+    align-items: center;
+    flex-grow: 0;
 
-      .character-status-inputs {
-        width: max-content;
-        justify-content: center;
+    .character-status-inputs {
+      width: max-content;
+      justify-content: center;
 
-        .divider {
-          max-width: 2rem;
-          text-align: center;
-          font-size: variables.$font-size-large;
-        }
-      }
-
-      .character-status-label {
+      .divider {
+        max-width: 2rem;
         text-align: center;
+        font-size: variables.$font-size-large;
       }
+    }
+
+    .character-status-label {
+      text-align: center;
     }
   }
 }

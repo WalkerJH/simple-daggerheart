@@ -1,3 +1,22 @@
-<fieldset class='character-sheet-experiences'>
-  {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Experience'}}
+<fieldset
+  class='flexcol gap-2 character-sheet-experiences character-sheet-section'
+>
+  <label class='character-experiences-header'>{{localize
+      'SIMPLE_DAGGERHEART.CharacterSheet.Experience'
+    }}</label>
+  {{#each this.experiences as |experience|}}
+    <div class='flexrow gap-2 character-experience'>
+      <input
+        type='text'
+        name='{{concat experience.value ".value"}}'
+        value='{{trait.value}}'
+      />
+      <input
+        class='character-experience-bonus'
+        type='number'
+        name='{{concat experience.value ".value"}}'
+        value='{{trait.value}}'
+      />
+    </div>
+  {{/each}}
 </fieldset>

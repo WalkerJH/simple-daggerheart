@@ -4,7 +4,6 @@ import { SimpleDHCharacterSheet } from './sheets/SimpleDHCharacterSheet.js';
 import { SimpleDHCharacter } from './data/SimpleDHCharacter.js';
 
 const { Items, Actors } = foundry.documents.collections;
-// const { loadTemplates } = foundry.applications.handlebars;
 
 function setupConfig() {
   CONFIG.SIMPLE_DAGGERHEART_SYSTEM = SIMPLE_DAGGERHEART_SYSTEM;
@@ -32,11 +31,15 @@ function registerSheets() {
   });
 }
 
-// function preloadTemplates() {
-//   const templatePaths = [];
-
-//   return loadTemplates(templatePaths);
-// }
+async function preloadTemplates() {
+  const { loadTemplates } = foundry.applications.handlebars;
+  await loadTemplates({
+    'simple-daggerheart.character-sheet.statuses':
+      'systems/simple-daggerheart/src/templates/character-sheet/character-sheet-statuses.hbs',
+    'simple-daggerheart.character-sheet.experiences':
+      'systems/simple-daggerheart/src/templates/character-sheet/character-sheet-experiences.hbs'
+  });
+}
 
 Hooks.once('init', async () => {
   console.log(
@@ -46,5 +49,5 @@ Hooks.once('init', async () => {
   setupConfig();
   registerDataModels();
   registerSheets();
-  // preloadTemplates();
+  preloadTemplates();
 });

@@ -1,5 +1,3 @@
-import { DataUtils } from '../utils/DataUtils.js';
-
 const { api, sheets } = foundry.applications;
 
 export class SimpleDHCharacterSheet extends api.HandlebarsApplicationMixin(
@@ -36,15 +34,10 @@ export class SimpleDHCharacterSheet extends api.HandlebarsApplicationMixin(
       template: `${this.templatePrefix}/character-sheet-traits.hbs`,
       classes: ['simple-daggerheart', 'character-sheet-section']
     },
-    statuses: {
-      id: 'statuses',
-      template: `${this.templatePrefix}/character-sheet-statuses.hbs`,
-      classes: ['simple-daggerheart', 'character-sheet-section']
-    },
-    experiences: {
-      id: 'experiences',
-      template: `${this.templatePrefix}/character-sheet-experiences.hbs`,
-      classes: ['simple-daggerheart', 'character-sheet-section']
+    statColumns: {
+      id: 'stat-columns',
+      template: `${this.templatePrefix}/character-sheet-stat-columns.hbs`,
+      classes: ['simple-daggerheart']
     }
   };
 
@@ -67,6 +60,12 @@ export class SimpleDHCharacterSheet extends api.HandlebarsApplicationMixin(
         marked: this.document.system.traits[traitTemplate.dataKey].marked
       })
     );
+
+    context.experiences = Array.from({ length: 5 }).map((_value, index) => ({
+      index,
+      value: this.document.system.experiences[index]?.value,
+      bonus: this.document.system.experiences[index]?.bonus
+    }));
 
     return context;
   }

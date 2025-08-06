@@ -10,15 +10,18 @@
 .simple-daggerheart .gap-4 {
   gap: 24px;
 }
+.simple-daggerheart .align-stretch {
+  align-items: stretch;
+}
 
 .simple-daggerheart .large-input-field,
 .simple-daggerheart .large-text-container {
-  width: 3.2rem;
-  max-width: 3.2rem;
-  min-width: 3.2rem;
+  width: 3rem;
+  max-width: 3rem;
+  min-width: 3rem;
   height: 3rem;
   text-align: center;
-  font-size: 1.7rem;
+  font-size: 1.5rem;
 }
 .simple-daggerheart .large-input-field-label {
   max-width: min-content;
@@ -55,24 +58,26 @@
   top: -24px;
 }
 
-.simple-daggerheart.character-sheet-statuses .character-status-row {
+.simple-daggerheart .character-sheet-statuses {
   justify-content: center;
+  min-width: 55%;
 }
-.simple-daggerheart.character-sheet-statuses .character-status-row .character-status {
-  flex-grow: 0;
+.simple-daggerheart .character-sheet-statuses .character-status {
   padding: 12px;
   border-radius: 8px;
+  align-items: center;
+  flex-grow: 0;
 }
-.simple-daggerheart.character-sheet-statuses .character-status-row .character-status .character-status-inputs {
+.simple-daggerheart .character-sheet-statuses .character-status .character-status-inputs {
   width: max-content;
   justify-content: center;
 }
-.simple-daggerheart.character-sheet-statuses .character-status-row .character-status .character-status-inputs .divider {
+.simple-daggerheart .character-sheet-statuses .character-status .character-status-inputs .divider {
   max-width: 2rem;
   text-align: center;
-  font-size: 1.7rem;
+  font-size: 1.5rem;
 }
-.simple-daggerheart.character-sheet-statuses .character-status-row .character-status .character-status-label {
+.simple-daggerheart .character-sheet-statuses .character-status .character-status-label {
   text-align: center;
 }
 
@@ -101,6 +106,25 @@
   text-align: center;
   padding: 0;
   margin: 12px 0 0 0;
+}
+
+.simple-daggerheart .character-sheet-experiences .character-experience {
+  position: relative;
+}
+.simple-daggerheart .character-sheet-experiences .character-experience::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 50%;
+  background-color: hsl(228, 40%, 7%);
+  margin-top: 4px;
+}
+.simple-daggerheart .character-sheet-experiences .character-experience input {
+  z-index: 2;
+}
+.simple-daggerheart .character-sheet-experiences .character-experience .character-experience-bonus {
+  max-width: 2rem;
+  text-align: center;
 }
 
 .simple-daggerheart.character-sheet {

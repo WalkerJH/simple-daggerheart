@@ -1,5 +1,7 @@
-<fieldset class='flexcol gap-3 character-sheet-statuses'>
-  <div class='flexrow character-status-row gap-3'>
+<fieldset
+  class='flexcol gap-3 character-sheet-statuses character-sheet-section'
+>
+  <div class='flexrow gap-3'>
     <div class='flexcol character-status card'>
       <label class='character-status-label'>
         {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.HP'}}
@@ -23,6 +25,24 @@
 
     <div class='flexcol character-status card'>
       <label class='character-status-label'>
+        {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Hope'}}
+      </label>
+      <div class='flexrow gap-2 character-status-inputs'>
+        <input
+          class='large-input-field'
+          type='number'
+          name='system.hope'
+          value='{{document.system.hope}}'
+        />
+        <span class='divider'>/</span>
+        <span class='large-text-container'>6</span>
+      </div>
+    </div>
+  </div>
+
+  <div class='flexrow gap-3'>
+    <div class='flexcol character-status card'>
+      <label class='character-status-label'>
         {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Stress'}}
       </label>
       <div class='flexrow gap-2 character-status-inputs'>
@@ -42,24 +62,6 @@
       </div>
     </div>
 
-    <div class='flexcol character-status card'>
-      <label class='character-status-label'>
-        {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Hope'}}
-      </label>
-      <div class='flexrow gap-2 character-status-inputs'>
-        <input
-          class='large-input-field'
-          type='number'
-          name='system.hope'
-          value='{{document.system.hope}}'
-        />
-        <span class='divider'>/</span>
-        <span class='large-text-container'>6</span>
-      </div>
-    </div>
-  </div>
-
-  <div class='flexrow character-status-row gap-3'>
     <label class='character-status large-input-field-label card'>
       {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Evasion'}}
       <input
@@ -90,28 +92,28 @@
         />
       </div>
     </div>
+  </div>
 
-    <div class='flexcol character-status card'>
-      <label class='character-status-label'>
-        {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.ArmorThresholds'}}
-      </label>
-      <div class='flexrow gap-3 character-status-inputs'>
-        <button class='damage-button'>-1 HP</button>
-        <input
-          class='large-input-field'
-          type='number'
-          name='system.armor.minorThreshold'
-          value='{{document.system.armor.minorThreshold}}'
-        />
-        <button class='damage-button'>-2 HP</button>
-        <input
-          class='large-input-field'
-          type='number'
-          name='system.armor.majorThreshold'
-          value='{{document.system.armor.majorThreshold}}'
-        />
-        <button class='damage-button'>-3 HP</button>
-      </div>
+  <div class='flexcol character-status card'>
+    <label class='character-status-label'>
+      {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.ArmorThresholds'}}
+    </label>
+    <div class='flexrow gap-3 character-status-inputs'>
+      <button class='damage-button'>-1 HP</button>
+      <input
+        class='large-input-field'
+        type='number'
+        name='system.armor.minorThreshold'
+        value='{{document.system.armor.minorThreshold}}'
+      />
+      <button class='damage-button'>-2 HP</button>
+      <input
+        class='large-input-field'
+        type='number'
+        name='system.armor.majorThreshold'
+        value='{{document.system.armor.majorThreshold}}'
+      />
+      <button class='damage-button'>-3 HP</button>
     </div>
   </div>
 </fieldset>
