@@ -5,10 +5,10 @@
 
   .character-img {
     cursor: pointer;
-    max-width: 120px;
-    max-height: 120px;
+    max-width: 102px;
+    max-height: 102px;
     border: 1px solid variables.$color-dark-2;
-    padding: 2px;
+    border-radius: 4px;
   }
 
   .character-level {

@@ -1,7 +1,7 @@
 <fieldset
   class='flexcol gap-3 character-sheet-statuses character-sheet-section'
 >
-  <div class='flexrow gap-3'>
+  <div class='flexrow gap-3 character-statuses-row'>
     <div class='flexcol character-status card'>
       <label class='character-status-label'>
         {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.HP'}}
@@ -40,7 +40,7 @@
     </div>
   </div>
 
-  <div class='flexrow gap-3'>
+  <div class='flexrow gap-3 character-statuses-row'>
     <div class='flexcol character-status card'>
       <label class='character-status-label'>
         {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Stress'}}
@@ -61,16 +61,6 @@
         />
       </div>
     </div>
-
-    <label class='character-status large-input-field-label card'>
-      {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Evasion'}}
-      <input
-        class='large-input-field'
-        type='number'
-        name='system.evasion'
-        value='{{document.system.evasion}}'
-      />
-    </label>
 
     <div class='flexcol character-status card'>
       <label class='character-status-label'>
@@ -94,26 +84,38 @@
     </div>
   </div>
 
-  <div class='flexcol character-status card'>
-    <label class='character-status-label'>
-      {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.ArmorThresholds'}}
+  <div class='flexrow gap-3 character-status-row'>
+    <label class='character-status large-input-field-label card'>
+      {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Evasion'}}
+      <input
+        class='large-input-field'
+        type='number'
+        name='system.evasion'
+        value='{{document.system.evasion}}'
+      />
     </label>
-    <div class='flexrow gap-3 character-status-inputs'>
-      <button class='damage-button'>-1 HP</button>
-      <input
-        class='large-input-field'
-        type='number'
-        name='system.armor.minorThreshold'
-        value='{{document.system.armor.minorThreshold}}'
-      />
-      <button class='damage-button'>-2 HP</button>
-      <input
-        class='large-input-field'
-        type='number'
-        name='system.armor.majorThreshold'
-        value='{{document.system.armor.majorThreshold}}'
-      />
-      <button class='damage-button'>-3 HP</button>
+
+    <div class='flexcol character-status card'>
+      <label class='character-status-label'>
+        {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.ArmorThresholds'}}
+      </label>
+      <div class='flexrow gap-2 character-status-inputs'>
+        <button class='damage-button'>-1 HP</button>
+        <input
+          class='large-input-field'
+          type='number'
+          name='system.armor.minorThreshold'
+          value='{{document.system.armor.minorThreshold}}'
+        />
+        <button class='damage-button'>-2 HP</button>
+        <input
+          class='large-input-field'
+          type='number'
+          name='system.armor.majorThreshold'
+          value='{{document.system.armor.majorThreshold}}'
+        />
+        <button class='damage-button'>-3 HP</button>
+      </div>
     </div>
   </div>
 </fieldset>

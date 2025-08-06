@@ -1,13 +1,16 @@
 @use '../variables.scss';
 
 .simple-daggerheart .character-sheet-statuses {
-  min-width: 55%;
+  min-width: 32rem;
+
+  .character-statuses-row {
+    justify-content: space-between;
+  }
 
   .character-status {
     padding: 12px;
     border-radius: 8px;
     align-items: center;
-    flex-grow: 0;
 
     .character-status-inputs {
       width: max-content;

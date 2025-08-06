@@ -44,10 +44,10 @@
 }
 .simple-daggerheart.character-sheet-header .character-img {
   cursor: pointer;
-  max-width: 120px;
-  max-height: 120px;
+  max-width: 102px;
+  max-height: 102px;
   border: 1px solid hsl(228, 28%, 16%);
-  padding: 2px;
+  border-radius: 4px;
 }
 .simple-daggerheart.character-sheet-header .character-level {
   text-align: center;
@@ -59,14 +59,15 @@
 }
 
 .simple-daggerheart .character-sheet-statuses {
-  justify-content: center;
-  min-width: 55%;
+  min-width: 32rem;
+}
+.simple-daggerheart .character-sheet-statuses .character-statuses-row {
+  justify-content: space-between;
 }
 .simple-daggerheart .character-sheet-statuses .character-status {
   padding: 12px;
   border-radius: 8px;
   align-items: center;
-  flex-grow: 0;
 }
 .simple-daggerheart .character-sheet-statuses .character-status .character-status-inputs {
   width: max-content;
@@ -108,6 +109,9 @@
   margin: 12px 0 0 0;
 }
 
+.simple-daggerheart .character-sheet-experiences {
+  min-width: 15rem;
+}
 .simple-daggerheart .character-sheet-experiences .character-experience {
   position: relative;
 }
@@ -128,8 +132,8 @@
 }
 
 .simple-daggerheart.character-sheet {
-  min-width: 800px;
-  max-width: 800px;
+  min-width: 840px;
+  max-width: 840px;
 }
 .simple-daggerheart.character-sheet .window-content {
   padding: 24px;
