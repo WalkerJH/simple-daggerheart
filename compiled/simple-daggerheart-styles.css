@@ -51,7 +51,7 @@
   height: 3px;
   top: 0;
   left: 25%;
-  border-radius: 0 0 3px 3px;
+  border-radius: 0 0 6px 6px;
 }
 .simple-daggerheart .card.card-red::before {
   background: hsla(3, 70%, 60%, 0.6);
@@ -144,20 +144,6 @@
 
 .simple-daggerheart .character-sheet-experiences {
   min-width: 15rem;
-}
-.simple-daggerheart .character-sheet-experiences .character-experience {
-  position: relative;
-}
-.simple-daggerheart .character-sheet-experiences .character-experience::before {
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 50%;
-  background-color: hsl(228, 40%, 7%);
-  margin-top: 4px;
-}
-.simple-daggerheart .character-sheet-experiences .character-experience input {
-  z-index: 2;
 }
 .simple-daggerheart .character-sheet-experiences .character-experience .character-experience-bonus {
   max-width: 2rem;

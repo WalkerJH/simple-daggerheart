@@ -2,23 +2,8 @@
 
 .simple-daggerheart .character-sheet-experiences {
   min-width: 15rem;
-  .character-experiences-header {
-  }
 
   .character-experience {
-    position: relative;
-    &::before {
-      position: absolute;
-      content: '';
-      width: 100%;
-      height: 50%;
-      background-color: variables.$color-dark-3;
-      margin-top: 4px;
-    }
-
-    input {
-      z-index: 2;
-    }
     .character-experience-bonus {
       max-width: 2rem;
       text-align: center;

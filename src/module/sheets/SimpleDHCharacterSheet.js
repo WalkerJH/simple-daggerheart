@@ -49,22 +49,26 @@ export class SimpleDHCharacterSheet extends api.HandlebarsApplicationMixin(
   async _prepareContext(_options) {
     const context = await super._prepareContext(_options);
 
-    context.traits = CONFIG.SIMPLE_DAGGERHEART_SYSTEM.character.traits.map(
-      (traitTemplate) => ({
-        baseName: `system.traits.${traitTemplate.dataKey}`,
-        label: `${traitTemplate.localizationKey}.Label`,
-        examples: Array.from({ length: 3 }).map(
-          (_val, index) =>
-            `${traitTemplate.localizationKey}.Example${index + 1}`
-        ),
-        value: this.document.system.traits[traitTemplate.dataKey].value,
-        marked: this.document.system.traits[traitTemplate.dataKey].marked
-      })
+    context.traits = Object.entries(this.document.system.traits).map(
+      ([traitKey, traitData]) => {
+        const traitConfig =
+          CONFIG.SIMPLE_DAGGERHEART_SYSTEM.character.traits[traitKey];
+        return {
+          baseName: `system.traits.${traitKey}`,
+          label: `${traitConfig.localizationKey}.Label`,
+          examples: Array.from({ length: 3 }).map(
+            (_val, index) =>
+              `${traitConfig.localizationKey}.Example${index + 1}`
+          ),
+          value: traitData.value,
+          marked: traitData.marked
+        };
+      }
     );
 
     context.experiences = Array.from({ length: 5 }).map((_value, index) => ({
       index,
-      value: this.document.system.experiences[index]?.value,
+      name: this.document.system.experiences[index]?.name,
       bonus: this.document.system.experiences[index]?.bonus
     }));
 

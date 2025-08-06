@@ -1,31 +1,25 @@
 export const SIMPLE_DAGGERHEART_SYSTEM = {
   id: 'simple-daggerheart',
   character: {
-    traits: [
-      {
-        dataKey: 'agility',
+    traits: {
+      agility: {
         localizationKey: 'SIMPLE_DAGGERHEART.CharacterSheet.Agility'
       },
-      {
-        dataKey: 'strength',
+      strength: {
         localizationKey: 'SIMPLE_DAGGERHEART.CharacterSheet.Strength'
       },
-      {
-        dataKey: 'finesse',
+      finesse: {
         localizationKey: 'SIMPLE_DAGGERHEART.CharacterSheet.Finesse'
       },
-      {
-        dataKey: 'instinct',
+      instinct: {
         localizationKey: 'SIMPLE_DAGGERHEART.CharacterSheet.Instinct'
       },
-      {
-        dataKey: 'presence',
+      presence: {
         localizationKey: 'SIMPLE_DAGGERHEART.CharacterSheet.Presence'
       },
-      {
-        dataKey: 'knowledge',
+      knowledge: {
         localizationKey: 'SIMPLE_DAGGERHEART.CharacterSheet.Knowledge'
       }
-    ]
+    }
   }
 };
