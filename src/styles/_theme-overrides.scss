@@ -6,6 +6,8 @@
   --color-text-primary: #{variables.$color-light-1};
 
   .window-content {
+    overflow-y: scroll;
+
     input {
       --input-background-color: #{variables.$color-dark-2};
       --checkbox-background-color: #{variables.$color-dark-2};
@@ -47,7 +49,7 @@
       &:focus-visible::after {
         position: absolute;
         display: block;
-        content: ' ';
+        content: '';
         width: 130%;
         height: 140%;
         border-radius: 4px;

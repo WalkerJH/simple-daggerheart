@@ -13,10 +13,11 @@ export class SimpleDHCharacterSheet extends api.HandlebarsApplicationMixin(
     },
     position: {
       width: 840,
-      height: 820
+      height: 840
     },
     window: {
-      resizable: true
+      resizable: true,
+      scrollable: true
     }
   };
 

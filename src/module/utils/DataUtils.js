@@ -1,4 +1,5 @@
-const { BooleanField, NumberField, SchemaField } = foundry.data.fields;
+const { BooleanField, NumberField, SchemaField, ArrayField } =
+  foundry.data.fields;
 
 const createResourceField = (options) => {
   const { initial, min, max } = options ?? {};
@@ -19,6 +20,14 @@ const createAttributeField = () => {
       min: -99,
       integer: true
     }),
+    modifications: new ArrayField(
+      new NumberField({
+        initial: 0,
+        max: 99,
+        min: -99,
+        integer: true
+      })
+    ),
     marked: new BooleanField({ initial: false })
   });
 };

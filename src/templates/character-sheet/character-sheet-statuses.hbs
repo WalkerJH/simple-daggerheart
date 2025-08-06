@@ -2,7 +2,7 @@
   class='flexcol gap-3 character-sheet-statuses character-sheet-section'
 >
   <div class='flexrow gap-3 character-statuses-row'>
-    <div class='flexcol character-status card'>
+    <div class='flexcol character-status card card-red'>
       <label class='character-status-label'>
         {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.HP'}}
       </label>
@@ -23,7 +23,7 @@
       </div>
     </div>
 
-    <div class='flexcol character-status card'>
+    <div class='flexcol character-status card card-gold'>
       <label class='character-status-label'>
         {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Hope'}}
       </label>
@@ -41,7 +41,7 @@
   </div>
 
   <div class='flexrow gap-3 character-statuses-row'>
-    <div class='flexcol character-status card'>
+    <div class='flexcol character-status card card-blue'>
       <label class='character-status-label'>
         {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Stress'}}
       </label>
@@ -62,7 +62,7 @@
       </div>
     </div>
 
-    <div class='flexcol character-status card'>
+    <div class='flexcol character-status card card-metallic'>
       <label class='character-status-label'>
         {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Armor'}}
       </label>
@@ -84,18 +84,22 @@
     </div>
   </div>
 
-  <div class='flexrow gap-3 character-status-row'>
-    <label class='character-status large-input-field-label card'>
-      {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Evasion'}}
-      <input
-        class='large-input-field'
-        type='number'
-        name='system.evasion'
-        value='{{document.system.evasion}}'
-      />
-    </label>
+  <div class='flexrow gap-3'>
+    <div class='flexcol character-status card card-green'>
+      <label class='large-input-field-label'>
+        {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Evasion'}}
+        <input
+          class='large-input-field'
+          type='number'
+          name='system.evasion'
+          value='{{document.system.evasion}}'
+        />
+      </label>
+    </div>
 
-    <div class='flexcol character-status card'>
+    <div
+      class='flexcol character-status character-thresholds card card-metallic'
+    >
       <label class='character-status-label'>
         {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.ArmorThresholds'}}
       </label>
