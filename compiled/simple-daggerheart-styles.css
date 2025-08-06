@@ -54,19 +54,19 @@
   border-radius: 0 0 3px 3px;
 }
 .simple-daggerheart .card.card-red::before {
-  background: hsla(3, 70%, 55%, 0.5);
+  background: hsla(3, 70%, 60%, 0.6);
 }
 .simple-daggerheart .card.card-gold::before {
   background: linear-gradient(to right, hsl(48, 75%, 77%), hsl(48, 78%, 67%));
 }
 .simple-daggerheart .card.card-green::before {
-  background: hsla(93, 70%, 60%, 0.5);
+  background: hsla(93, 70%, 60%, 0.6);
 }
 .simple-daggerheart .card.card-blue::before {
-  background: hsla(228, 70%, 60%, 0.5);
+  background: hsla(228, 70%, 60%, 0.6);
 }
 .simple-daggerheart .card.card-metallic::before {
-  background: linear-gradient(to right, hsla(228, 20%, 95%, 0.8), hsla(228, 20%, 95%, 0.4));
+  background: linear-gradient(to right, hsla(228, 20%, 95%, 0.6), hsla(228, 20%, 95%, 0.4));
 }
 
 .simple-daggerheart.character-sheet-header {
