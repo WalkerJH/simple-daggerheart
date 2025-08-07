@@ -36,10 +36,46 @@ export class SimpleDHCharacterSheet extends api.HandlebarsApplicationMixin(
       template: `${this.templatePrefix}/character-sheet-traits.hbs`,
       classes: ['simple-daggerheart', 'character-sheet-section']
     },
+    tabs: {
+      template: 'templates/generic/tab-navigation.hbs',
+      classes: ['simple-daggerheart']
+    },
     statColumns: {
       id: 'stat-columns',
       template: `${this.templatePrefix}/character-sheet-stat-columns.hbs`,
       classes: ['simple-daggerheart']
+    },
+    inventory: {
+      id: 'inventory',
+      template: `${this.templatePrefix}/character-sheet-inventory.hbs`,
+      classes: ['simple-daggerheart', 'character-sheet-section']
+    },
+    cards: {
+      id: 'cards',
+      template: `${this.templatePrefix}/character-sheet-cards.hbs`,
+      classes: ['simple-daggerheart', 'character-sheet-section']
+    }
+  };
+
+  static TABS = {
+    primary: {
+      tabs: [
+        {
+          id: 'status',
+          icon: 'fas fa-user',
+          tooltip: 'SIMPLE_DAGGERHEART.CharacterSheet.Tabs.Status'
+        },
+        {
+          id: 'inventory',
+          icon: 'fas fa-backpack',
+          tooltip: 'SIMPLE_DAGGERHEART.CharacterSheet.Tabs.Inventory'
+        },
+        {
+          id: 'cards',
+          icon: 'fas fa-cards-blank',
+          tooltip: 'SIMPLE_DAGGERHEART.CharacterSheet.Tabs.Cards'
+        }
+      ]
     }
   };
 
@@ -49,6 +85,8 @@ export class SimpleDHCharacterSheet extends api.HandlebarsApplicationMixin(
 
   async _prepareContext(_options) {
     const context = await super._prepareContext(_options);
+
+    context.tabs - this._prepareTabs('primary');
 
     context.traits = Object.entries(this.document.system.traits).map(
       ([traitKey, traitData]) => {

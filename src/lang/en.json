@@ -51,6 +51,11 @@
         "Example1": "Recall",
         "Example2": "Analyze",
         "Example3": "Comprehend"
+      },
+      "Tabs": {
+        "Status": "Status",
+        "Inventory": "Inventory",
+        "Cards": "Cards"
       }
     }
   }
