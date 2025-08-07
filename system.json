@@ -27,8 +27,17 @@
     "distance": 5,
     "units": "ft"
   },
-  "primaryTokenAttribute": "health",
-  "secondaryTokenAttribute": "power",
+  "documentTypes": {
+    "Actor": {
+      "character": {}
+    },
+    "Item": {
+      "card": {},
+      "item": {}
+    }
+  },
+  "primaryTokenAttribute": "hp",
+  "secondaryTokenAttribute": "hope",
   "url": "https://github.com/WalkerJH/simple-daggerheart",
   "manifest": "https://raw.githubusercontent.com//WalkerJH/simple-daggerheart/master/system.json",
   "download": "https://raw.githubusercontent.com//WalkerJH/simple-daggerheart/releases/download/system.zip"

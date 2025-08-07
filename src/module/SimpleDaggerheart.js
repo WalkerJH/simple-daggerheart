@@ -7,13 +7,10 @@ const { Items, Actors } = foundry.documents.collections;
 
 function setupConfig() {
   CONFIG.SIMPLE_DAGGERHEART_SYSTEM = SIMPLE_DAGGERHEART_SYSTEM;
-  CONFIG.INIT = true;
 }
 
 function registerDataModels() {
-  Object.assign(CONFIG.Actor.dataModels, {
-    character: SimpleDHCharacter
-  });
+  CONFIG.Actor.dataModels.character = SimpleDHCharacter;
 }
 
 function registerSheets() {

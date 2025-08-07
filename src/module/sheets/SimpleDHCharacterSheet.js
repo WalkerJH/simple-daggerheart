@@ -11,6 +11,7 @@ export class SimpleDHCharacterSheet extends api.HandlebarsApplicationMixin(
       submitOnChange: true,
       closeOnSubmit: false
     },
+    actions: { modifyHP: this.modifyHP },
     position: {
       width: 840,
       height: 840
@@ -73,5 +74,12 @@ export class SimpleDHCharacterSheet extends api.HandlebarsApplicationMixin(
     }));
 
     return context;
+  }
+
+  static async modifyHP(_, button) {
+    const newHPValue =
+      this.document.system.hp + parseInt(button.dataset.amount, 10);
+    this.document.system.hp = newHPValue >= 0 ? newHPValue : 0;
+    this.render();
   }
 }
