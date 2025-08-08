@@ -75,7 +75,8 @@ export class SimpleDHCharacterSheet extends api.HandlebarsApplicationMixin(
           icon: 'fas fa-cards-blank',
           tooltip: 'SIMPLE_DAGGERHEART.CharacterSheet.Tabs.Cards'
         }
-      ]
+      ],
+      initial: 'status'
     }
   };
 
@@ -86,7 +87,7 @@ export class SimpleDHCharacterSheet extends api.HandlebarsApplicationMixin(
   async _prepareContext(_options) {
     const context = await super._prepareContext(_options);
 
-    context.tabs - this._prepareTabs('primary');
+    context.tabs = this._prepareTabs('primary');
 
     context.traits = Object.entries(this.document.system.traits).map(
       ([traitKey, traitData]) => {
