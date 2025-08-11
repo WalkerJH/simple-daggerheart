@@ -175,6 +175,7 @@
   --background: hsl(228, 40%, 4%);
   --color-border: hsl(228, 28%, 16%);
   --color-text-primary: hsl(40, 10%, 92%);
+  --color-text-secondary: hsl(40, 10%, 92%);
 }
 .application.simple-daggerheart .window-content {
   overflow-y: scroll;
@@ -222,6 +223,9 @@
   height: 140%;
   border-radius: 4px;
   border: 1px solid hsl(40, 20%, 80%);
+}
+.application.simple-daggerheart .window-content nav.tabs {
+  border: none;
 }
 
 .chat-message {

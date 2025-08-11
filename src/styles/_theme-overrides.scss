@@ -4,6 +4,7 @@
   --background: #{variables.$color-dark-1};
   --color-border: #{variables.$color-dark-2};
   --color-text-primary: #{variables.$color-light-1};
+  --color-text-secondary: #{variables.$color-light-1};
 
   .window-content {
     overflow-y: scroll;
@@ -55,6 +56,10 @@
         border-radius: 4px;
         border: 1px solid variables.$color-light-2;
       }
+    }
+
+    nav.tabs {
+      border: none;
     }
   }
 }
