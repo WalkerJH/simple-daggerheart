@@ -1,4 +1,4 @@
-<section class='flexcol gap-2 character-sheet-experiences'>
+<section class='card flexcol gap-2 character-sheet-experiences'>
   <label class='character-experiences-header'>{{localize
       'SIMPLE_DAGGERHEART.CharacterSheet.Experience'
     }}</label>
@@ -15,7 +15,11 @@
         name='{{concat "system.experiences." index ".bonus"}}'
         value='{{experience.bonus}}'
       />
-      <button data-action='removeExperience' data-index='{{index}}'>-</button>
+      <button
+        class='remove-experience-button'
+        data-action='removeExperience'
+        data-index='{{index}}'
+      ><a class='fas fa-x'></a></button>
     </div>
   {{/each}}
   <button data-action='addExperience'>Add Experience</button>

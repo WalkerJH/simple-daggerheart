@@ -1,0 +1,15 @@
+@use '../variables.scss';
+
+.simple-daggerheart .character-sheet-features {
+  padding: 12px;
+  border-radius: 3px;
+
+  .character-feature {
+    .character-feature-name {
+      max-width: 8rem;
+    }
+    .remove-feature-button {
+      max-width: min-content;
+    }
+  }
+}

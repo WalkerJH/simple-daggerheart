@@ -66,7 +66,7 @@
 .simple-daggerheart.character-sheet-traits .character-trait {
   align-items: center;
   padding: 12px 0.2rem;
-  border-radius: 2px;
+  border-radius: 3px;
 }
 .simple-daggerheart.character-sheet-traits .character-trait .character-trait-content {
   width: 100%;
@@ -123,23 +123,36 @@
 .simple-daggerheart .character-sheet-statuses .character-status .character-status-label {
   text-align: center;
 }
-.simple-daggerheart .character-sheet-statuses .character-status.character-thresholds {
-  min-width: max-content;
+
+.simple-daggerheart .character-sheet-features {
+  padding: 12px;
+  border-radius: 3px;
+}
+.simple-daggerheart .character-sheet-features .character-feature .character-feature-name {
+  max-width: 8rem;
+}
+.simple-daggerheart .character-sheet-features .character-feature .remove-feature-button {
+  max-width: min-content;
 }
 
 .simple-daggerheart .character-sheet-experiences {
-  min-width: 15rem;
+  padding: 12px;
+  border-radius: 3px;
 }
 .simple-daggerheart .character-sheet-experiences .character-experience .character-experience-bonus {
   max-width: 3rem;
   text-align: center;
+}
+.simple-daggerheart .character-sheet-experiences .character-experience .remove-experience-button {
+  max-width: min-content;
 }
 
 .simple-daggerheart.character-sheet {
   min-width: 800px;
   max-width: 800px;
 }
-.simple-daggerheart.character-sheet input {
+.simple-daggerheart.character-sheet input,
+.simple-daggerheart.character-sheet button {
   margin-top: 4px;
 }
 .simple-daggerheart.character-sheet .tab {
@@ -147,7 +160,7 @@
   flex-grow: 1;
   background: linear-gradient(var(--background), var(--background)) padding-box, linear-gradient(to bottom right, hsl(48, 75%, 77%), hsl(48, 78%, 67%)) border-box;
   border-radius: 8px;
-  padding: 12px;
+  padding: 24px;
 }
 .simple-daggerheart.character-sheet .tabs > a {
   border: 1px solid transparent;
@@ -207,6 +220,9 @@
   transition: none;
   position: relative;
 }
+.application.simple-daggerheart .window-content button > a {
+  font-size: 0.7rem;
+}
 .application.simple-daggerheart .window-content button:active {
   background-color: hsl(228, 40%, 7%);
   border-top: 1px solid hsl(228, 28%, 16%);
@@ -220,8 +236,8 @@
   position: absolute;
   display: block;
   content: "";
-  width: 130%;
-  height: 140%;
+  width: 100%;
+  height: 100%;
   border-radius: 4px;
   border: 1px solid hsl(40, 10%, 95%);
 }

@@ -1,12 +1,16 @@
 @use '../variables.scss';
 
 .simple-daggerheart .character-sheet-experiences {
-  min-width: 15rem;
+  padding: 12px;
+  border-radius: 3px;
 
   .character-experience {
     .character-experience-bonus {
       max-width: 3rem;
       text-align: center;
+    }
+    .remove-experience-button {
+      max-width: min-content;
     }
   }
 }

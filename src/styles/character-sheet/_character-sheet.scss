@@ -2,6 +2,7 @@
 @use 'character-sheet-traits.scss';
 @use 'character-sheet-character-tab.scss';
 @use 'character-sheet-statuses.scss';
+@use 'character-sheet-features.scss';
 @use 'character-sheet-experiences.scss';
 @use '../variables.scss';
 
@@ -9,7 +10,8 @@
   min-width: 800px;
   max-width: 800px;
 
-  input {
+  input,
+  button {
     margin-top: 4px;
   }
 
@@ -25,7 +27,7 @@
         )
         border-box;
     border-radius: 8px;
-    padding: 12px;
+    padding: 24px;
   }
 
   .tabs > a {

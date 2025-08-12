@@ -126,7 +126,7 @@ export class SimpleDHCharacterSheet extends api.HandlebarsApplicationMixin(
       ...this.document.system.experiences,
       {
         name: '',
-        bonus: 0
+        bonus: null
       }
     ];
     this.render();
