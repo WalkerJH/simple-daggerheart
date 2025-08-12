@@ -2,7 +2,7 @@
   <label class='character-features-header'>
     {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Features.Label'}}
   </label>
-  {{#each document.system.features as |feature index|}}
+  {{#each features as |feature index|}}
     <div class='flexcol gap-2 character-feature'>
       <div class='flexrow gap-2'>
         <input
@@ -21,10 +21,11 @@
           data-tooltip-direction='UP'
         ><a class='fas fa-x'></a></button>
       </div>
-      <textarea
-        rows='3'
-        name='{{concat "system.features." index ".description"}}'
-      >{{feature.description}}</textarea>
+      {{formInput
+        feature.descriptionField
+        name=feature.descriptionName
+        value=feature.description
+      }}
     </div>
   {{/each}}
   <button data-action='addFeature'>

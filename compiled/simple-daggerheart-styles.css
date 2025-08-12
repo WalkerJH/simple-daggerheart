@@ -135,8 +135,11 @@
 .simple-daggerheart .character-sheet-features .character-feature .remove-feature-button {
   max-width: min-content;
 }
-.simple-daggerheart .character-sheet-features .character-feature textarea {
-  resize: none;
+.simple-daggerheart .character-sheet-features .character-feature prose-mirror {
+  min-height: 5.5rem;
+}
+.simple-daggerheart .character-sheet-features .character-feature .editor-menu {
+  display: none;
 }
 
 .simple-daggerheart .character-sheet-experiences {
@@ -197,6 +200,9 @@
   --color-text-selection-bg: hsl(228, 30%, 40%);
   --color-scrollbar: hsl(228, 50%, 40%);
 }
+.application.simple-daggerheart .window-content {
+  overflow-y: scroll;
+}
 .application.simple-daggerheart .window-content input,
 .application.simple-daggerheart .window-content textarea {
   --input-background-color: hsl(228, 28%, 16%);
@@ -206,6 +212,19 @@
   --input-text-color: hsl(40, 10%, 95%);
   --input-focus-outline-color: hsl(40, 10%, 95%);
   transition: 0.2s;
+}
+.application.simple-daggerheart .window-content prose-mirror.active .editor-content {
+  background-color: hsl(228, 28%, 16%);
+  padding: 0 0.5rem;
+}
+.application.simple-daggerheart .window-content prose-mirror.inactive .editor-content {
+  border: 1px solid hsl(228, 28%, 16%);
+  padding: 0 0.5rem;
+}
+.application.simple-daggerheart .window-content prose-mirror.inactive > button.toggle {
+  margin: 5px;
+  padding: 0;
+  left: 90%;
 }
 .application.simple-daggerheart .window-content button {
   --button-text-color: hsl(40, 10%, 95%);

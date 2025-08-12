@@ -4,7 +4,7 @@ const { TypeDataModel } = foundry.abstract;
 
 export class SimpleDHCharacter extends TypeDataModel {
   static defineSchema() {
-    const { StringField, NumberField, ArrayField, SchemaField } =
+    const { StringField, NumberField, ArrayField, SchemaField, HTMLField } =
       foundry.data.fields;
     const { createResourceField, createAttributeField } = DataUtils;
 
@@ -38,7 +38,7 @@ export class SimpleDHCharacter extends TypeDataModel {
       features: new ArrayField(
         new SchemaField({
           name: new StringField(),
-          description: new StringField()
+          description: new HTMLField()
         })
       ),
       experiences: new ArrayField(

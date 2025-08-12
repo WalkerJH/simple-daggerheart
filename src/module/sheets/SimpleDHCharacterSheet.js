@@ -120,6 +120,23 @@ export class SimpleDHCharacterSheet extends api.HandlebarsApplicationMixin(
         };
       }
     );
+
+    context.features = await Promise.all(
+      this.document.system.features.map(async (feature, index) => {
+        const descriptionField =
+          this.document.system.schema.fields.features.element.fields
+            .description;
+        const descriptionName = `system.features.${index}.description`;
+
+        return {
+          name: feature.name,
+          description: feature.description,
+          descriptionField,
+          descriptionName
+        };
+      })
+    );
+
     return context;
   }
 

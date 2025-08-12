@@ -11,8 +11,11 @@
     .remove-feature-button {
       max-width: min-content;
     }
-    textarea {
-      resize: none;
+    prose-mirror {
+      min-height: 5.5rem;
+    }
+    .editor-menu {
+      display: none;
     }
   }
 }

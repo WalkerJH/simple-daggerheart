@@ -10,6 +10,8 @@
   --color-scrollbar: #{variables.$color-blue-accent};
 
   .window-content {
+    overflow-y: scroll;
+
     input,
     textarea {
       --input-background-color: #{variables.$color-dark-2};
@@ -19,6 +21,25 @@
       --input-text-color: #{variables.$color-light-1};
       --input-focus-outline-color: #{variables.$color-light-1};
       transition: 0.2s;
+    }
+
+    prose-mirror.active {
+      .editor-content {
+        background-color: variables.$color-dark-2;
+        padding: 0 0.5rem;
+      }
+    }
+
+    prose-mirror.inactive {
+      .editor-content {
+        border: 1px solid variables.$color-dark-2;
+        padding: 0 0.5rem;
+      }
+      > button.toggle {
+        margin: 5px;
+        padding: 0;
+        left: 90%;
+      }
     }
 
     button {
