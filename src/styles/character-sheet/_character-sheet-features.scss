@@ -6,10 +6,13 @@
 
   .character-feature {
     .character-feature-name {
-      max-width: 8rem;
+      flex-grow: 1;
     }
     .remove-feature-button {
       max-width: min-content;
+    }
+    textarea {
+      resize: none;
     }
   }
 }

@@ -27,13 +27,13 @@
         )
         border-box;
     border-radius: 8px;
-    padding: 24px;
+    padding: 12px;
   }
 
   .tabs > a {
     border: 1px solid transparent;
     padding: 0 1rem;
-    color: variables.$color-light-2;
+    color: variables.$color-light-1;
 
     > i {
       padding-right: 0.5rem;

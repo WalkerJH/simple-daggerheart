@@ -91,7 +91,7 @@
 }
 
 .simple-daggerheart.character-sheet-character-tab .text-entry-columns {
-  margin-top: 24px;
+  margin-top: 12px;
   align-items: flex-start;
 }
 
@@ -112,7 +112,8 @@
   justify-content: center;
   margin-top: 4px;
 }
-.simple-daggerheart .character-sheet-statuses .character-status .character-status-inputs input {
+.simple-daggerheart .character-sheet-statuses .character-status .character-status-inputs input,
+.simple-daggerheart .character-sheet-statuses .character-status .character-status-inputs button {
   margin-top: 0;
 }
 .simple-daggerheart .character-sheet-statuses .character-status .character-status-inputs .divider {
@@ -129,10 +130,13 @@
   border-radius: 3px;
 }
 .simple-daggerheart .character-sheet-features .character-feature .character-feature-name {
-  max-width: 8rem;
+  flex-grow: 1;
 }
 .simple-daggerheart .character-sheet-features .character-feature .remove-feature-button {
   max-width: min-content;
+}
+.simple-daggerheart .character-sheet-features .character-feature textarea {
+  resize: none;
 }
 
 .simple-daggerheart .character-sheet-experiences {
@@ -160,12 +164,12 @@
   flex-grow: 1;
   background: linear-gradient(var(--background), var(--background)) padding-box, linear-gradient(to bottom right, hsl(48, 75%, 77%), hsl(48, 78%, 67%)) border-box;
   border-radius: 8px;
-  padding: 24px;
+  padding: 12px;
 }
 .simple-daggerheart.character-sheet .tabs > a {
   border: 1px solid transparent;
   padding: 0 1rem;
-  color: hsl(40, 20%, 85%);
+  color: hsl(40, 10%, 95%);
 }
 .simple-daggerheart.character-sheet .tabs > a > i {
   padding-right: 0.5rem;
@@ -191,17 +195,16 @@
   --color-text-secondary: hsl(40, 10%, 95%);
   --color-text-selection: hsl(40, 10%, 95%);
   --color-text-selection-bg: hsl(228, 30%, 40%);
+  --color-scrollbar: hsl(228, 50%, 40%);
 }
-.application.simple-daggerheart .window-content {
-  overflow-y: scroll;
-}
-.application.simple-daggerheart .window-content input {
+.application.simple-daggerheart .window-content input,
+.application.simple-daggerheart .window-content textarea {
   --input-background-color: hsl(228, 28%, 16%);
   --checkbox-background-color: hsl(228, 28%, 16%);
   --checkbox-checked-color: hsl(48, 78%, 67%);
   --input-border-color: transparent;
   --input-text-color: hsl(40, 10%, 95%);
-  --input-focus-outline-color: hsl(40, 20%, 85%);
+  --input-focus-outline-color: hsl(40, 10%, 95%);
   transition: 0.2s;
 }
 .application.simple-daggerheart .window-content button {
@@ -214,7 +217,7 @@
   --button-focus-outline-color: transparent;
   padding: 6px 0.6rem;
   box-shadow: 0 1px 1px 1px black;
-  border-top: 1px solid hsl(228, 28%, 30%);
+  border-top: 1px solid hsl(228, 28%, 32%);
   border-radius: 4px;
   height: auto;
   transition: none;
@@ -236,9 +239,11 @@
   position: absolute;
   display: block;
   content: "";
-  width: 100%;
-  height: 100%;
+  min-width: 100%;
+  min-height: 100%;
   border-radius: 4px;
+  padding: 4px;
+  box-sizing: content-box;
   border: 1px solid hsl(40, 10%, 95%);
 }
 .application.simple-daggerheart .window-content nav.tabs {

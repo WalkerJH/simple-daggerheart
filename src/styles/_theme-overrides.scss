@@ -7,17 +7,17 @@
   --color-text-secondary: #{variables.$color-light-1};
   --color-text-selection: #{variables.$color-light-1};
   --color-text-selection-bg: #{variables.$color-blue-accent-light};
+  --color-scrollbar: #{variables.$color-blue-accent};
 
   .window-content {
-    overflow-y: scroll;
-
-    input {
+    input,
+    textarea {
       --input-background-color: #{variables.$color-dark-2};
       --checkbox-background-color: #{variables.$color-dark-2};
       --checkbox-checked-color: #{variables.$color-gold-accent-heavy};
       --input-border-color: transparent;
       --input-text-color: #{variables.$color-light-1};
-      --input-focus-outline-color: #{variables.$color-light-2};
+      --input-focus-outline-color: #{variables.$color-light-1};
       transition: 0.2s;
     }
 
@@ -56,9 +56,11 @@
         position: absolute;
         display: block;
         content: '';
-        width: 100%;
-        height: 100%;
+        min-width: 100%;
+        min-height: 100%;
         border-radius: 4px;
+        padding: 4px;
+        box-sizing: content-box;
         border: 1px solid variables.$color-light-1;
       }
     }

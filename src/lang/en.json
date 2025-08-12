@@ -15,8 +15,16 @@
       "Evasion": "Evasion",
       "Armor": "Armor",
       "ArmorThresholds": "Armor Thresholds",
-      "Experience": "Experience",
-      "Features": "Features",
+      "Experience": {
+        "Label": "Experience",
+        "Add": "Add Experience",
+        "Remove": "Remove Experience"
+      },
+      "Features": {
+        "Label": "Features",
+        "Add": "Add Feature",
+        "Remove": "Remove Feature"
+      },
       "Agility": {
         "Label": "Agility",
         "Example1": "Sprint",
@@ -56,7 +64,8 @@
       "Tabs": {
         "Character": "Character",
         "Inventory": "Inventory",
-        "Cards": "Cards"
+        "Cards": "Cards",
+        "Notes": "Notes"
       }
     }
   }

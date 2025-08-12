@@ -23,8 +23,7 @@ export class SimpleDHCharacterSheet extends api.HandlebarsApplicationMixin(
       height: 800
     },
     window: {
-      resizable: true,
-      scrollable: true
+      resizable: true
     }
   };
 
@@ -60,6 +59,11 @@ export class SimpleDHCharacterSheet extends api.HandlebarsApplicationMixin(
       id: 'cards',
       template: `${this.templatePrefix}/character-sheet-cards.hbs`,
       classes: ['simple-daggerheart']
+    },
+    notes: {
+      id: 'notes',
+      template: `${this.templatePrefix}/character-sheet-notes.hbs`,
+      classes: ['simple-daggerheart']
     }
   };
 
@@ -80,6 +84,11 @@ export class SimpleDHCharacterSheet extends api.HandlebarsApplicationMixin(
           id: 'cards',
           icon: 'fas fa-cards-blank',
           label: 'SIMPLE_DAGGERHEART.CharacterSheet.Tabs.Cards'
+        },
+        {
+          id: 'notes',
+          icon: 'fas fa-scroll',
+          label: 'SIMPLE_DAGGERHEART.CharacterSheet.Tabs.Notes'
         }
       ],
       initial: 'status'

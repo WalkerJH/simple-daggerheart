@@ -15,6 +15,7 @@ export class SimpleDHCharacter extends TypeDataModel {
       domains: new ArrayField(new StringField()),
       subclass: new StringField(),
       biography: new StringField(),
+      notes: new StringField(),
 
       level: createResourceField({ initial: 1, min: 1, max: 10 }),
       hp: createResourceField({ initial: 1, min: 0, max: 10 }),

@@ -1,7 +1,7 @@
 <section class='card flexcol gap-2 character-sheet-experiences'>
-  <label class='character-experiences-header'>{{localize
-      'SIMPLE_DAGGERHEART.CharacterSheet.Experience'
-    }}</label>
+  <label class='character-experiences-header'>
+    {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Experience.Label'}}
+  </label>
   {{#each document.system.experiences as |experience index|}}
     <div class='flexrow gap-2 character-experience'>
       <input
@@ -19,8 +19,14 @@
         class='remove-experience-button'
         data-action='removeExperience'
         data-index='{{index}}'
+        data-tooltip='{{localize
+          "SIMPLE_DAGGERHEART.CharacterSheet.Experience.Remove"
+        }}'
+        data-tooltip-direction='UP'
       ><a class='fas fa-x'></a></button>
     </div>
   {{/each}}
-  <button data-action='addExperience'>Add Experience</button>
+  <button data-action='addExperience'>
+    {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Experience.Add'}}
+  </button>
 </section>
