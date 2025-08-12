@@ -8,7 +8,7 @@ export class SimpleDHCharacterSheet extends api.HandlebarsApplicationMixin(
     label: '',
     classes: ['simple-daggerheart', 'character-sheet'],
     form: {
-      submitOnChange: true,
+      submitOnChange: false,
       closeOnSubmit: false
     },
     actions: {
@@ -148,13 +148,10 @@ export class SimpleDHCharacterSheet extends api.HandlebarsApplicationMixin(
   }
 
   static async addExperience() {
-    this.document.system.experiences = [
-      ...this.document.system.experiences,
-      {
-        name: '',
-        bonus: null
-      }
-    ];
+    this.document.system.experiences.push({
+      name: '',
+      bonus: null
+    });
     this.render();
   }
 
@@ -167,13 +164,10 @@ export class SimpleDHCharacterSheet extends api.HandlebarsApplicationMixin(
   }
 
   static async addFeature() {
-    this.document.system.features = [
-      ...this.document.system.features,
-      {
-        name: '',
-        description: ''
-      }
-    ];
+    this.document.system.features.push({
+      name: '',
+      description: ''
+    });
     this.render();
   }
 

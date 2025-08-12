@@ -62,7 +62,7 @@
         font-size: 0.7rem;
       }
 
-      &:active {
+      &:not(:disabled):active {
         background-color: variables.$color-dark-3;
         border-top: 1px solid variables.$color-dark-2;
         transform: translate(0, 1px);

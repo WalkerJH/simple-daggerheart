@@ -61,7 +61,7 @@
 }
 
 .simple-daggerheart.character-sheet-traits {
-  margin-bottom: 24px;
+  margin-bottom: 12px;
 }
 .simple-daggerheart.character-sheet-traits .character-trait {
   align-items: center;
@@ -245,13 +245,13 @@
 .application.simple-daggerheart .window-content button > a {
   font-size: 0.7rem;
 }
-.application.simple-daggerheart .window-content button:active {
+.application.simple-daggerheart .window-content button:not(:disabled):active {
   background-color: hsl(228, 40%, 7%);
   border-top: 1px solid hsl(228, 28%, 16%);
   transform: translate(0, 1px);
   box-shadow: 0 0 1px 1px black;
 }
-.application.simple-daggerheart .window-content button:active::after {
+.application.simple-daggerheart .window-content button:not(:disabled):active::after {
   transform: translate(0, -1px);
 }
 .application.simple-daggerheart .window-content button:focus-visible::after {

@@ -64,7 +64,7 @@ export class SimpleDHCharacter extends TypeDataModel {
         minorThreshold: createResourceField({ min: 0 }),
         majorThreshold: createResourceField({ min: 0 }),
         currentScore: createResourceField({ min: 0 }),
-        maxScore: createResourceField({ initial: 1, min: 0 })
+        maxScore: createResourceField({ min: 0 })
       })
     };
   }
