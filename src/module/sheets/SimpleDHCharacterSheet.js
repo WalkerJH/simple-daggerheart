@@ -11,10 +11,16 @@ export class SimpleDHCharacterSheet extends api.HandlebarsApplicationMixin(
       submitOnChange: true,
       closeOnSubmit: false
     },
-    actions: { modifyHP: this.modifyHP },
+    actions: {
+      modifyHP: this.modifyHP,
+      addExperience: this.addExperience,
+      removeExperience: this.removeExperience,
+      addFeature: this.addFeature,
+      removeFeature: this.removeFeature
+    },
     position: {
-      width: 840,
-      height: 840
+      width: 800,
+      height: 800
     },
     window: {
       resizable: true,
@@ -29,31 +35,31 @@ export class SimpleDHCharacterSheet extends api.HandlebarsApplicationMixin(
     header: {
       id: 'header',
       template: `${this.templatePrefix}/character-sheet-header.hbs`,
-      classes: ['simple-daggerheart', 'character-sheet-section']
+      classes: ['simple-daggerheart']
     },
     traits: {
       id: 'traits',
       template: `${this.templatePrefix}/character-sheet-traits.hbs`,
-      classes: ['simple-daggerheart', 'character-sheet-section']
+      classes: ['simple-daggerheart']
     },
     tabs: {
       template: 'templates/generic/tab-navigation.hbs',
       classes: ['simple-daggerheart']
     },
-    statColumns: {
-      id: 'stat-columns',
-      template: `${this.templatePrefix}/character-sheet-stat-columns.hbs`,
+    characterTab: {
+      id: 'character-tab',
+      template: `${this.templatePrefix}/character-sheet-character-tab.hbs`,
       classes: ['simple-daggerheart']
     },
     inventory: {
       id: 'inventory',
       template: `${this.templatePrefix}/character-sheet-inventory.hbs`,
-      classes: ['simple-daggerheart', 'character-sheet-section']
+      classes: ['simple-daggerheart']
     },
     cards: {
       id: 'cards',
       template: `${this.templatePrefix}/character-sheet-cards.hbs`,
-      classes: ['simple-daggerheart', 'character-sheet-section']
+      classes: ['simple-daggerheart']
     }
   };
 
@@ -63,17 +69,17 @@ export class SimpleDHCharacterSheet extends api.HandlebarsApplicationMixin(
         {
           id: 'status',
           icon: 'fas fa-user',
-          tooltip: 'SIMPLE_DAGGERHEART.CharacterSheet.Tabs.Status'
+          label: 'SIMPLE_DAGGERHEART.CharacterSheet.Tabs.Character'
         },
         {
           id: 'inventory',
           icon: 'fas fa-backpack',
-          tooltip: 'SIMPLE_DAGGERHEART.CharacterSheet.Tabs.Inventory'
+          label: 'SIMPLE_DAGGERHEART.CharacterSheet.Tabs.Inventory'
         },
         {
           id: 'cards',
           icon: 'fas fa-cards-blank',
-          tooltip: 'SIMPLE_DAGGERHEART.CharacterSheet.Tabs.Cards'
+          label: 'SIMPLE_DAGGERHEART.CharacterSheet.Tabs.Cards'
         }
       ],
       initial: 'status'
@@ -105,13 +111,6 @@ export class SimpleDHCharacterSheet extends api.HandlebarsApplicationMixin(
         };
       }
     );
-
-    context.experiences = Array.from({ length: 5 }).map((_value, index) => ({
-      index,
-      name: this.document.system.experiences[index]?.name,
-      bonus: this.document.system.experiences[index]?.bonus
-    }));
-
     return context;
   }
 
@@ -119,6 +118,44 @@ export class SimpleDHCharacterSheet extends api.HandlebarsApplicationMixin(
     const newHPValue =
       this.document.system.hp + parseInt(button.dataset.amount, 10);
     this.document.system.hp = newHPValue >= 0 ? newHPValue : 0;
+    this.render();
+  }
+
+  static async addExperience() {
+    this.document.system.experiences = [
+      ...this.document.system.experiences,
+      {
+        name: '',
+        bonus: 0
+      }
+    ];
+    this.render();
+  }
+
+  static async removeExperience(_, button) {
+    const index = parseInt(button.dataset.index, 10);
+    this.document.system.experiences = this.document.system.experiences.filter(
+      (_experience, experienceIndex) => experienceIndex !== index
+    );
+    this.render();
+  }
+
+  static async addFeature() {
+    this.document.system.features = [
+      ...this.document.system.features,
+      {
+        name: '',
+        description: ''
+      }
+    ];
+    this.render();
+  }
+
+  static async removeFeature(_, button) {
+    const index = parseInt(button.dataset.index, 10);
+    this.document.system.features = this.document.system.features.filter(
+      (_feature, featureIndex) => featureIndex !== index
+    );
     this.render();
   }
 }

@@ -16,6 +16,7 @@
       "Armor": "Armor",
       "ArmorThresholds": "Armor Thresholds",
       "Experience": "Experience",
+      "Features": "Features",
       "Agility": {
         "Label": "Agility",
         "Example1": "Sprint",
@@ -53,7 +54,7 @@
         "Example3": "Comprehend"
       },
       "Tabs": {
-        "Status": "Status",
+        "Character": "Character",
         "Inventory": "Inventory",
         "Cards": "Cards"
       }

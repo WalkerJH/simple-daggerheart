@@ -10,9 +10,6 @@
 .simple-daggerheart .gap-4 {
   gap: 24px;
 }
-.simple-daggerheart .align-stretch {
-  align-items: stretch;
-}
 
 .simple-daggerheart .large-input-field,
 .simple-daggerheart .large-text-container {
@@ -42,34 +39,10 @@
   z-index: 2;
   position: relative;
 }
-.simple-daggerheart .card.card-red::before, .simple-daggerheart .card.card-gold::before, .simple-daggerheart .card.card-green::before, .simple-daggerheart .card.card-blue::before, .simple-daggerheart .card.card-metallic::before {
-  content: "";
-  position: absolute;
-  z-index: 1;
-  width: 50%;
-  height: 3px;
-  top: 0;
-  left: 25%;
-  border-radius: 0 0 6px 6px;
-}
-.simple-daggerheart .card.card-red::before {
-  background: hsla(3, 70%, 60%, 0.6);
-}
-.simple-daggerheart .card.card-gold::before {
-  background: linear-gradient(to right, hsl(48, 75%, 77%), hsl(48, 78%, 67%));
-}
-.simple-daggerheart .card.card-green::before {
-  background: hsla(93, 70%, 60%, 0.6);
-}
-.simple-daggerheart .card.card-blue::before {
-  background: hsla(228, 70%, 60%, 0.6);
-}
-.simple-daggerheart .card.card-metallic::before {
-  background: linear-gradient(to right, hsla(228, 20%, 95%, 0.6), hsla(228, 20%, 95%, 0.4));
-}
 
 .simple-daggerheart.character-sheet-header {
   align-items: start;
+  margin-bottom: 24px;
 }
 .simple-daggerheart.character-sheet-header .character-img {
   cursor: pointer;
@@ -87,14 +60,50 @@
   top: -24px;
 }
 
+.simple-daggerheart.character-sheet-traits {
+  margin-bottom: 24px;
+}
+.simple-daggerheart.character-sheet-traits .character-trait {
+  align-items: center;
+  padding: 12px 0.2rem;
+  border-radius: 2px;
+}
+.simple-daggerheart.character-sheet-traits .character-trait .character-trait-content {
+  width: 100%;
+  justify-content: center;
+}
+.simple-daggerheart.character-sheet-traits .character-trait .character-trait-content .character-trait-value {
+  max-width: 3rem;
+  text-align: center;
+  margin: 0 4px;
+}
+.simple-daggerheart.character-sheet-traits .character-trait .character-trait-content .character-trait-checkbox {
+  flex: 0;
+  width: 0;
+  margin: 0;
+}
+.simple-daggerheart.character-sheet-traits .character-trait ul {
+  list-style: none;
+  width: 100%;
+  text-align: center;
+  padding: 0;
+  margin: 12px 0 0 0;
+}
+
+.simple-daggerheart.character-sheet-character-tab .text-entry-columns {
+  margin-top: 24px;
+  align-items: flex-start;
+}
+
 .simple-daggerheart .character-sheet-statuses {
   min-width: 32rem;
 }
 .simple-daggerheart .character-sheet-statuses .character-statuses-row {
-  justify-content: space-between;
+  justify-content: center;
 }
 .simple-daggerheart .character-sheet-statuses .character-status {
   padding: 12px;
+  flex-grow: 0;
   border-radius: 8px;
   align-items: center;
 }
@@ -118,64 +127,57 @@
   min-width: max-content;
 }
 
-.simple-daggerheart.character-sheet-traits .character-trait {
-  align-items: center;
-  padding: 12px 0.2rem;
-  border-radius: 2px;
-}
-.simple-daggerheart.character-sheet-traits .character-trait .character-trait-content {
-  width: 100%;
-  justify-content: center;
-}
-.simple-daggerheart.character-sheet-traits .character-trait .character-trait-content .character-trait-value {
-  max-width: 50%;
-  text-align: center;
-  margin: 0 4px;
-}
-.simple-daggerheart.character-sheet-traits .character-trait .character-trait-content .character-trait-checkbox {
-  flex: 0;
-  width: 0;
-  margin: 0;
-}
-.simple-daggerheart.character-sheet-traits .character-trait ul {
-  list-style: none;
-  width: 100%;
-  text-align: center;
-  padding: 0;
-  margin: 12px 0 0 0;
-}
-
 .simple-daggerheart .character-sheet-experiences {
   min-width: 15rem;
 }
 .simple-daggerheart .character-sheet-experiences .character-experience .character-experience-bonus {
-  max-width: 2rem;
+  max-width: 3rem;
   text-align: center;
 }
 
 .simple-daggerheart.character-sheet {
-  min-width: 840px;
-  max-width: 840px;
-}
-.simple-daggerheart.character-sheet .window-content {
-  padding: 12px;
-  gap: 24px;
+  min-width: 800px;
+  max-width: 800px;
 }
 .simple-daggerheart.character-sheet input {
   margin-top: 4px;
 }
-.simple-daggerheart.character-sheet .character-sheet-section {
+.simple-daggerheart.character-sheet .tab {
   border: 1px solid transparent;
+  flex-grow: 1;
   background: linear-gradient(var(--background), var(--background)) padding-box, linear-gradient(to bottom right, hsl(48, 75%, 77%), hsl(48, 78%, 67%)) border-box;
   border-radius: 8px;
-  padding: 24px;
+  padding: 12px;
+}
+.simple-daggerheart.character-sheet .tabs > a {
+  border: 1px solid transparent;
+  padding: 0 1rem;
+  color: hsl(40, 20%, 85%);
+}
+.simple-daggerheart.character-sheet .tabs > a > i {
+  padding-right: 0.5rem;
+}
+.simple-daggerheart.character-sheet .tabs > a.active {
+  border: 1px solid hsl(48, 75%, 77%);
+  border-bottom: none;
+  border-radius: 8px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  z-index: 2;
+  position: relative;
+  top: 1px;
+  padding-bottom: 2px;
+  background: hsl(228, 40%, 4%);
+  color: hsl(40, 10%, 95%);
 }
 
 .application.simple-daggerheart {
   --background: hsl(228, 40%, 4%);
   --color-border: hsl(228, 28%, 16%);
-  --color-text-primary: hsl(40, 10%, 92%);
-  --color-text-secondary: hsl(40, 10%, 92%);
+  --color-text-primary: hsl(40, 10%, 95%);
+  --color-text-secondary: hsl(40, 10%, 95%);
+  --color-text-selection: hsl(40, 10%, 95%);
+  --color-text-selection-bg: hsl(228, 30%, 40%);
 }
 .application.simple-daggerheart .window-content {
   overflow-y: scroll;
@@ -185,20 +187,19 @@
   --checkbox-background-color: hsl(228, 28%, 16%);
   --checkbox-checked-color: hsl(48, 78%, 67%);
   --input-border-color: transparent;
-  --input-text-color: hsl(40, 10%, 92%);
-  --input-focus-outline-color: hsl(40, 20%, 80%);
+  --input-text-color: hsl(40, 10%, 95%);
+  --input-focus-outline-color: hsl(40, 20%, 85%);
   transition: 0.2s;
 }
 .application.simple-daggerheart .window-content button {
-  --button-text-color: hsl(40, 10%, 92%);
+  --button-text-color: hsl(40, 10%, 95%);
   --button-border-color: transparent;
   --button-background-color: hsl(228, 28%, 16%);
-  --button-hover-text-color: hsl(40, 10%, 92%);
+  --button-hover-text-color: hsl(40, 10%, 95%);
   --button-hover-background-color: hsl(228, 28%, 16%);
   --button-hover-border-color: transparent;
   --button-focus-outline-color: transparent;
   padding: 6px 0.6rem;
-  margin: 4px;
   box-shadow: 0 1px 1px 1px black;
   border-top: 1px solid hsl(228, 28%, 30%);
   border-radius: 4px;
@@ -222,14 +223,14 @@
   width: 130%;
   height: 140%;
   border-radius: 4px;
-  border: 1px solid hsl(40, 20%, 80%);
+  border: 1px solid hsl(40, 10%, 95%);
 }
 .application.simple-daggerheart .window-content nav.tabs {
   border: none;
 }
 
 .chat-message {
-  --chat-message-background: hsl(40, 10%, 92%);
+  --chat-message-background: hsl(40, 10%, 95%);
 }
 
 /*# sourceMappingURL=simple-daggerheart-styles.css.map */

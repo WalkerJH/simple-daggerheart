@@ -1,24 +1,21 @@
 @use 'character-sheet-header.scss';
-@use 'character-sheet-statuses.scss';
 @use 'character-sheet-traits.scss';
+@use 'character-sheet-character-tab.scss';
+@use 'character-sheet-statuses.scss';
 @use 'character-sheet-experiences.scss';
 @use '../variables.scss';
 
 .simple-daggerheart.character-sheet {
-  min-width: 840px;
-  max-width: 840px;
-
-  .window-content {
-    padding: 12px;
-    gap: 24px;
-  }
+  min-width: 800px;
+  max-width: 800px;
 
   input {
     margin-top: 4px;
   }
 
-  .character-sheet-section {
+  .tab {
     border: 1px solid transparent;
+    flex-grow: 1;
     background:
       linear-gradient(var(--background), var(--background)) padding-box,
       linear-gradient(
@@ -28,6 +25,30 @@
         )
         border-box;
     border-radius: 8px;
-    padding: 24px;
+    padding: 12px;
+  }
+
+  .tabs > a {
+    border: 1px solid transparent;
+    padding: 0 1rem;
+    color: variables.$color-light-2;
+
+    > i {
+      padding-right: 0.5rem;
+    }
+  }
+
+  .tabs > a.active {
+    border: 1px solid variables.$color-gold-accent;
+    border-bottom: none;
+    border-radius: 8px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    z-index: 2;
+    position: relative;
+    top: 1px;
+    padding-bottom: 2px;
+    background: variables.$color-dark-1;
+    color: variables.$color-light-1;
   }
 }

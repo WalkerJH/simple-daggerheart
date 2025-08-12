@@ -1,22 +1,22 @@
-<section
-  class='flexcol gap-2 character-sheet-experiences character-sheet-section'
->
+<section class='flexcol gap-2 character-sheet-experiences'>
   <label class='character-experiences-header'>{{localize
       'SIMPLE_DAGGERHEART.CharacterSheet.Experience'
     }}</label>
-  {{#each this.experiences as |experience|}}
+  {{#each document.system.experiences as |experience index|}}
     <div class='flexrow gap-2 character-experience'>
       <input
         type='text'
-        name='{{concat "system.experiences." experience.index ".name"}}'
+        name='{{concat "system.experiences." index ".name"}}'
         value='{{experience.name}}'
       />
       <input
         class='character-experience-bonus'
         type='number'
-        name='{{concat "system.experiences." experience.index ".bonus"}}'
+        name='{{concat "system.experiences." index ".bonus"}}'
         value='{{experience.bonus}}'
       />
+      <button data-action='removeExperience' data-index='{{index}}'>-</button>
     </div>
   {{/each}}
+  <button data-action='addExperience'>Add Experience</button>
 </section>

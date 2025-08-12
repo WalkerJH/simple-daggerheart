@@ -34,7 +34,12 @@ export class SimpleDHCharacter extends TypeDataModel {
         knowledge: createAttributeField()
       }),
 
-      features: new ArrayField(new StringField()),
+      features: new ArrayField(
+        new SchemaField({
+          name: new StringField(),
+          description: new StringField()
+        })
+      ),
       experiences: new ArrayField(
         new SchemaField({
           name: new StringField(),

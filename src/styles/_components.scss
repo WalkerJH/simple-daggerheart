@@ -32,50 +32,5 @@
       z-index: 2;
       position: relative;
     }
-
-    &.card-red,
-    &.card-gold,
-    &.card-green,
-    &.card-blue,
-    &.card-metallic {
-      &::before {
-        content: '';
-        position: absolute;
-        z-index: 1;
-        width: 50%;
-        height: 3px;
-        top: 0;
-        left: 25%;
-        border-radius: 0 0 6px 6px;
-      }
-    }
-
-    &.card-red::before {
-      background: variables.$color-red-accent;
-    }
-
-    &.card-gold::before {
-      background: linear-gradient(
-        to right,
-        variables.$color-gold-accent,
-        variables.$color-gold-accent-heavy
-      );
-    }
-
-    &.card-green::before {
-      background: variables.$color-green-accent;
-    }
-
-    &.card-blue::before {
-      background: variables.$color-blue-accent;
-    }
-
-    &.card-metallic::before {
-      background: linear-gradient(
-        to right,
-        variables.$color-metallic-accent,
-        variables.$color-metallic-accent-heavy
-      );
-    }
   }
 }

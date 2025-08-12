@@ -34,7 +34,9 @@ async function preloadTemplates() {
     'simple-daggerheart.character-sheet.statuses':
       'systems/simple-daggerheart/src/templates/character-sheet/character-sheet-statuses.hbs',
     'simple-daggerheart.character-sheet.experiences':
-      'systems/simple-daggerheart/src/templates/character-sheet/character-sheet-experiences.hbs'
+      'systems/simple-daggerheart/src/templates/character-sheet/character-sheet-experiences.hbs',
+    'simple-daggerheart.character-sheet.features':
+      'systems/simple-daggerheart/src/templates/character-sheet/character-sheet-features.hbs'
   });
 }
 

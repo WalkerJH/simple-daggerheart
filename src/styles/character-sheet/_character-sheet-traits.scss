@@ -1,6 +1,8 @@
 @use '../variables.scss';
 
 .simple-daggerheart.character-sheet-traits {
+  margin-bottom: 24px;
+
   .character-trait {
     align-items: center;
     padding: 12px 0.2rem;
@@ -10,7 +12,7 @@
       width: 100%;
       justify-content: center;
       .character-trait-value {
-        max-width: 50%;
+        max-width: 3rem;
         text-align: center;
         margin: 0 4px;
       }

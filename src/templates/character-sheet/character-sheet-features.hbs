@@ -1,0 +1,21 @@
+<section class='flexcol gap-2 character-sheet-features'>
+  <label class='character-features-header'>{{localize
+      'SIMPLE_DAGGERHEART.CharacterSheet.Features'
+    }}</label>
+  {{#each document.system.features as |feature index|}}
+    <div class='flexrow gap-2 character-feature'>
+      <input
+        type='text'
+        name='{{concat "features." index ".name"}}'
+        value='{{feature.name}}'
+      />
+      <input
+        type='text'
+        name='{{concat "features." index ".description"}}'
+        value='{{feature.description}}'
+      />
+    </div>
+    <button data-action='removeFeature' data-index='{{index}}'>-</button>
+  {{/each}}
+  <button data-action='addFeature'>Add Feature</button>
+</section>
