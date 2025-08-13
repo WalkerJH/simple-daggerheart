@@ -141,41 +141,62 @@ export class SimpleDHCharacterSheet extends api.HandlebarsApplicationMixin(
   }
 
   static async modifyHP(_, button) {
-    const newHPValue =
-      this.document.system.hp + parseInt(button.dataset.amount, 10);
-    this.document.system.hp = newHPValue >= 0 ? newHPValue : 0;
+    let hp = this.document.system.hp + parseInt(button.dataset.amount, 10);
+    if (hp < 0) hp = 0;
+    await this.submit({
+      updateData: {
+        'system.hp': hp
+      }
+    });
     this.render();
   }
 
   static async addExperience() {
-    this.document.system.experiences.push({
-      name: '',
-      bonus: null
+    await this.submit({
+      updateData: {
+        [`system.experiences.${this.document.system.experiences.length}`]: {
+          name: '',
+          bonus: null
+        }
+      }
     });
     this.render();
   }
 
   static async removeExperience(_, button) {
     const index = parseInt(button.dataset.index, 10);
-    this.document.system.experiences = this.document.system.experiences.filter(
-      (_experience, experienceIndex) => experienceIndex !== index
-    );
+    await this.submit({
+      updateData: {
+        'system.experiences': this.document.system.experiences.filter(
+          (_experience, experienceIndex) => experienceIndex !== index
+        )
+      }
+    });
     this.render();
   }
 
   static async addFeature() {
-    this.document.system.features.push({
-      name: '',
-      description: ''
+    await this.submit({
+      updateData: {
+        [`system.features.${this.document.system.features.length}`]: {
+          name: '',
+          description: ''
+        }
+      }
     });
     this.render();
   }
 
   static async removeFeature(_, button) {
     const index = parseInt(button.dataset.index, 10);
-    this.document.system.features = this.document.system.features.filter(
-      (_feature, featureIndex) => featureIndex !== index
-    );
+    await this.submit({
+      updateData: {
+        'system.features': this.document.system.features.filter(
+          (_feature, featureIndex) => featureIndex !== index
+        )
+      }
+    });
+    await this.submit();
     this.render();
   }
 }
