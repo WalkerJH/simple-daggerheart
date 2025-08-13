@@ -1,0 +1,19 @@
+@use '../variables.scss';
+
+.simple-daggerheart .character-sheet-inventory {
+  .character-weapon {
+    .character-weapon-name {
+      flex-grow: 1;
+    }
+    .remove-weapon-button {
+      max-width: min-content;
+      margin-top: 20px;
+    }
+    prose-mirror {
+      min-height: 3.7rem;
+    }
+    .editor-menu {
+      display: none;
+    }
+  }
+}

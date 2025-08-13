@@ -16,7 +16,9 @@ export class SimpleDHCharacterSheet extends api.HandlebarsApplicationMixin(
       addExperience: this.addExperience,
       removeExperience: this.removeExperience,
       addFeature: this.addFeature,
-      removeFeature: this.removeFeature
+      removeFeature: this.removeFeature,
+      addWeapon: this.addWeapon,
+      removeWeapon: this.removeWeapon
     },
     position: {
       width: 800,
@@ -45,8 +47,8 @@ export class SimpleDHCharacterSheet extends api.HandlebarsApplicationMixin(
       template: 'templates/generic/tab-navigation.hbs',
       classes: ['simple-daggerheart']
     },
-    characterTab: {
-      id: 'character-tab',
+    character: {
+      id: 'character',
       template: `${this.templatePrefix}/character-sheet-character-tab.hbs`,
       classes: ['simple-daggerheart']
     },
@@ -71,7 +73,7 @@ export class SimpleDHCharacterSheet extends api.HandlebarsApplicationMixin(
     primary: {
       tabs: [
         {
-          id: 'status',
+          id: 'character',
           icon: 'fas fa-user',
           label: 'SIMPLE_DAGGERHEART.CharacterSheet.Tabs.Character'
         },
@@ -91,7 +93,7 @@ export class SimpleDHCharacterSheet extends api.HandlebarsApplicationMixin(
           label: 'SIMPLE_DAGGERHEART.CharacterSheet.Tabs.Notes'
         }
       ],
-      initial: 'status'
+      initial: 'character'
     }
   };
 
@@ -131,6 +133,21 @@ export class SimpleDHCharacterSheet extends api.HandlebarsApplicationMixin(
         return {
           name: feature.name,
           description: feature.description,
+          descriptionField,
+          descriptionName
+        };
+      })
+    );
+
+    context.weapons = await Promise.all(
+      this.document.system.weapons.map(async (weapon, index) => {
+        const descriptionField =
+          this.document.system.schema.fields.weapons.element.fields.description;
+        const descriptionName = `system.weapons.${index}.description`;
+
+        return {
+          name: weapon.name,
+          description: weapon.description,
           descriptionField,
           descriptionName
         };
@@ -189,6 +206,34 @@ export class SimpleDHCharacterSheet extends api.HandlebarsApplicationMixin(
       updateData: {
         system: {
           features: { [`-=${index}`]: null }
+        }
+      }
+    });
+  }
+
+  static addWeapon() {
+    this.submit({
+      updateData: {
+        [`system.weapons.${this.document.system.weapons.length}`]: {
+          name: '',
+          trait: '',
+          range: '',
+          damageDice: '',
+          feature: '',
+          primary: false,
+          secondary: false,
+          burden: 1
+        }
+      }
+    });
+  }
+
+  static removeWeapon(_, button) {
+    const index = parseInt(button.dataset.index, 10);
+    this.submit({
+      updateData: {
+        system: {
+          weapons: { [`-=${index}`]: null }
         }
       }
     });

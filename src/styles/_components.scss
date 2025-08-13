@@ -27,6 +27,8 @@
     border-top: 1px solid var(--color-border);
     box-shadow: 0 2px 4px black;
     position: relative;
+    padding: 12px;
+    border-radius: 3px;
 
     & > * {
       z-index: 2;

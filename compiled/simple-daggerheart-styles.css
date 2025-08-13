@@ -34,6 +34,8 @@
   border-top: 1px solid var(--color-border);
   box-shadow: 0 2px 4px black;
   position: relative;
+  padding: 12px;
+  border-radius: 3px;
 }
 .simple-daggerheart .card > * {
   z-index: 2;
@@ -66,7 +68,6 @@
 .simple-daggerheart.character-sheet-traits .character-trait {
   align-items: center;
   padding: 12px 0.2rem;
-  border-radius: 3px;
 }
 .simple-daggerheart.character-sheet-traits .character-trait .character-trait-content {
   width: 100%;
@@ -102,7 +103,6 @@
   justify-content: center;
 }
 .simple-daggerheart .character-sheet-statuses .character-status {
-  padding: 12px;
   flex-grow: 0;
   border-radius: 8px;
   align-items: center;
@@ -125,10 +125,6 @@
   text-align: center;
 }
 
-.simple-daggerheart .character-sheet-features {
-  padding: 12px;
-  border-radius: 3px;
-}
 .simple-daggerheart .character-sheet-features .character-feature .character-feature-name {
   flex-grow: 1;
 }
@@ -142,16 +138,26 @@
   display: none;
 }
 
-.simple-daggerheart .character-sheet-experiences {
-  padding: 12px;
-  border-radius: 3px;
-}
 .simple-daggerheart .character-sheet-experiences .character-experience .character-experience-bonus {
   max-width: 3rem;
   text-align: center;
 }
 .simple-daggerheart .character-sheet-experiences .character-experience .remove-experience-button {
   max-width: min-content;
+}
+
+.simple-daggerheart .character-sheet-inventory .character-weapon .character-weapon-name {
+  flex-grow: 1;
+}
+.simple-daggerheart .character-sheet-inventory .character-weapon .remove-weapon-button {
+  max-width: min-content;
+  margin-top: 20px;
+}
+.simple-daggerheart .character-sheet-inventory .character-weapon prose-mirror {
+  min-height: 3.7rem;
+}
+.simple-daggerheart .character-sheet-inventory .character-weapon .editor-menu {
+  display: none;
 }
 
 .simple-daggerheart.character-sheet {

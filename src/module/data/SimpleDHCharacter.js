@@ -4,8 +4,14 @@ const { TypeDataModel } = foundry.abstract;
 
 export class SimpleDHCharacter extends TypeDataModel {
   static defineSchema() {
-    const { StringField, NumberField, ArrayField, SchemaField, HTMLField } =
-      foundry.data.fields;
+    const {
+      StringField,
+      NumberField,
+      ArrayField,
+      SchemaField,
+      HTMLField,
+      BooleanField
+    } = foundry.data.fields;
     const { createResourceField, createAttributeField } = DataUtils;
 
     return {
@@ -47,14 +53,24 @@ export class SimpleDHCharacter extends TypeDataModel {
           bonus: createResourceField()
         })
       ),
-      items: new ArrayField(new StringField()),
+      items: new ArrayField(
+        new SchemaField({
+          name: new StringField(),
+          description: new HTMLField(),
+          amount: createResourceField({ min: 0 })
+        })
+      ),
       weapons: new ArrayField(
         new SchemaField({
           name: new StringField(),
           trait: new StringField(),
           range: new StringField(),
           damageDice: new StringField(),
-          feature: new StringField()
+          description: new HTMLField(),
+          feature: new StringField(),
+          primary: new BooleanField({ initial: false }),
+          secondary: new BooleanField({ initial: false }),
+          burden: new NumberField({ min: 1, max: 2, integer: true, initial: 1 })
         })
       ),
       activeWeaponIndex: new NumberField({ min: 0, max: 3, integer: true }),

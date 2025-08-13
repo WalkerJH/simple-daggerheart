@@ -66,6 +66,23 @@
         "Inventory": "Inventory",
         "Cards": "Cards",
         "Notes": "Notes"
+      },
+      "Weapons": {
+        "Label": "Weapons and Tools",
+        "Add": "Add Weapon/Tool",
+        "Name": "Name",
+        "Trait": "Trait",
+        "Range": "Range",
+        "DamageDice": "Damage Dice",
+        "Primary": "Primary",
+        "Secondary": "Secondary",
+        "Remove": "Remove Weapon/Tool"
+      },
+      "Items": {
+        "Label": "Items",
+        "Add": "Add Item",
+        "Remove": "Remove Item",
+        "Amount": "Amount"
       }
     }
   }
