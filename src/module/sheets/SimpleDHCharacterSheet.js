@@ -140,8 +140,6 @@ export class SimpleDHCharacterSheet extends api.HandlebarsApplicationMixin(
     return context;
   }
 
-  canSubmitDHCharacter = true;
-
   static modifyHP(_, button) {
     let hp = this.document.system.hp + parseInt(button.dataset.amount, 10);
     if (hp < 0) hp = 0;
