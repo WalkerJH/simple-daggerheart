@@ -12,6 +12,7 @@
           value='{{feature.name}}'
         />
         <button
+          type='button'
           class='remove-feature-button'
           data-action='removeFeature'
           data-index='{{index}}'
@@ -28,7 +29,7 @@
       }}
     </div>
   {{/each}}
-  <button data-action='addFeature'>
+  <button type='button' data-action='addFeature'>
     {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Features.Add'}}
   </button>
 </section>

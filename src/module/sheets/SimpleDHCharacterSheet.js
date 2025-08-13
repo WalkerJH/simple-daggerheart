@@ -140,7 +140,9 @@ export class SimpleDHCharacterSheet extends api.HandlebarsApplicationMixin(
     return context;
   }
 
-  static async modifyHP(_, button) {
+  canSubmitDHCharacter = true;
+
+  static modifyHP(_, button) {
     let hp = this.document.system.hp + parseInt(button.dataset.amount, 10);
     if (hp < 0) hp = 0;
     this.submit({
@@ -150,7 +152,7 @@ export class SimpleDHCharacterSheet extends api.HandlebarsApplicationMixin(
     });
   }
 
-  static async addExperience() {
+  static addExperience() {
     this.submit({
       updateData: {
         [`system.experiences.${this.document.system.experiences.length}`]: {
@@ -161,18 +163,18 @@ export class SimpleDHCharacterSheet extends api.HandlebarsApplicationMixin(
     });
   }
 
-  static async removeExperience(_, button) {
+  static removeExperience(_, button) {
     const index = parseInt(button.dataset.index, 10);
     this.submit({
       updateData: {
-        'system.experiences': this.document.system.experiences.filter(
-          (_experience, experienceIndex) => experienceIndex !== index
-        )
+        system: {
+          experiences: { [`-=${index}`]: null }
+        }
       }
     });
   }
 
-  static async addFeature() {
+  static addFeature() {
     this.submit({
       updateData: {
         [`system.features.${this.document.system.features.length}`]: {
@@ -183,13 +185,13 @@ export class SimpleDHCharacterSheet extends api.HandlebarsApplicationMixin(
     });
   }
 
-  static async removeFeature(_, button) {
+  static removeFeature(_, button) {
     const index = parseInt(button.dataset.index, 10);
     this.submit({
       updateData: {
-        'system.features': this.document.system.features.filter(
-          (_feature, featureIndex) => featureIndex !== index
-        )
+        system: {
+          features: { [`-=${index}`]: null }
+        }
       }
     });
   }

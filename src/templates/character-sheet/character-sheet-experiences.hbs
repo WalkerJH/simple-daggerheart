@@ -16,6 +16,7 @@
         value='{{experience.bonus}}'
       />
       <button
+        type='button'
         class='remove-experience-button'
         data-action='removeExperience'
         data-index='{{index}}'
@@ -26,7 +27,7 @@
       ><a class='fas fa-x'></a></button>
     </div>
   {{/each}}
-  <button data-action='addExperience'>
+  <button type='button' data-action='addExperience'>
     {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Experience.Add'}}
   </button>
 </section>
