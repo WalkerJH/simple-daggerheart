@@ -8,7 +8,7 @@ export class SimpleDHCharacterSheet extends api.HandlebarsApplicationMixin(
     label: '',
     classes: ['simple-daggerheart', 'character-sheet'],
     form: {
-      submitOnChange: false,
+      submitOnChange: true,
       closeOnSubmit: false
     },
     actions: {
@@ -143,16 +143,15 @@ export class SimpleDHCharacterSheet extends api.HandlebarsApplicationMixin(
   static async modifyHP(_, button) {
     let hp = this.document.system.hp + parseInt(button.dataset.amount, 10);
     if (hp < 0) hp = 0;
-    await this.submit({
+    this.submit({
       updateData: {
         'system.hp': hp
       }
     });
-    this.render();
   }
 
   static async addExperience() {
-    await this.submit({
+    this.submit({
       updateData: {
         [`system.experiences.${this.document.system.experiences.length}`]: {
           name: '',
@@ -160,23 +159,21 @@ export class SimpleDHCharacterSheet extends api.HandlebarsApplicationMixin(
         }
       }
     });
-    this.render();
   }
 
   static async removeExperience(_, button) {
     const index = parseInt(button.dataset.index, 10);
-    await this.submit({
+    this.submit({
       updateData: {
         'system.experiences': this.document.system.experiences.filter(
           (_experience, experienceIndex) => experienceIndex !== index
         )
       }
     });
-    this.render();
   }
 
   static async addFeature() {
-    await this.submit({
+    this.submit({
       updateData: {
         [`system.features.${this.document.system.features.length}`]: {
           name: '',
@@ -184,19 +181,16 @@ export class SimpleDHCharacterSheet extends api.HandlebarsApplicationMixin(
         }
       }
     });
-    this.render();
   }
 
   static async removeFeature(_, button) {
     const index = parseInt(button.dataset.index, 10);
-    await this.submit({
+    this.submit({
       updateData: {
         'system.features': this.document.system.features.filter(
           (_feature, featureIndex) => featureIndex !== index
         )
       }
     });
-    await this.submit();
-    this.render();
   }
 }
