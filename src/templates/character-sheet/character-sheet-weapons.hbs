@@ -1,7 +1,17 @@
 <div class='flexcol gap-2 character-sheet-weapons'>
-  <label>
-    {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Weapons.Label'}}
-  </label>
+  <div class='flexrow character-weapons-header'>
+    <label>
+      {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Weapons.Label'}}
+    </label>
+    <label class='card character-proficiency'>
+      {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Proficiency'}}
+      <input
+        type='number'
+        name='system.proficiency'
+        value='{{document.system.proficiency}}'
+      />
+    </label>
+  </div>
   {{#each weapons as |weapon index|}}
     <div class='card flexcol gap-2 character-weapon'>
       <div class='flexrow gap-2'>
@@ -42,17 +52,47 @@
           class='remove-weapon-button'
           data-action='removeWeapon'
           data-index='{{index}}'
-          data-weapontip='{{localize
+          data-tooltip='{{localize
             "SIMPLE_DAGGERHEART.CharacterSheet.Weapons.Remove"
           }}'
-          data-weapontip-direction='UP'
-        ><a class='fas fa-x'></a></button>
+          data-tooltip-direction='UP'
+        ><span class='fas fa-x'></span></button>
       </div>
-      {{formInput
-        weapon.descriptionField
-        name=weapon.descriptionName
-        value=weapon.description
-      }}
+      <div class='flexrow gap-2'>
+        <div class='simple-prose-mirror-container'>
+          {{formInput
+            weapon.descriptionField
+            name=weapon.descriptionName
+            value=weapon.description
+          }}
+        </div>
+        <label class='character-weapon-burden'>
+          {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Weapons.Burden'}}
+          <input
+            type='text'
+            name='{{concat "system.weapons." index ".burden"}}'
+            value='{{weapon.burden}}'
+          />
+        </label>
+        <div class='flexcol character-weapon-equip-settings'>
+          <label>
+            <input
+              type='checkbox'
+              name='{{concat "system.weapons." index ".primary"}}'
+              {{checked weapon.primary}}
+            />
+            {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Weapons.Primary'}}
+          </label>
+          <label>
+            <input
+              type='checkbox'
+              name='{{concat "system.weapons." index ".secondary"}}'
+              {{checked weapon.secondary}}
+            />
+            {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Weapons.Secondary'}}
+          </label>
+        </div>
+      </div>
     </div>
   {{/each}}
   <button type='button' data-action='addWeapon'>

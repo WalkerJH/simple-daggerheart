@@ -20,13 +20,15 @@
             "SIMPLE_DAGGERHEART.CharacterSheet.Features.Remove"
           }}'
           data-tooltip-direction='UP'
-        ><a class='fas fa-x'></a></button>
+        ><span class='fas fa-x'></span></button>
       </div>
-      {{formInput
-        feature.descriptionField
-        name=feature.descriptionName
-        value=feature.description
-      }}
+      <div class='simple-prose-mirror-container'>
+        {{formInput
+          feature.descriptionField
+          name=feature.descriptionName
+          value=feature.description
+        }}
+      </div>
     </div>
   {{/each}}
   <button type='button' data-action='addFeature'>

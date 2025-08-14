@@ -10,6 +10,9 @@
 .simple-daggerheart .gap-4 {
   gap: 24px;
 }
+.simple-daggerheart .align-start {
+  align-items: flex-start;
+}
 
 .simple-daggerheart .large-input-field,
 .simple-daggerheart .large-text-container {
@@ -41,9 +44,11 @@
   z-index: 2;
   position: relative;
 }
-.simple-daggerheart .container-columns {
-  margin-top: 12px;
-  align-items: flex-start;
+.simple-daggerheart .simple-prose-mirror-container prose-mirror {
+  min-height: 3.7rem;
+}
+.simple-daggerheart .simple-prose-mirror-container .editor-menu {
+  display: none;
 }
 
 .simple-daggerheart.character-sheet-header {
@@ -57,7 +62,7 @@
   border: 1px solid hsl(228, 28%, 16%);
   border-radius: 4px;
 }
-.simple-daggerheart.character-sheet-header .character-level {
+.simple-daggerheart.character-sheet-header .character-banner {
   padding: 24px 12px 12px;
   border-radius: 0 0 8px 8px;
   border-top: none;
@@ -94,7 +99,7 @@
 }
 
 .simple-daggerheart .character-sheet-statuses {
-  min-width: 32rem;
+  margin-bottom: 12px;
 }
 .simple-daggerheart .character-sheet-statuses .character-statuses-row {
   justify-content: center;
@@ -128,12 +133,6 @@
 .simple-daggerheart .character-sheet-features .character-feature .remove-feature-button {
   max-width: min-content;
 }
-.simple-daggerheart .character-sheet-features .character-feature prose-mirror {
-  min-height: 5.5rem;
-}
-.simple-daggerheart .character-sheet-features .character-feature .editor-menu {
-  display: none;
-}
 
 .simple-daggerheart .character-sheet-experiences .character-experience .character-experience-bonus {
   max-width: 3rem;
@@ -142,6 +141,20 @@
   max-width: min-content;
 }
 
+.simple-daggerheart .character-sheet-weapons .character-weapons-header {
+  justify-content: space-between;
+}
+.simple-daggerheart .character-sheet-weapons .character-weapons-header .character-proficiency {
+  padding: 6px;
+}
+.simple-daggerheart .character-sheet-weapons .character-weapons-header .character-proficiency input {
+  margin-top: 0;
+  max-width: 3rem;
+  margin-left: 4px;
+}
+.simple-daggerheart .character-sheet-weapons .character-weapons-header label {
+  max-width: max-content;
+}
 .simple-daggerheart .character-sheet-weapons .character-weapon .character-weapon-small-input {
   max-width: 5.2rem;
 }
@@ -149,11 +162,15 @@
   max-width: min-content;
   margin-top: 20px;
 }
-.simple-daggerheart .character-sheet-weapons .character-weapon prose-mirror {
-  min-height: 3.7rem;
+.simple-daggerheart .character-sheet-weapons .character-weapon .simple-prose-mirror-container {
+  flex: 1 0 0;
 }
-.simple-daggerheart .character-sheet-weapons .character-weapon .editor-menu {
-  display: none;
+.simple-daggerheart .character-sheet-weapons .character-weapon .character-weapon-equip-settings {
+  flex: 0 0 0;
+  min-width: max-content;
+}
+.simple-daggerheart .character-sheet-weapons .character-weapon .character-weapon-burden {
+  max-width: 5.8rem;
 }
 
 .simple-daggerheart .character-sheet-items {
@@ -168,12 +185,6 @@
 .simple-daggerheart .character-sheet-items .character-item .remove-item-button {
   max-width: min-content;
   margin-top: 20px;
-}
-.simple-daggerheart .character-sheet-items .character-item prose-mirror {
-  min-height: 3.7rem;
-}
-.simple-daggerheart .character-sheet-items .character-item .editor-menu {
-  display: none;
 }
 
 .simple-daggerheart.character-sheet {
@@ -194,7 +205,7 @@
 .simple-daggerheart.character-sheet .tabs > a {
   border: 1px solid transparent;
   padding: 0 1rem;
-  color: hsl(40, 10%, 95%);
+  color: hsl(40, 10%, 92%);
 }
 .simple-daggerheart.character-sheet .tabs > a > i {
   padding-right: 0.5rem;
@@ -210,15 +221,15 @@
   top: 1px;
   padding-bottom: 2px;
   background: hsl(228, 40%, 4%);
-  color: hsl(40, 10%, 95%);
+  color: hsl(40, 10%, 92%);
 }
 
 .application.simple-daggerheart {
   --background: hsl(228, 40%, 4%);
   --color-border: hsl(228, 28%, 16%);
-  --color-text-primary: hsl(40, 10%, 95%);
-  --color-text-secondary: hsl(40, 10%, 95%);
-  --color-text-selection: hsl(40, 10%, 95%);
+  --color-text-primary: hsl(40, 10%, 92%);
+  --color-text-secondary: hsl(40, 10%, 92%);
+  --color-text-selection: hsl(40, 10%, 92%);
   --color-text-selection-bg: hsl(228, 30%, 40%);
   --color-scrollbar: hsl(228, 50%, 40%);
 }
@@ -231,8 +242,8 @@
   --checkbox-background-color: hsl(228, 28%, 16%);
   --checkbox-checked-color: hsl(48, 78%, 67%);
   --input-border-color: transparent;
-  --input-text-color: hsl(40, 10%, 95%);
-  --input-focus-outline-color: hsl(40, 10%, 95%);
+  --input-text-color: hsl(40, 10%, 92%);
+  --input-focus-outline-color: hsl(40, 10%, 92%);
   transition: 0.2s;
 }
 .application.simple-daggerheart .window-content input[type=number] {
@@ -252,10 +263,10 @@
   left: 90%;
 }
 .application.simple-daggerheart .window-content button {
-  --button-text-color: hsl(40, 10%, 95%);
+  --button-text-color: hsl(40, 10%, 92%);
   --button-border-color: transparent;
   --button-background-color: hsl(228, 28%, 16%);
-  --button-hover-text-color: hsl(40, 10%, 95%);
+  --button-hover-text-color: hsl(40, 10%, 92%);
   --button-hover-background-color: hsl(228, 28%, 16%);
   --button-hover-border-color: transparent;
   --button-focus-outline-color: transparent;
@@ -267,11 +278,10 @@
   position: relative;
   padding: 0;
 }
-.application.simple-daggerheart .window-content button > span,
-.application.simple-daggerheart .window-content button > a {
+.application.simple-daggerheart .window-content button > * {
   padding: 6px 0.6rem;
 }
-.application.simple-daggerheart .window-content button > a {
+.application.simple-daggerheart .window-content button > .fas {
   font-size: 0.7rem;
 }
 .application.simple-daggerheart .window-content button:not(:disabled):active {
@@ -292,14 +302,14 @@
   border-radius: 4px;
   padding: 4px;
   box-sizing: content-box;
-  border: 1px solid hsl(40, 10%, 95%);
+  border: 1px solid hsl(40, 10%, 92%);
 }
 .application.simple-daggerheart .window-content nav.tabs {
   border: none;
 }
 
 .chat-message {
-  --chat-message-background: hsl(40, 10%, 95%);
+  --chat-message-background: hsl(40, 10%, 92%);
 }
 
 /*# sourceMappingURL=simple-daggerheart-styles.css.map */

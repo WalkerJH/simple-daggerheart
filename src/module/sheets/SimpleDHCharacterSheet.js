@@ -236,7 +236,7 @@ export class SimpleDHCharacterSheet extends api.HandlebarsApplicationMixin(
           feature: '',
           primary: false,
           secondary: false,
-          burden: 1
+          burden: ''
         }
       }
     });

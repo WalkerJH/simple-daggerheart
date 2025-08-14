@@ -1,4 +1,21 @@
 .simple-daggerheart .character-sheet-weapons {
+  .character-weapons-header {
+    justify-content: space-between;
+
+    .character-proficiency {
+      padding: 6px;
+      input {
+        margin-top: 0;
+        max-width: 3rem;
+        margin-left: 4px;
+      }
+    }
+
+    label {
+      max-width: max-content;
+    }
+  }
+
   .character-weapon {
     .character-weapon-small-input {
       max-width: 5.2rem;
@@ -7,11 +24,15 @@
       max-width: min-content;
       margin-top: 20px;
     }
-    prose-mirror {
-      min-height: 3.7rem;
+    .simple-prose-mirror-container {
+      flex: 1 0 0;
     }
-    .editor-menu {
-      display: none;
+    .character-weapon-equip-settings {
+      flex: 0 0 0;
+      min-width: max-content;
+    }
+    .character-weapon-burden {
+      max-width: 5.8rem;
     }
   }
 }

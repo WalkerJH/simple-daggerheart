@@ -70,7 +70,7 @@ export class SimpleDHCharacter extends TypeDataModel {
           feature: new StringField(),
           primary: new BooleanField({ initial: false }),
           secondary: new BooleanField({ initial: false }),
-          burden: new NumberField({ min: 1, max: 2, integer: true, initial: 1 })
+          burden: new StringField()
         })
       ),
       activeWeaponIndex: new NumberField({ min: 0, max: 3, integer: true }),

@@ -36,8 +36,12 @@
     }
   }
 
-  .container-columns {
-    margin-top: 12px;
-    align-items: flex-start;
+  .simple-prose-mirror-container {
+    prose-mirror {
+      min-height: 3.7rem;
+    }
+    .editor-menu {
+      display: none;
+    }
   }
 }

@@ -62,12 +62,11 @@
       position: relative;
       padding: 0;
 
-      > span,
-      > a {
+      > * {
         padding: 6px 0.6rem;
       }
 
-      > a {
+      > .fas {
         font-size: 0.7rem;
       }
 

@@ -9,6 +9,7 @@
       "Subclass": "Subclass",
       "Biography": "Biography",
       "Level": "Level",
+      "Proficiency": "Proficiency",
       "HP": "HP",
       "Stress": "Stress",
       "Hope": "Hope",
@@ -76,6 +77,7 @@
         "DamageDice": "Damage Dice",
         "Primary": "Primary",
         "Secondary": "Secondary",
+        "Burden": "Burden",
         "Remove": "Remove Weapon/Tool"
       },
       "Items": {
