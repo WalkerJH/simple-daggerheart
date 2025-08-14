@@ -81,6 +81,7 @@
       "Items": {
         "Label": "Items",
         "Add": "Add Item",
+        "Name": "Name",
         "Remove": "Remove Item",
         "Amount": "Amount"
       }

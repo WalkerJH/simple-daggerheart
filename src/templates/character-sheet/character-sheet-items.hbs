@@ -1,0 +1,47 @@
+<div class='flexcol gap-2 character-sheet-items'>
+  <label>
+    {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Items.Label'}}
+  </label>
+  {{#each items as |item index|}}
+    <div class='card flexcol gap-2 character-item'>
+      <div class='flexrow gap-2'>
+        <label class='character-item-name'>
+          {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Items.Name'}}
+          <input
+            type='text'
+            name='{{concat "system.items." index ".name"}}'
+            value='{{item.name}}'
+          />
+        </label>
+        <label class='character-item-amount'>
+          {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Items.Amount'}}
+          <input
+            type='number'
+            name='{{concat "system.items." index ".amount"}}'
+            value='{{item.amount}}'
+          />
+        </label>
+        <button
+          type='button'
+          class='remove-item-button'
+          data-action='removeItem'
+          data-index='{{index}}'
+          data-itemtip='{{localize
+            "SIMPLE_DAGGERHEART.CharacterSheet.Items.Remove"
+          }}'
+          data-itemtip-direction='UP'
+        ><a class='fas fa-x'></a></button>
+      </div>
+      {{formInput
+        item.descriptionField
+        name=item.descriptionName
+        value=item.description
+      }}
+    </div>
+  {{/each}}
+  <button type='button' data-action='addItem'>
+    <span>
+      {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Items.Add'}}
+    </span>
+  </button>
+</div>

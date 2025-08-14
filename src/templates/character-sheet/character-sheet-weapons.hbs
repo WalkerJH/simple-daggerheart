@@ -1,0 +1,63 @@
+<div class='flexcol gap-2 character-sheet-weapons'>
+  <label>
+    {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Weapons.Label'}}
+  </label>
+  {{#each weapons as |weapon index|}}
+    <div class='card flexcol gap-2 character-weapon'>
+      <div class='flexrow gap-2'>
+        <label>
+          {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Weapons.Name'}}
+          <input
+            type='text'
+            name='{{concat "system.weapons." index ".name"}}'
+            value='{{weapon.name}}'
+          />
+        </label>
+        <label>
+          {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Weapons.Trait'}}
+          <input
+            type='text'
+            name='{{concat "system.weapons." index ".trait"}}'
+            value='{{weapon.trait}}'
+          />
+        </label>
+        <label class='character-weapon-small-input'>
+          {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Weapons.Range'}}
+          <input
+            type='text'
+            name='{{concat "system.weapons." index ".range"}}'
+            value='{{weapon.range}}'
+          />
+        </label>
+        <label class='character-weapon-small-input'>
+          {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Weapons.DamageDice'}}
+          <input
+            type='text'
+            name='{{concat "system.weapons." index ".damageDice"}}'
+            value='{{weapon.damageDice}}'
+          />
+        </label>
+        <button
+          type='button'
+          class='remove-weapon-button'
+          data-action='removeWeapon'
+          data-index='{{index}}'
+          data-weapontip='{{localize
+            "SIMPLE_DAGGERHEART.CharacterSheet.Weapons.Remove"
+          }}'
+          data-weapontip-direction='UP'
+        ><a class='fas fa-x'></a></button>
+      </div>
+      {{formInput
+        weapon.descriptionField
+        name=weapon.descriptionName
+        value=weapon.description
+      }}
+    </div>
+  {{/each}}
+  <button type='button' data-action='addWeapon'>
+    <span>
+      {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Weapons.Add'}}
+    </span>
+  </button>
+</div>

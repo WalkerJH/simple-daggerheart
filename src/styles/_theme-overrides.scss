@@ -23,6 +23,10 @@
       transition: 0.2s;
     }
 
+    input[type='number'] {
+      text-align: center;
+    }
+
     prose-mirror.active {
       .editor-content {
         background-color: variables.$color-dark-2;
@@ -50,13 +54,18 @@
       --button-hover-background-color: #{variables.$color-dark-2};
       --button-hover-border-color: transparent;
       --button-focus-outline-color: transparent;
-      padding: 6px 0.6rem;
       box-shadow: 0 1px 1px 1px black;
       border-top: 1px solid variables.$color-dark-4;
       border-radius: 4px;
       height: auto;
       transition: none;
       position: relative;
+      padding: 0;
+
+      > span,
+      > a {
+        padding: 6px 0.6rem;
+      }
 
       > a {
         font-size: 0.7rem;

@@ -1,10 +1,10 @@
 @use 'character-sheet-header.scss';
 @use 'character-sheet-traits.scss';
-@use 'character-sheet-character-tab.scss';
 @use 'character-sheet-statuses.scss';
 @use 'character-sheet-features.scss';
 @use 'character-sheet-experiences.scss';
-@use 'character-sheet-inventory.scss';
+@use 'character-sheet-weapons.scss';
+@use 'character-sheet-items.scss';
 @use '../variables.scss';
 
 .simple-daggerheart.character-sheet {

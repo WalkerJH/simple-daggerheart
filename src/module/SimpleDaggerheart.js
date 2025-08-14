@@ -36,7 +36,11 @@ async function preloadTemplates() {
     'simple-daggerheart.character-sheet.experiences':
       'systems/simple-daggerheart/src/templates/character-sheet/character-sheet-experiences.hbs',
     'simple-daggerheart.character-sheet.features':
-      'systems/simple-daggerheart/src/templates/character-sheet/character-sheet-features.hbs'
+      'systems/simple-daggerheart/src/templates/character-sheet/character-sheet-features.hbs',
+    'simple-daggerheart.character-sheet.weapons':
+      'systems/simple-daggerheart/src/templates/character-sheet/character-sheet-weapons.hbs',
+    'simple-daggerheart.character-sheet.items':
+      'systems/simple-daggerheart/src/templates/character-sheet/character-sheet-items.hbs'
   });
 }
 

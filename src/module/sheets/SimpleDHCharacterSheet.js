@@ -18,7 +18,9 @@ export class SimpleDHCharacterSheet extends api.HandlebarsApplicationMixin(
       addFeature: this.addFeature,
       removeFeature: this.removeFeature,
       addWeapon: this.addWeapon,
-      removeWeapon: this.removeWeapon
+      removeWeapon: this.removeWeapon,
+      addItem: this.addItem,
+      removeItem: this.removeItem
     },
     position: {
       width: 800,
@@ -54,7 +56,7 @@ export class SimpleDHCharacterSheet extends api.HandlebarsApplicationMixin(
     },
     inventory: {
       id: 'inventory',
-      template: `${this.templatePrefix}/character-sheet-inventory.hbs`,
+      template: `${this.templatePrefix}/character-sheet-inventory-tab.hbs`,
       classes: ['simple-daggerheart']
     },
     cards: {
@@ -131,8 +133,7 @@ export class SimpleDHCharacterSheet extends api.HandlebarsApplicationMixin(
         const descriptionName = `system.features.${index}.description`;
 
         return {
-          name: feature.name,
-          description: feature.description,
+          ...feature,
           descriptionField,
           descriptionName
         };
@@ -146,8 +147,21 @@ export class SimpleDHCharacterSheet extends api.HandlebarsApplicationMixin(
         const descriptionName = `system.weapons.${index}.description`;
 
         return {
-          name: weapon.name,
-          description: weapon.description,
+          ...weapon,
+          descriptionField,
+          descriptionName
+        };
+      })
+    );
+
+    context.items = await Promise.all(
+      this.document.system.items.map(async (item, index) => {
+        const descriptionField =
+          this.document.system.schema.fields.items.element.fields.description;
+        const descriptionName = `system.items.${index}.description`;
+
+        return {
+          ...item,
           descriptionField,
           descriptionName
         };
@@ -234,6 +248,29 @@ export class SimpleDHCharacterSheet extends api.HandlebarsApplicationMixin(
       updateData: {
         system: {
           weapons: { [`-=${index}`]: null }
+        }
+      }
+    });
+  }
+
+  static addItem() {
+    this.submit({
+      updateData: {
+        [`system.items.${this.document.system.items.length}`]: {
+          name: '',
+          amount: 1,
+          description: ''
+        }
+      }
+    });
+  }
+
+  static removeItem(_, button) {
+    const index = parseInt(button.dataset.index, 10);
+    this.submit({
+      updateData: {
+        system: {
+          items: { [`-=${index}`]: null }
         }
       }
     });

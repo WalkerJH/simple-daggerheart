@@ -1,0 +1,22 @@
+.simple-daggerheart .character-sheet-items {
+  max-width: 40%;
+
+  .character-item {
+    .character-item-name {
+      flex-grow: 1;
+    }
+    .character-item-amount {
+      max-width: 3rem;
+    }
+    .remove-item-button {
+      max-width: min-content;
+      margin-top: 20px;
+    }
+    prose-mirror {
+      min-height: 3.7rem;
+    }
+    .editor-menu {
+      display: none;
+    }
+  }
+}
