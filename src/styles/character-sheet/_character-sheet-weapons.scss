@@ -1,18 +1,24 @@
 .simple-daggerheart .character-sheet-weapons {
-  .character-weapons-header {
+  .section-header {
     justify-content: space-between;
 
+    .section-label {
+      flex-grow: 1;
+    }
+
     .character-proficiency {
-      padding: 6px;
-      input {
+      flex-grow: 0;
+      flex-shrink: 1;
+      min-width: max-content;
+      .character-proficiency-label {
+        flex-grow: 0;
+      }
+
+      .character-proficiency-input {
         margin-top: 0;
         max-width: 3rem;
         margin-left: 4px;
       }
-    }
-
-    label {
-      max-width: max-content;
     }
   }
 

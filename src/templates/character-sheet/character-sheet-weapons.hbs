@@ -1,16 +1,19 @@
 <div class='flexcol gap-2 character-sheet-weapons'>
-  <div class='flexrow character-weapons-header'>
-    <label>
+  <div class='flexrow section-header'>
+    <label class='section-label'>
       {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Weapons.Label'}}
     </label>
-    <label class='card character-proficiency'>
-      {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Proficiency'}}
+    <div class='flexrow character-proficiency'>
+      <label class='character-proficiency-label'>
+        {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Proficiency'}}
+      </label>
       <input
+        class='character-proficiency-input'
         type='number'
         name='system.proficiency'
         value='{{document.system.proficiency}}'
       />
-    </label>
+    </div>
   </div>
   {{#each weapons as |weapon index|}}
     <div class='card flexcol gap-2 character-weapon'>

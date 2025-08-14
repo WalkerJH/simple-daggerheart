@@ -36,13 +36,14 @@
   background-color: hsl(228, 40%, 7%);
   border-top: 1px solid var(--color-border);
   box-shadow: 0 2px 4px black;
-  position: relative;
   padding: 12px;
   border-radius: 3px;
 }
-.simple-daggerheart .card > * {
-  z-index: 2;
-  position: relative;
+.simple-daggerheart .section-header {
+  padding: 4px;
+  min-height: 3rem;
+  padding: 0 12px;
+  border-bottom: 1px solid hsl(228, 10%, 60%);
 }
 .simple-daggerheart .simple-prose-mirror-container prose-mirror {
   min-height: 3.7rem;
@@ -141,19 +142,24 @@
   max-width: min-content;
 }
 
-.simple-daggerheart .character-sheet-weapons .character-weapons-header {
+.simple-daggerheart .character-sheet-weapons .section-header {
   justify-content: space-between;
 }
-.simple-daggerheart .character-sheet-weapons .character-weapons-header .character-proficiency {
-  padding: 6px;
+.simple-daggerheart .character-sheet-weapons .section-header .section-label {
+  flex-grow: 1;
 }
-.simple-daggerheart .character-sheet-weapons .character-weapons-header .character-proficiency input {
+.simple-daggerheart .character-sheet-weapons .section-header .character-proficiency {
+  flex-grow: 0;
+  flex-shrink: 1;
+  min-width: max-content;
+}
+.simple-daggerheart .character-sheet-weapons .section-header .character-proficiency .character-proficiency-label {
+  flex-grow: 0;
+}
+.simple-daggerheart .character-sheet-weapons .section-header .character-proficiency .character-proficiency-input {
   margin-top: 0;
   max-width: 3rem;
   margin-left: 4px;
-}
-.simple-daggerheart .character-sheet-weapons .character-weapons-header label {
-  max-width: max-content;
 }
 .simple-daggerheart .character-sheet-weapons .character-weapon .character-weapon-small-input {
   max-width: 5.2rem;
@@ -230,8 +236,8 @@
   --color-text-primary: hsl(40, 10%, 92%);
   --color-text-secondary: hsl(40, 10%, 92%);
   --color-text-selection: hsl(40, 10%, 92%);
-  --color-text-selection-bg: hsl(228, 30%, 40%);
-  --color-scrollbar: hsl(228, 50%, 40%);
+  --color-text-selection-bg: hsl(228, 30%, 50%);
+  --color-scrollbar: hsl(228, 30%, 50%);
 }
 .application.simple-daggerheart .window-content {
   overflow-y: scroll;
