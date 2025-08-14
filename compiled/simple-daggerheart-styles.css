@@ -40,6 +40,9 @@
   border-radius: 3px;
 }
 .simple-daggerheart .section-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   padding: 4px;
   min-height: 3rem;
   padding: 0 12px;
