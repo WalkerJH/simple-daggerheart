@@ -1,5 +1,5 @@
-<div class='flexcol gap-2 character-sheet-weapons'>
-  <div class='flexrow section-header'>
+<div class='flexcol gap-2 section character-sheet-weapons'>
+  <div class='flexrow weapons-header'>
     <label class='section-label'>
       {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Weapons.Label'}}
     </label>
@@ -16,7 +16,7 @@
     </div>
   </div>
   {{#each weapons as |weapon index|}}
-    <div class='card flexcol gap-2 character-weapon'>
+    <div class='flexcol gap-2 subsection character-weapon'>
       <div class='flexrow gap-2'>
         <label>
           {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Weapons.Name'}}
@@ -61,7 +61,7 @@
           data-tooltip-direction='UP'
         ><span class='fas fa-x'></span></button>
       </div>
-      <div class='flexrow gap-2'>
+      <div class='flexrow gap-2 align-end'>
         <div class='simple-prose-mirror-container'>
           {{formInput
             weapon.descriptionField

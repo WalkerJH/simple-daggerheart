@@ -20,14 +20,14 @@
     border: 1px solid transparent;
     flex-grow: 1;
     background:
-      linear-gradient(var(--background), var(--background)) padding-box,
+      linear-gradient(variables.$color-dark-1, variables.$color-dark-1) padding-box,
       linear-gradient(
           to bottom right,
           variables.$color-gold-accent,
           variables.$color-gold-accent-heavy
         )
         border-box;
-    border-radius: 8px;
+    border-radius: 4px;
     padding: 12px;
   }
 
@@ -44,7 +44,7 @@
   .tabs > a.active {
     border: 1px solid variables.$color-gold-accent;
     border-bottom: none;
-    border-radius: 8px;
+    border-radius: 4px;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
     z-index: 2;

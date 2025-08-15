@@ -1,7 +1,5 @@
 .simple-daggerheart .character-sheet-weapons {
-  .section-header {
-    justify-content: space-between;
-
+  .weapons-header {
     .section-label {
       flex-grow: 1;
     }
@@ -17,7 +15,7 @@
       .character-proficiency-input {
         margin-top: 0;
         max-width: 3rem;
-        margin-left: 4px;
+        margin-left: 1ch;
       }
     }
   }

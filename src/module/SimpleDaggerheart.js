@@ -16,7 +16,7 @@ function registerDataModels() {
 function registerSheets() {
   Items.unregisterSheet('core', foundry.applications.sheets.ItemSheetV2);
   Items.registerSheet(SIMPLE_DAGGERHEART_SYSTEM.id, SimpleDHCardSheet, {
-    types: ['card'],
+    types: ['section'],
     makeDefault: true
   });
 

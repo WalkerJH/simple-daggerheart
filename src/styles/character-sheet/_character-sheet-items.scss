@@ -1,6 +1,10 @@
 .simple-daggerheart .character-sheet-items {
   max-width: 40%;
 
+  .items-header {
+    height: 2rem;
+  }
+
   .character-item {
     .character-item-name {
       flex-grow: 1;
