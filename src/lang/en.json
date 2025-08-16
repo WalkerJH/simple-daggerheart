@@ -92,7 +92,8 @@
         "Label": "Journal",
         "Next": "Next Page",
         "Previous": "Previous Page",
-        "Remove": "Remove Page"
+        "Remove": "Remove Page",
+        "Add": "Add Page"
       }
     }
   }

@@ -20,7 +20,10 @@ export class SimpleDHCharacterSheet extends api.HandlebarsApplicationMixin(
       addWeapon: this.addWeapon,
       removeWeapon: this.removeWeapon,
       addItem: this.addItem,
-      removeItem: this.removeItem
+      removeItem: this.removeItem,
+      addJournalPage: this.addJournalPage,
+      modifyActiveJournalPage: this.modifyActiveJournalPage,
+      removeJournalPage: this.removeJournalPage
     },
     position: {
       width: 800,
@@ -181,20 +184,11 @@ export class SimpleDHCharacterSheet extends api.HandlebarsApplicationMixin(
       name: 'system.connections'
     };
 
-    context.journal = await Promise.all(
-      this.document.system.journal.map(async (value, index) => {
-        const field = this.document.system.schema.fields.journal.element;
-        const name = `system.journal.${index}`;
-
-        return {
-          value,
-          field,
-          name,
-          isActive: index === this.document.system.activeJournalPage,
-          isFinalPage: index === this.document.system.journal.length
-        };
-      })
-    );
+    context.journal = {
+      field: this.document.system.schema.fields.journal,
+      value: this.document.system.journal,
+      name: 'system.journal'
+    };
 
     return context;
   }
@@ -279,27 +273,5 @@ export class SimpleDHCharacterSheet extends api.HandlebarsApplicationMixin(
 
   static removeItem(_, button) {
     this.removeItemFromSystemArray('items', parseInt(button.dataset.index, 10));
-  }
-
-  static addJournalPage() {
-    this.appendItemToSystemArray('journal', '');
-  }
-
-  static removeJournalPage(_, button) {
-    this.removeItemFromSystemArray(
-      'journal',
-      parseInt(button.dataset.index, 10)
-    );
-  }
-
-  static modifyActiveJournalPage(_, button) {
-    let activeJournalPage =
-      this.document.system.activeJournalPage +
-      parseInt(button.dataset.amount, 10);
-    this.submit({
-      updateData: {
-        'system.activeJournalPage': activeJournalPage
-      }
-    });
   }
 }

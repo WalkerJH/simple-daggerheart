@@ -3,13 +3,13 @@
   data-group='primary'
   data-tab='notes'
 >
-  <div class='flexrow gap-3 notes-columns'>
-    <div class='flexcol gap-3 character-notes-rows'>
-      <label class='large-prose-mirror-container'>
+  <div class='flexrow gap-3 align-stretch'>
+    <div class='flexcol gap-3'>
+      <label class='section flexcol large-prose-mirror-container'>
         {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Biography'}}
         {{formInput biography.field name=biography.name value=biography.value}}
       </label>
-      <label class='large-prose-mirror-container'>
+      <label class='section flexcol large-prose-mirror-container'>
         {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Connections'}}
         {{formInput
           connections.field
@@ -18,33 +18,9 @@
         }}
       </label>
     </div>
-    <div class='flexcol journal'>
-      <label>{{localize
-          'SIMPLE_DAGGERHEART.CharacterSheet.Journal.Label'
-        }}</label>
-      {{#each journal as |journalPage index|}}
-        {{#if journalPage.isActive}}
-          <div class='large-prose-mirror-container'>
-            {{formInput
-              journalPage.field
-              name=journalPage.name
-              value=journalPage.value
-            }}
-          </div>
-          <div>
-            <button
-              type='button'
-              class='previous-page-button'
-              data-action='modifyActiveJournalPage'
-              data-index='-1'
-              data-tooltip='{{localize
-                "SIMPLE_DAGGERHEART.CharacterSheet.Journal.Previous"
-              }}'
-              data-tooltip-direction='UP'
-            ><span class='fas fa-x'></span></button>
-          </div>
-        {{/if}}
-      {{/each}}
-    </div>
+    <label class='section flexcol large-prose-mirror-container'>
+      {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Journal.Label'}}
+      {{formInput journal.field name=journal.name value=journal.value}}
+    </label>
   </div>
 </section>

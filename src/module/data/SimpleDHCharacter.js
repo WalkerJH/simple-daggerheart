@@ -22,8 +22,8 @@ export class SimpleDHCharacter extends TypeDataModel {
       subclass: new StringField(),
       biography: new HTMLField(),
       connections: new HTMLField(),
-      journal: new ArrayField(new HTMLField(), { initial: [''] }),
-      activeJournalPage: new NumberField({ initial: 0, integer: true }),
+      journal: new HTMLField(),
+      activeJournalPage: new NumberField({ initial: 0, integer: true, min: 0 }),
 
       level: createResourceField({ initial: 1, min: 1, max: 10 }),
       hp: createResourceField({ initial: 1, min: 0, max: 10 }),

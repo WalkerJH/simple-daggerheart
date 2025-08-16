@@ -8,7 +8,7 @@
     cursor: pointer;
     max-width: 102px;
     max-height: 102px;
-    border: 1px solid variables.$color-dark-2;
+    border: 1px solid variables.$color-gold-accent;
     border-radius: 4px;
   }
 
@@ -18,5 +18,10 @@
     border-top: none;
     position: relative;
     top: -24px;
+
+    #level-input {
+      border: 1px solid variables.$color-gold-accent;
+      border-bottom-color: variables.$color-gold-accent-heavy;
+    }
   }
 }

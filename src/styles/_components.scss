@@ -44,6 +44,7 @@
   .simple-prose-mirror-container {
     prose-mirror {
       min-height: 3.7rem;
+      max-height: 3.7rem;
     }
     .editor-menu {
       display: none;
@@ -51,6 +52,9 @@
   }
 
   .large-prose-mirror-container {
+    prose-mirror {
+      flex-grow: 1;
+    }
     .editor-menu {
       display: none;
     }
