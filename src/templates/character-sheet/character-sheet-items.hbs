@@ -2,45 +2,47 @@
   <label class='flexrow items-header'>
     {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Items.Label'}}
   </label>
-  {{#each items as |item index|}}
-    <div class='flexcol gap-2 subsection character-item'>
-      <div class='flexrow gap-2'>
-        <label class='character-item-name'>
-          {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Items.Name'}}
-          <input
-            type='text'
-            name='{{concat "system.items." index ".name"}}'
-            value='{{item.name}}'
-          />
-        </label>
-        <label class='character-item-amount'>
-          {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Items.Amount'}}
-          <input
-            type='number'
-            name='{{concat "system.items." index ".amount"}}'
-            value='{{item.amount}}'
-          />
-        </label>
-        <button
-          type='button'
-          class='remove-item-button'
-          data-action='removeItem'
-          data-index='{{index}}'
-          data-tooltip='{{localize
-            "SIMPLE_DAGGERHEART.CharacterSheet.Items.Remove"
-          }}'
-          data-tooltip-direction='UP'
-        ><span class='fas fa-x'></span></button>
+  <div class='flexcol gap-2 character-items-list'>
+    {{#each items as |item index|}}
+      <div class='flexcol gap-2 subsection character-item'>
+        <div class='flexrow gap-2'>
+          <label class='character-item-name'>
+            {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Items.Name'}}
+            <input
+              type='text'
+              name='{{concat "system.items." index ".name"}}'
+              value='{{item.name}}'
+            />
+          </label>
+          <label class='character-item-amount'>
+            {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Items.Amount'}}
+            <input
+              type='number'
+              name='{{concat "system.items." index ".amount"}}'
+              value='{{item.amount}}'
+            />
+          </label>
+          <button
+            type='button'
+            class='remove-item-button'
+            data-action='removeItem'
+            data-index='{{index}}'
+            data-tooltip='{{localize
+              "SIMPLE_DAGGERHEART.CharacterSheet.Items.Remove"
+            }}'
+            data-tooltip-direction='UP'
+          ><span class='fas fa-x'></span></button>
+        </div>
+        <div class='simple-prose-mirror-container'>
+          {{formInput
+            item.descriptionField
+            name=item.descriptionName
+            value=item.description
+          }}
+        </div>
       </div>
-      <div class='simple-prose-mirror-container'>
-        {{formInput
-          item.descriptionField
-          name=item.descriptionName
-          value=item.description
-        }}
-      </div>
-    </div>
-  {{/each}}
+    {{/each}}
+  </div>
   <button type='button' data-action='addItem'>
     <span>
       {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Items.Add'}}

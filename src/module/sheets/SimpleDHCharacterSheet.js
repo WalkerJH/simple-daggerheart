@@ -42,8 +42,7 @@ export class SimpleDHCharacterSheet extends api.HandlebarsApplicationMixin(
     header: {
       id: 'header',
       template: `${this.templatePrefix}/character-sheet-header.hbs`,
-      classes: ['simple-daggerheart'],
-      scrollable: ['.character-experiences-list', '.character-features-list']
+      classes: ['simple-daggerheart']
     },
     traits: {
       id: 'traits',
@@ -57,12 +56,14 @@ export class SimpleDHCharacterSheet extends api.HandlebarsApplicationMixin(
     character: {
       id: 'character',
       template: `${this.templatePrefix}/character-sheet-character-tab.hbs`,
-      classes: ['simple-daggerheart']
+      classes: ['simple-daggerheart'],
+      scrollable: ['.character-experiences-list', '.character-features-list']
     },
     inventory: {
       id: 'inventory',
       template: `${this.templatePrefix}/character-sheet-inventory-tab.hbs`,
-      classes: ['simple-daggerheart']
+      classes: ['simple-daggerheart'],
+      scrollable: ['.character-weapons-list', '.character-items-list']
     },
     cards: {
       id: 'cards',

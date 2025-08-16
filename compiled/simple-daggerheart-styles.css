@@ -19,6 +19,9 @@
 .simple-daggerheart .align-stretch {
   align-items: stretch;
 }
+.simple-daggerheart .full-height {
+  height: 100%;
+}
 
 .simple-daggerheart .large-input-field,
 .simple-daggerheart .large-text-container {
@@ -203,20 +206,26 @@
   max-width: 3rem;
   margin-left: 1ch;
 }
-.simple-daggerheart .character-sheet-weapons .character-weapon .character-weapon-small-input {
+.simple-daggerheart .character-sheet-weapons .character-weapons-list {
+  flex: 2 1 0;
+  padding-right: 4px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.simple-daggerheart .character-sheet-weapons .character-weapons-list .character-weapon .character-weapon-small-input {
   max-width: 5.2rem;
 }
-.simple-daggerheart .character-sheet-weapons .character-weapon .remove-weapon-button {
+.simple-daggerheart .character-sheet-weapons .character-weapons-list .character-weapon .remove-weapon-button {
   max-width: min-content;
   margin-top: 20px;
 }
-.simple-daggerheart .character-sheet-weapons .character-weapon .simple-prose-mirror-container {
+.simple-daggerheart .character-sheet-weapons .character-weapons-list .character-weapon .simple-prose-mirror-container {
   flex: 1 0 0;
 }
-.simple-daggerheart .character-sheet-weapons .character-weapon .character-weapon-equip-settings {
+.simple-daggerheart .character-sheet-weapons .character-weapons-list .character-weapon .character-weapon-equip-settings {
   max-width: 6rem;
 }
-.simple-daggerheart .character-sheet-weapons .character-weapon .character-weapon-burden {
+.simple-daggerheart .character-sheet-weapons .character-weapons-list .character-weapon .character-weapon-burden {
   max-width: 5.8rem;
 }
 
@@ -227,13 +236,19 @@
 .simple-daggerheart .character-sheet-items .items-header {
   height: 2rem;
 }
-.simple-daggerheart .character-sheet-items .character-item .character-item-name {
+.simple-daggerheart .character-sheet-items .character-items-list {
+  flex: 2 1 0;
+  padding-right: 4px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.simple-daggerheart .character-sheet-items .character-items-list .character-item .character-item-name {
   flex-grow: 1;
 }
-.simple-daggerheart .character-sheet-items .character-item .character-item-amount {
+.simple-daggerheart .character-sheet-items .character-items-list .character-item .character-item-amount {
   max-width: 3rem;
 }
-.simple-daggerheart .character-sheet-items .character-item .remove-item-button {
+.simple-daggerheart .character-sheet-items .character-items-list .character-item .remove-item-button {
   max-width: min-content;
   margin-top: 20px;
 }

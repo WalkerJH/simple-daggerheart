@@ -6,16 +6,23 @@
     height: 2rem;
   }
 
-  .character-item {
-    .character-item-name {
-      flex-grow: 1;
-    }
-    .character-item-amount {
-      max-width: 3rem;
-    }
-    .remove-item-button {
-      max-width: min-content;
-      margin-top: 20px;
+  .character-items-list {
+    flex: 2 1 0;
+    padding-right: 4px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    .character-item {
+      .character-item-name {
+        flex-grow: 1;
+      }
+      .character-item-amount {
+        max-width: 3rem;
+      }
+      .remove-item-button {
+        max-width: min-content;
+        margin-top: 20px;
+      }
     }
   }
 }
