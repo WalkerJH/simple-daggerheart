@@ -20,8 +20,10 @@ export class SimpleDHCharacter extends TypeDataModel {
       class: new StringField(),
       domains: new ArrayField(new StringField()),
       subclass: new StringField(),
-      biography: new StringField(),
-      notes: new StringField(),
+      biography: new HTMLField(),
+      connections: new HTMLField(),
+      journal: new ArrayField(new HTMLField(), { initial: [''] }),
+      activeJournalPage: new NumberField({ initial: 0, integer: true }),
 
       level: createResourceField({ initial: 1, min: 1, max: 10 }),
       hp: createResourceField({ initial: 1, min: 0, max: 10 }),
@@ -73,7 +75,6 @@ export class SimpleDHCharacter extends TypeDataModel {
           burden: new StringField()
         })
       ),
-      activeWeaponIndex: new NumberField({ min: 0, max: 3, integer: true }),
       armor: new SchemaField({
         name: new StringField(),
         feature: new StringField(),

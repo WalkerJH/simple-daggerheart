@@ -5,53 +5,57 @@
 @use 'character-sheet-experiences.scss';
 @use 'character-sheet-weapons.scss';
 @use 'character-sheet-items.scss';
+@use 'character-sheet-notes.scss';
 @use '../variables.scss';
 
 .simple-daggerheart.character-sheet {
   min-width: 800px;
   max-width: 800px;
 
-  input,
-  button {
-    margin-top: 4px;
-  }
-
-  .tab {
-    border: 1px solid transparent;
-    flex-grow: 1;
-    background:
-      linear-gradient(variables.$color-dark-1, variables.$color-dark-1) padding-box,
-      linear-gradient(
-          to bottom right,
-          variables.$color-gold-accent,
-          variables.$color-gold-accent-heavy
-        )
-        border-box;
-    border-radius: 4px;
-    padding: 12px;
-  }
-
-  .tabs > a {
-    border: 1px solid transparent;
-    padding: 0 1rem;
-    color: variables.$color-light-1;
-
-    > i {
-      padding-right: 0.5rem;
+  .window-content {
+    input,
+    button {
+      margin-top: 4px;
     }
-  }
 
-  .tabs > a.active {
-    border: 1px solid variables.$color-gold-accent;
-    border-bottom: none;
-    border-radius: 4px;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-    z-index: 2;
-    position: relative;
-    top: 1px;
-    padding-bottom: 2px;
-    background: variables.$color-dark-1;
-    color: variables.$color-light-1;
+    .tab {
+      border: 1px solid transparent;
+      flex-grow: 1;
+      background:
+        linear-gradient(variables.$color-dark-1, variables.$color-dark-1)
+          padding-box,
+        linear-gradient(
+            to bottom right,
+            variables.$color-gold-accent,
+            variables.$color-gold-accent-heavy
+          )
+          border-box;
+      border-radius: 4px;
+      padding: 12px;
+    }
+
+    .tabs > a {
+      border: 1px solid transparent;
+      padding: 0 1rem;
+      color: variables.$color-light-1;
+
+      > i {
+        padding-right: 0.5rem;
+      }
+    }
+
+    .tabs > a.active {
+      border: 1px solid variables.$color-gold-accent;
+      border-bottom: none;
+      border-radius: 4px;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+      z-index: 2;
+      position: relative;
+      top: 1px;
+      padding-bottom: 2px;
+      background: variables.$color-dark-1;
+      color: variables.$color-light-1;
+    }
   }
 }

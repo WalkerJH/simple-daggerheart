@@ -1,5 +1,6 @@
 .simple-daggerheart .character-sheet-weapons {
   .weapons-header {
+    height: 2rem;
     .section-label {
       flex-grow: 1;
     }
@@ -32,8 +33,7 @@
       flex: 1 0 0;
     }
     .character-weapon-equip-settings {
-      flex: 0 0 0;
-      min-width: max-content;
+      max-width: 6rem;
     }
     .character-weapon-burden {
       max-width: 5.8rem;

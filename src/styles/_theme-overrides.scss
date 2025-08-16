@@ -21,10 +21,15 @@
       --input-text-color: #{variables.$color-light-1};
       --input-focus-outline-color: #{variables.$color-light-1};
       transition: 0.2s;
+      border: none;
     }
 
     input[type='number'] {
       text-align: center;
+    }
+
+    input[type='checkbox'] {
+      margin-bottom: 0;
     }
 
     prose-mirror.active {
@@ -42,7 +47,6 @@
       > button.toggle {
         margin: 5px;
         padding: 0;
-        left: 90%;
       }
     }
 

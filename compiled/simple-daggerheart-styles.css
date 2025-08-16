@@ -56,6 +56,9 @@
 .simple-daggerheart .simple-prose-mirror-container .editor-menu {
   display: none;
 }
+.simple-daggerheart .large-prose-mirror-container .editor-menu {
+  display: none;
+}
 
 .simple-daggerheart.character-sheet-header {
   align-items: start;
@@ -146,6 +149,9 @@
   max-width: min-content;
 }
 
+.simple-daggerheart .character-sheet-weapons .weapons-header {
+  height: 2rem;
+}
 .simple-daggerheart .character-sheet-weapons .weapons-header .section-label {
   flex-grow: 1;
 }
@@ -173,8 +179,7 @@
   flex: 1 0 0;
 }
 .simple-daggerheart .character-sheet-weapons .character-weapon .character-weapon-equip-settings {
-  flex: 0 0 0;
-  min-width: max-content;
+  max-width: 6rem;
 }
 .simple-daggerheart .character-sheet-weapons .character-weapon .character-weapon-burden {
   max-width: 5.8rem;
@@ -197,30 +202,49 @@
   margin-top: 20px;
 }
 
+.simple-daggerheart .character-sheet-notes .notes-columns {
+  height: 100%;
+}
+.simple-daggerheart .character-sheet-notes .notes-columns .character-notes-rows {
+  height: 100%;
+}
+.simple-daggerheart .character-sheet-notes .notes-columns .large-prose-mirror-container {
+  flex: 1 1 50%;
+  display: flex;
+  flex-direction: column;
+}
+.simple-daggerheart .character-sheet-notes .notes-columns .large-prose-mirror-container prose-mirror {
+  margin-top: 4px;
+  flex-grow: 1;
+}
+.simple-daggerheart .character-sheet-notes .notes-columns .journal {
+  height: 100%;
+}
+
 .simple-daggerheart.character-sheet {
   min-width: 800px;
   max-width: 800px;
 }
-.simple-daggerheart.character-sheet input,
-.simple-daggerheart.character-sheet button {
+.simple-daggerheart.character-sheet .window-content input,
+.simple-daggerheart.character-sheet .window-content button {
   margin-top: 4px;
 }
-.simple-daggerheart.character-sheet .tab {
+.simple-daggerheart.character-sheet .window-content .tab {
   border: 1px solid transparent;
   flex-grow: 1;
   background: linear-gradient(hsl(228, 40%, 4%), hsl(228, 40%, 4%)) padding-box, linear-gradient(to bottom right, hsl(48, 75%, 77%), hsl(48, 78%, 67%)) border-box;
   border-radius: 4px;
   padding: 12px;
 }
-.simple-daggerheart.character-sheet .tabs > a {
+.simple-daggerheart.character-sheet .window-content .tabs > a {
   border: 1px solid transparent;
   padding: 0 1rem;
   color: hsl(40, 10%, 92%);
 }
-.simple-daggerheart.character-sheet .tabs > a > i {
+.simple-daggerheart.character-sheet .window-content .tabs > a > i {
   padding-right: 0.5rem;
 }
-.simple-daggerheart.character-sheet .tabs > a.active {
+.simple-daggerheart.character-sheet .window-content .tabs > a.active {
   border: 1px solid hsl(48, 75%, 77%);
   border-bottom: none;
   border-radius: 4px;
@@ -255,9 +279,13 @@
   --input-text-color: hsl(40, 10%, 92%);
   --input-focus-outline-color: hsl(40, 10%, 92%);
   transition: 0.2s;
+  border: none;
 }
 .application.simple-daggerheart .window-content input[type=number] {
   text-align: center;
+}
+.application.simple-daggerheart .window-content input[type=checkbox] {
+  margin-bottom: 0;
 }
 .application.simple-daggerheart .window-content prose-mirror.active .editor-content {
   background-color: hsl(228, 28%, 16%);
@@ -270,7 +298,6 @@
 .application.simple-daggerheart .window-content prose-mirror.inactive > button.toggle {
   margin: 5px;
   padding: 0;
-  left: 90%;
 }
 .application.simple-daggerheart .window-content button {
   --button-text-color: hsl(40, 10%, 92%);

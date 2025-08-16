@@ -7,7 +7,6 @@
       "Heritage": "Heritage",
       "Class": "Class",
       "Subclass": "Subclass",
-      "Biography": "Biography",
       "Level": "Level",
       "Proficiency": "Proficiency",
       "HP": "HP",
@@ -86,6 +85,14 @@
         "Name": "Name",
         "Remove": "Remove Item",
         "Amount": "Amount"
+      },
+      "Biography": "Biography",
+      "Connections": "Connections",
+      "Journal": {
+        "Label": "Journal",
+        "Next": "Next Page",
+        "Previous": "Previous Page",
+        "Remove": "Remove Page"
       }
     }
   }

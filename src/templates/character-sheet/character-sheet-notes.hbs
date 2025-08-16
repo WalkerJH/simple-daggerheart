@@ -1,7 +1,50 @@
 <section
-  class='tab {{tabs.notes.cssClass}}'
+  class='tab {{tabs.notes.cssClass}} character-sheet-notes'
   data-group='primary'
   data-tab='notes'
 >
-  notes and bio will go here
+  <div class='flexrow gap-3 notes-columns'>
+    <div class='flexcol gap-3 character-notes-rows'>
+      <label class='large-prose-mirror-container'>
+        {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Biography'}}
+        {{formInput biography.field name=biography.name value=biography.value}}
+      </label>
+      <label class='large-prose-mirror-container'>
+        {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Connections'}}
+        {{formInput
+          connections.field
+          name=connections.name
+          value=connections.value
+        }}
+      </label>
+    </div>
+    <div class='flexcol journal'>
+      <label>{{localize
+          'SIMPLE_DAGGERHEART.CharacterSheet.Journal.Label'
+        }}</label>
+      {{#each journal as |journalPage index|}}
+        {{#if journalPage.isActive}}
+          <div class='large-prose-mirror-container'>
+            {{formInput
+              journalPage.field
+              name=journalPage.name
+              value=journalPage.value
+            }}
+          </div>
+          <div>
+            <button
+              type='button'
+              class='previous-page-button'
+              data-action='modifyActiveJournalPage'
+              data-index='-1'
+              data-tooltip='{{localize
+                "SIMPLE_DAGGERHEART.CharacterSheet.Journal.Previous"
+              }}'
+              data-tooltip-direction='UP'
+            ><span class='fas fa-x'></span></button>
+          </div>
+        {{/if}}
+      {{/each}}
+    </div>
+  </div>
 </section>

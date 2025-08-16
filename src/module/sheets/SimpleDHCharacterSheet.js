@@ -112,6 +112,7 @@ export class SimpleDHCharacterSheet extends api.HandlebarsApplicationMixin(
       ([traitKey, traitData]) => {
         const traitConfig =
           CONFIG.SIMPLE_DAGGERHEART_SYSTEM.character.traits[traitKey];
+
         return {
           baseName: `system.traits.${traitKey}`,
           label: `${traitConfig.localizationKey}.Label`,
@@ -168,7 +169,52 @@ export class SimpleDHCharacterSheet extends api.HandlebarsApplicationMixin(
       })
     );
 
+    context.biography = {
+      field: this.document.system.schema.fields.biography,
+      value: this.document.system.biography,
+      name: 'system.biography'
+    };
+
+    context.connections = {
+      field: this.document.system.schema.fields.connections,
+      value: this.document.system.connections,
+      name: 'system.connections'
+    };
+
+    context.journal = await Promise.all(
+      this.document.system.journal.map(async (value, index) => {
+        const field = this.document.system.schema.fields.journal.element;
+        const name = `system.journal.${index}`;
+
+        return {
+          value,
+          field,
+          name,
+          isActive: index === this.document.system.activeJournalPage,
+          isFinalPage: index === this.document.system.journal.length
+        };
+      })
+    );
+
     return context;
+  }
+
+  appendItemToSystemArray(key, item) {
+    this.submit({
+      updateData: {
+        [`system.${key}.${this.document.system[key].length}`]: item
+      }
+    });
+  }
+
+  removeItemFromSystemArray(key, index) {
+    this.submit({
+      updateData: {
+        [`system.${key}`]: this.document.system[key].filter(
+          (_item, itemIndex) => itemIndex !== index
+        )
+      }
+    });
   }
 
   static modifyHP(_, button) {
@@ -182,96 +228,77 @@ export class SimpleDHCharacterSheet extends api.HandlebarsApplicationMixin(
   }
 
   static addExperience() {
-    this.submit({
-      updateData: {
-        [`system.experiences.${this.document.system.experiences.length}`]: {
-          name: '',
-          bonus: null
-        }
-      }
-    });
+    this.appendItemToSystemArray('experiences', { name: '', bonus: null });
   }
 
   static removeExperience(_, button) {
-    const index = parseInt(button.dataset.index, 10);
-    this.submit({
-      updateData: {
-        system: {
-          experiences: { [`-=${index}`]: null }
-        }
-      }
-    });
+    this.removeItemFromSystemArray(
+      'experiences',
+      parseInt(button.dataset.index, 10)
+    );
   }
 
   static addFeature() {
-    this.submit({
-      updateData: {
-        [`system.features.${this.document.system.features.length}`]: {
-          name: '',
-          description: ''
-        }
-      }
-    });
+    this.appendItemToSystemArray('features', { name: '', description: '' });
   }
 
   static removeFeature(_, button) {
-    const index = parseInt(button.dataset.index, 10);
-    this.submit({
-      updateData: {
-        system: {
-          features: { [`-=${index}`]: null }
-        }
-      }
-    });
+    this.removeItemFromSystemArray(
+      'features',
+      parseInt(button.dataset.index, 10)
+    );
   }
 
   static addWeapon() {
-    this.submit({
-      updateData: {
-        [`system.weapons.${this.document.system.weapons.length}`]: {
-          name: '',
-          trait: '',
-          range: '',
-          damageDice: '',
-          feature: '',
-          primary: false,
-          secondary: false,
-          burden: ''
-        }
-      }
+    this.appendItemToSystemArray('weapons', {
+      name: '',
+      trait: '',
+      range: '',
+      damageDice: '',
+      feature: '',
+      primary: false,
+      secondary: false,
+      burden: ''
     });
   }
 
   static removeWeapon(_, button) {
-    const index = parseInt(button.dataset.index, 10);
-    this.submit({
-      updateData: {
-        system: {
-          weapons: { [`-=${index}`]: null }
-        }
-      }
-    });
+    this.removeItemFromSystemArray(
+      'weapons',
+      parseInt(button.dataset.index, 10)
+    );
   }
 
   static addItem() {
-    this.submit({
-      updateData: {
-        [`system.items.${this.document.system.items.length}`]: {
-          name: '',
-          amount: 1,
-          description: ''
-        }
-      }
+    this.appendItemToSystemArray('items', {
+      name: '',
+      amount: 1,
+      description: ''
     });
   }
 
   static removeItem(_, button) {
-    const index = parseInt(button.dataset.index, 10);
+    this.removeItemFromSystemArray('items', parseInt(button.dataset.index, 10));
+  }
+
+  static addJournalPage() {
+    this.appendItemToSystemArray('journal', '');
+  }
+
+  static removeJournalPage(_, button) {
+    this.removeItemFromSystemArray(
+      'journal',
+      parseInt(button.dataset.index, 10)
+    );
+  }
+
+  static modifyActiveJournalPage(_, button) {
+    let activeJournalPage =
+      this.document.system.activeJournalPage +
+      parseInt(button.dataset.amount, 10);
     this.submit({
       updateData: {
-        system: {
-          items: { [`-=${index}`]: null }
-        }
+        'system.activeJournalPage': activeJournalPage
       }
     });
   }
