@@ -118,6 +118,11 @@
   margin: 12px 0 0 0;
 }
 
+.simple-daggerheart .character-sheet-character-tab .character-tab-lower-section {
+  flex: 1 1 0;
+  overflow: hidden;
+}
+
 .simple-daggerheart .character-sheet-statuses {
   margin-bottom: 12px;
 }
@@ -146,20 +151,39 @@
   text-align: center;
 }
 
-.simple-daggerheart .character-sheet-features .character-feature .character-feature-name {
+.simple-daggerheart .character-sheet-features {
+  height: 100%;
+}
+.simple-daggerheart .character-sheet-features .character-features-list {
+  flex: 2 1 0;
+  padding-right: 4px;
+  overflow-y: scroll;
+}
+.simple-daggerheart .character-sheet-features .character-features-list .character-feature .character-feature-name {
   flex-grow: 1;
 }
-.simple-daggerheart .character-sheet-features .character-feature .remove-feature-button {
+.simple-daggerheart .character-sheet-features .character-features-list .character-feature .remove-feature-button {
   max-width: min-content;
 }
 
-.simple-daggerheart .character-sheet-experiences .character-experience .character-experience-bonus {
+.simple-daggerheart .character-sheet-experiences {
+  height: 100%;
+}
+.simple-daggerheart .character-sheet-experiences .character-experiences-list {
+  flex: 2 1 0;
+  padding-right: 4px;
+  overflow-y: scroll;
+}
+.simple-daggerheart .character-sheet-experiences .character-experiences-list .character-experience .character-experience-bonus {
   max-width: 3rem;
 }
-.simple-daggerheart .character-sheet-experiences .character-experience .remove-experience-button {
+.simple-daggerheart .character-sheet-experiences .character-experiences-list .character-experience .remove-experience-button {
   max-width: min-content;
 }
 
+.simple-daggerheart .character-sheet-weapons {
+  height: 100%;
+}
 .simple-daggerheart .character-sheet-weapons .weapons-header {
   height: 2rem;
 }
@@ -197,6 +221,7 @@
 }
 
 .simple-daggerheart .character-sheet-items {
+  height: 100%;
   max-width: 40%;
 }
 .simple-daggerheart .character-sheet-items .items-header {
@@ -228,6 +253,7 @@
 .simple-daggerheart.character-sheet .window-content .tab {
   border: 1px solid transparent;
   flex-grow: 1;
+  overflow: hidden;
   background: linear-gradient(hsl(228, 40%, 4%), hsl(228, 40%, 4%)) padding-box, linear-gradient(to bottom right, hsl(48, 75%, 77%), hsl(48, 78%, 67%)) border-box;
   border-radius: 4px;
   padding: 12px;
@@ -262,9 +288,6 @@
   --color-text-selection: hsl(40, 10%, 92%);
   --color-text-selection-bg: hsl(228, 30%, 50%);
   --color-scrollbar: hsl(228, 30%, 50%);
-}
-.application.simple-daggerheart .window-content {
-  overflow-y: scroll;
 }
 .application.simple-daggerheart .window-content input,
 .application.simple-daggerheart .window-content textarea {

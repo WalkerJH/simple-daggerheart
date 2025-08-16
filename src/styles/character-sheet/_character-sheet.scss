@@ -1,5 +1,6 @@
 @use 'character-sheet-header.scss';
 @use 'character-sheet-traits.scss';
+@use 'character-sheet-character-tab.scss';
 @use 'character-sheet-statuses.scss';
 @use 'character-sheet-features.scss';
 @use 'character-sheet-experiences.scss';
@@ -21,6 +22,7 @@
     .tab {
       border: 1px solid transparent;
       flex-grow: 1;
+      overflow: hidden;
       background:
         linear-gradient(variables.$color-dark-1, variables.$color-dark-1)
           padding-box,

@@ -1,12 +1,20 @@
 @use '../variables.scss';
 
 .simple-daggerheart .character-sheet-features {
-  .character-feature {
-    .character-feature-name {
-      flex-grow: 1;
-    }
-    .remove-feature-button {
-      max-width: min-content;
+  height: 100%;
+
+  .character-features-list {
+    flex: 2 1 0;
+    padding-right: 4px;
+    overflow-y: scroll;
+
+    .character-feature {
+      .character-feature-name {
+        flex-grow: 1;
+      }
+      .remove-feature-button {
+        max-width: min-content;
+      }
     }
   }
 }

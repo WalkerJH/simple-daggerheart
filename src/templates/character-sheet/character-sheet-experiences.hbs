@@ -2,31 +2,33 @@
   <label class='character-experiences-header'>
     {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Experience.Label'}}
   </label>
-  {{#each document.system.experiences as |experience index|}}
-    <div class='flexrow gap-2 character-experience'>
-      <input
-        type='text'
-        name='{{concat "system.experiences." index ".name"}}'
-        value='{{experience.name}}'
-      />
-      <input
-        class='character-experience-bonus'
-        type='number'
-        name='{{concat "system.experiences." index ".bonus"}}'
-        value='{{experience.bonus}}'
-      />
-      <button
-        type='button'
-        class='remove-experience-button'
-        data-action='removeExperience'
-        data-index='{{index}}'
-        data-tooltip='{{localize
-          "SIMPLE_DAGGERHEART.CharacterSheet.Experience.Remove"
-        }}'
-        data-tooltip-direction='UP'
-      ><span class='fas fa-x'></span></button>
-    </div>
-  {{/each}}
+  <div class='flexcol gap-2 character-experiences-list'>
+    {{#each document.system.experiences as |experience index|}}
+      <div class='flexrow gap-2 character-experience'>
+        <input
+          type='text'
+          name='{{concat "system.experiences." index ".name"}}'
+          value='{{experience.name}}'
+        />
+        <input
+          class='character-experience-bonus'
+          type='number'
+          name='{{concat "system.experiences." index ".bonus"}}'
+          value='{{experience.bonus}}'
+        />
+        <button
+          type='button'
+          class='remove-experience-button'
+          data-action='removeExperience'
+          data-index='{{index}}'
+          data-tooltip='{{localize
+            "SIMPLE_DAGGERHEART.CharacterSheet.Experience.Remove"
+          }}'
+          data-tooltip-direction='UP'
+        ><span class='fas fa-x'></span></button>
+      </div>
+    {{/each}}
+  </div>
   <button type='button' data-action='addExperience'>
     <span>
       {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Experience.Add'}}

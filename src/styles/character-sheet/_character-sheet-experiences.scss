@@ -1,12 +1,20 @@
 @use '../variables.scss';
 
 .simple-daggerheart .character-sheet-experiences {
-  .character-experience {
-    .character-experience-bonus {
-      max-width: 3rem;
-    }
-    .remove-experience-button {
-      max-width: min-content;
+  height: 100%;
+
+  .character-experiences-list {
+    flex: 2 1 0;
+    padding-right: 4px;
+    overflow-y: scroll;
+
+    .character-experience {
+      .character-experience-bonus {
+        max-width: 3rem;
+      }
+      .remove-experience-button {
+        max-width: min-content;
+      }
     }
   }
 }

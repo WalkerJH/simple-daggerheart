@@ -10,8 +10,6 @@
   --color-scrollbar: #{variables.$color-blue-accent};
 
   .window-content {
-    overflow-y: scroll;
-
     input,
     textarea {
       --input-background-color: #{variables.$color-dark-2};

@@ -1,0 +1,8 @@
+@use '../variables.scss';
+
+.simple-daggerheart .character-sheet-character-tab {
+  .character-tab-lower-section {
+    flex: 1 1 0;
+    overflow: hidden;
+  }
+}

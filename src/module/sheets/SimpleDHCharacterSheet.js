@@ -30,7 +30,8 @@ export class SimpleDHCharacterSheet extends api.HandlebarsApplicationMixin(
       height: 800
     },
     window: {
-      resizable: true
+      resizable: true,
+      minimizable: false
     }
   };
 
@@ -41,7 +42,8 @@ export class SimpleDHCharacterSheet extends api.HandlebarsApplicationMixin(
     header: {
       id: 'header',
       template: `${this.templatePrefix}/character-sheet-header.hbs`,
-      classes: ['simple-daggerheart']
+      classes: ['simple-daggerheart'],
+      scrollable: ['.character-experiences-list', '.character-features-list']
     },
     traits: {
       id: 'traits',

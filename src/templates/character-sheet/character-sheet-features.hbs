@@ -2,35 +2,37 @@
   <label>
     {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Features.Label'}}
   </label>
-  {{#each features as |feature index|}}
-    <div class='flexcol gap-2 character-feature'>
-      <div class='flexrow gap-2'>
-        <input
-          class='character-feature-name'
-          type='text'
-          name='{{concat "system.features." index ".name"}}'
-          value='{{feature.name}}'
-        />
-        <button
-          type='button'
-          class='remove-feature-button'
-          data-action='removeFeature'
-          data-index='{{index}}'
-          data-tooltip='{{localize
-            "SIMPLE_DAGGERHEART.CharacterSheet.Features.Remove"
-          }}'
-          data-tooltip-direction='UP'
-        ><span class='fas fa-x'></span></button>
+  <div class='flexcol gap-2 character-features-list'>
+    {{#each features as |feature index|}}
+      <div class='flexcol gap-2 character-feature'>
+        <div class='flexrow gap-2'>
+          <input
+            class='character-feature-name'
+            type='text'
+            name='{{concat "system.features." index ".name"}}'
+            value='{{feature.name}}'
+          />
+          <button
+            type='button'
+            class='remove-feature-button'
+            data-action='removeFeature'
+            data-index='{{index}}'
+            data-tooltip='{{localize
+              "SIMPLE_DAGGERHEART.CharacterSheet.Features.Remove"
+            }}'
+            data-tooltip-direction='UP'
+          ><span class='fas fa-x'></span></button>
+        </div>
+        <div class='simple-prose-mirror-container'>
+          {{formInput
+            feature.descriptionField
+            name=feature.descriptionName
+            value=feature.description
+          }}
+        </div>
       </div>
-      <div class='simple-prose-mirror-container'>
-        {{formInput
-          feature.descriptionField
-          name=feature.descriptionName
-          value=feature.description
-        }}
-      </div>
-    </div>
-  {{/each}}
+    {{/each}}
+  </div>
   <button type='button' data-action='addFeature'>
     <span>
       {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Features.Add'}}
