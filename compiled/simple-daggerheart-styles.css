@@ -64,7 +64,7 @@
   display: none;
 }
 .simple-daggerheart .large-prose-mirror-container prose-mirror {
-  flex-grow: 1;
+  flex: 1 1 0;
 }
 .simple-daggerheart .large-prose-mirror-container .editor-menu {
   display: none;
@@ -255,6 +255,19 @@
 
 .simple-daggerheart .character-sheet-notes prose-mirror {
   padding-top: 4px;
+  min-height: 0;
+}
+.simple-daggerheart .character-sheet-notes .notes-columns {
+  flex: 1 1 0;
+}
+.simple-daggerheart .character-sheet-notes .notes-columns .backstory-rows {
+  flex: 1 1 0;
+}
+.simple-daggerheart .character-sheet-notes .notes-columns .backstory-rows .large-prose-mirror-container {
+  flex: 1 1 0;
+}
+.simple-daggerheart .character-sheet-notes .notes-columns .journal {
+  flex: 1 1 0;
 }
 
 .simple-daggerheart.character-sheet {

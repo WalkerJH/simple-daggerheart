@@ -1,5 +1,21 @@
 .simple-daggerheart .character-sheet-notes {
   prose-mirror {
     padding-top: 4px;
+    min-height: 0;
+  }
+
+  .notes-columns {
+    flex: 1 1 0;
+
+    .backstory-rows {
+      flex: 1 1 0;
+      .large-prose-mirror-container {
+        flex: 1 1 0;
+      }
+    }
+
+    .journal {
+      flex: 1 1 0;
+    }
   }
 }

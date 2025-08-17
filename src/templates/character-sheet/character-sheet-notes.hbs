@@ -1,10 +1,10 @@
 <section
-  class='tab {{tabs.notes.cssClass}} character-sheet-notes'
+  class='tab flexcol {{tabs.notes.cssClass}} character-sheet-notes'
   data-group='primary'
   data-tab='notes'
 >
-  <div class='flexrow gap-3 align-stretch'>
-    <div class='flexcol gap-3'>
+  <div class='flexrow gap-3 align-stretch notes-columns'>
+    <div class='flexcol gap-3 backstory-rows'>
       <label class='section flexcol large-prose-mirror-container'>
         {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Biography'}}
         {{formInput biography.field name=biography.name value=biography.value}}
@@ -18,7 +18,7 @@
         }}
       </label>
     </div>
-    <label class='section flexcol large-prose-mirror-container'>
+    <label class='section flexcol large-prose-mirror-container journal'>
       {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Journal.Label'}}
       {{formInput journal.field name=journal.name value=journal.value}}
     </label>
