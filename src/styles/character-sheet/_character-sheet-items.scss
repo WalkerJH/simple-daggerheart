@@ -23,6 +23,13 @@
         max-width: min-content;
         margin-top: 20px;
       }
+
+      .simple-prose-mirror-container {
+        prose-mirror {
+          min-height: 2.1rem;
+          max-height: 2.1rem;
+        }
+      }
     }
   }
 }

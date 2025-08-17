@@ -260,6 +260,10 @@
   max-width: min-content;
   margin-top: 20px;
 }
+.simple-daggerheart .character-sheet-items .character-items-list .character-item .simple-prose-mirror-container prose-mirror {
+  min-height: 2.1rem;
+  max-height: 2.1rem;
+}
 
 .simple-daggerheart .character-sheet-armor .armor-header {
   height: 1rem;
