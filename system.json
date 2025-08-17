@@ -32,11 +32,10 @@
       "character": {}
     },
     "Item": {
-      "section": {},
-      "item": {}
+      "card": {}
     }
   },
   "url": "https://github.com/WalkerJH/simple-daggerheart",
-  "manifest": "https://raw.githubusercontent.com/WalkerJH/simple-daggerheart/master/system.json",
-  "download": "https://raw.githubusercontent.com/WalkerJH/simple-daggerheart/releases/download/system.zip"
+  "manifest": "https://github.com/WalkerJH/simple-daggerheart/master/system.json",
+  "download": "https://github.com/WalkerJH/simple-daggerheart/releases/download/system.zip"
 }
