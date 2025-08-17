@@ -186,6 +186,11 @@
   max-width: min-content;
 }
 
+.simple-daggerheart .character-sheet-inventory-tab .inventory-second-column {
+  height: 100%;
+  max-width: 40%;
+}
+
 .simple-daggerheart .character-sheet-weapons {
   height: 100%;
 }
@@ -233,8 +238,7 @@
 }
 
 .simple-daggerheart .character-sheet-items {
-  height: 100%;
-  max-width: 40%;
+  flex: 1 1 100%;
 }
 .simple-daggerheart .character-sheet-items .items-header {
   height: 2rem;
@@ -255,6 +259,24 @@
 .simple-daggerheart .character-sheet-items .character-items-list .character-item .remove-item-button {
   max-width: min-content;
   margin-top: 20px;
+}
+
+.simple-daggerheart .character-sheet-armor .armor-header {
+  height: 1rem;
+}
+.simple-daggerheart .character-sheet-armor .character-armor-name {
+  flex-grow: 1;
+}
+.simple-daggerheart .character-sheet-armor .character-armor-base-score {
+  max-width: 3.5rem;
+}
+.simple-daggerheart .character-sheet-armor .character-armor-base-thresholds label {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+.simple-daggerheart .character-sheet-armor .character-armor-base-thresholds input {
+  max-width: 3.5rem;
 }
 
 .simple-daggerheart .character-sheet-notes prose-mirror {

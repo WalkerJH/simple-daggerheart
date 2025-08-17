@@ -77,9 +77,12 @@ export class SimpleDHCharacter extends TypeDataModel {
       ),
       armor: new SchemaField({
         name: new StringField(),
-        feature: new StringField(),
+        feature: new HTMLField(),
+        baseMinorThreshold: createResourceField({ min: 0 }),
+        baseMajorThreshold: createResourceField({ min: 0 }),
         minorThreshold: createResourceField({ min: 0 }),
         majorThreshold: createResourceField({ min: 0 }),
+        baseScore: createResourceField({ min: 0 }),
         currentScore: createResourceField({ min: 0 }),
         maxScore: createResourceField({ min: 0 })
       })

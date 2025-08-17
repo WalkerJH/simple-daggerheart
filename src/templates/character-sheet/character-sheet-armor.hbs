@@ -1,0 +1,49 @@
+<div class='flexcol gap-2 section character-sheet-armor'>
+  <label class='flexrow armor-header'>
+    {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Armor.Label'}}
+  </label>
+  <div class='flexcol gap-2 subsection'>
+    <div class='flexrow gap-2'>
+      <label class='character-armor-name'>
+        {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Armor.Name'}}
+        <input
+          type='text'
+          name='system.armor.name'
+          value='{{document.system.armor.name}}'
+        />
+      </label>
+      <label class='character-armor-base-score'>
+        {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Armor.BaseScore'}}
+        <input
+          type='number'
+          name='system.armor.baseScore'
+          value='{{document.system.armor.baseScore}}'
+        />
+      </label>
+      <div class='character-armor-base-thresholds'>
+        <label>
+          {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Armor.BaseThresholds'}}
+        </label>
+        <div class='flexrow gap-2'>
+          <input
+            type='number'
+            name='system.armor.baseMinorThreshold'
+            value='{{document.system.armor.baseMinorThreshold}}'
+          />
+          <input
+            type='number'
+            name='system.armor.baseMajorThreshold'
+            value='{{document.system.armor.baseMajorThreshold}}'
+          />
+        </div>
+      </div>
+    </div>
+    <div class='simple-prose-mirror-container'>
+      {{formInput
+        armorFeature.field
+        name=armorFeature.name
+        value=armorFeature.value
+      }}
+    </div>
+  </div>
+</div>

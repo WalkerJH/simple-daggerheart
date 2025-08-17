@@ -41,7 +41,9 @@ async function preloadTemplates() {
     'simple-daggerheart.character-sheet.weapons':
       'systems/simple-daggerheart/src/templates/character-sheet/character-sheet-weapons.hbs',
     'simple-daggerheart.character-sheet.items':
-      'systems/simple-daggerheart/src/templates/character-sheet/character-sheet-items.hbs'
+      'systems/simple-daggerheart/src/templates/character-sheet/character-sheet-items.hbs',
+    'simple-daggerheart.character-sheet.armor':
+      'systems/simple-daggerheart/src/templates/character-sheet/character-sheet-armor.hbs'
   });
 }
 

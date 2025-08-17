@@ -193,6 +193,12 @@ export class SimpleDHCharacterSheet extends api.HandlebarsApplicationMixin(
       name: 'system.journal'
     };
 
+    context.armorFeature = {
+      field: this.document.system.schema.fields.armor.fields.feature,
+      value: this.document.system.armor.feature,
+      name: 'system.armor.feature'
+    };
+
     return context;
   }
 

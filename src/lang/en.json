@@ -13,8 +13,13 @@
       "Stress": "Stress",
       "Hope": "Hope",
       "Evasion": "Evasion",
-      "Armor": "Armor",
-      "ArmorThresholds": "Armor Thresholds",
+      "Armor": {
+        "Label": "Armor",
+        "Name": "Name",
+        "Thresholds": "Thresholds",
+        "BaseThresholds": "Thresholds",
+        "BaseScore": "Score"
+      },
       "Experience": {
         "Label": "Experience",
         "Add": "Add Experience",

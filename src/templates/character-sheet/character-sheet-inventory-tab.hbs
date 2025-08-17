@@ -1,10 +1,13 @@
 <section
-  class='tab {{tabs.inventory.cssClass}}'
+  class='tab {{tabs.inventory.cssClass}} character-sheet-inventory-tab'
   data-group='primary'
   data-tab='inventory'
 >
   <div class='flexrow gap-3 align-start full-height'>
     {{> 'simple-daggerheart.character-sheet.weapons'}}
-    {{> 'simple-daggerheart.character-sheet.items'}}
+    <div class="flexcol gap-3 inventory-second-column">
+      {{> 'simple-daggerheart.character-sheet.items'}}
+      {{> 'simple-daggerheart.character-sheet.armor'}}
+    </div>
   </div>
 </section>

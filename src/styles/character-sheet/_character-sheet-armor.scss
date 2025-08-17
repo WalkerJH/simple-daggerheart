@@ -1,0 +1,25 @@
+.simple-daggerheart .character-sheet-armor {
+  .armor-header {
+    height: 1rem;
+  }
+
+  .character-armor-name {
+    flex-grow: 1;
+  }
+
+  .character-armor-base-score {
+    max-width: 3.5rem;
+  }
+
+  .character-armor-base-thresholds {
+    label {
+      display: inline-block;
+      width: 100%;
+      text-align: center;
+    }
+
+    input {
+      max-width: 3.5rem;
+    }
+  }
+}
