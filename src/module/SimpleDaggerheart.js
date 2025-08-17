@@ -2,6 +2,7 @@ import { SIMPLE_DAGGERHEART_SYSTEM } from './config/system.js';
 import { SimpleDHCardSheet } from './sheets/SimpleDHCardSheet.js';
 import { SimpleDHCharacterSheet } from './sheets/SimpleDHCharacterSheet.js';
 import { SimpleDHCharacter } from './data/SimpleDHCharacter.js';
+import { SimpleDHCard } from './data/SimpleDHCard.js';
 
 const { Items, Actors } = foundry.documents.collections;
 
@@ -11,20 +12,20 @@ function setupConfig() {
 
 function registerDataModels() {
   CONFIG.Actor.dataModels.character = SimpleDHCharacter;
+  CONFIG.Item.dataModels.card = SimpleDHCard;
 }
 
 function registerSheets() {
   Items.unregisterSheet('core', foundry.applications.sheets.ItemSheetV2);
   Items.registerSheet(SIMPLE_DAGGERHEART_SYSTEM.id, SimpleDHCardSheet, {
-    types: ['section'],
+    types: ['card'],
     makeDefault: true
   });
 
   Actors.unregisterSheet('core', foundry.applications.sheets.ActorSheetV2);
   Actors.registerSheet(SIMPLE_DAGGERHEART_SYSTEM.id, SimpleDHCharacterSheet, {
     types: ['character'],
-    makeDefault: true,
-    label: 'Character'
+    makeDefault: true
   });
 }
 
@@ -53,4 +54,6 @@ Hooks.once('init', async () => {
   registerDataModels();
   registerSheets();
   preloadTemplates();
+
+  console.log('Simple Daggerheart System | Done Initializing');
 });

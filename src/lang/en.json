@@ -1,7 +1,7 @@
 {
   "SIMPLE_DAGGERHEART": {
     "CharacterSheet": {
-      "Heading": "Character Sheet",
+      "Header": "Character Sheet",
       "Name": "Name",
       "Pronouns": "Pronouns",
       "Heritage": "Heritage",
@@ -95,6 +95,14 @@
         "Remove": "Remove Page",
         "Add": "Add Page"
       }
+    },
+    "CardSheet": {
+      "Header": "Card",
+      "Name": "Name",
+      "Level": "Level",
+      "Domain": "Domain",
+      "Type": "Type",
+      "RecallCost": "Recall Cost"
     }
   }
 }

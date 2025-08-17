@@ -1,2 +1,8 @@
+@use 'card-sheet-header.scss';
+@use 'card-sheet-body.scss';
+
 .simple-daggerheart.card-sheet {
+  input {
+    margin-top: 4px;
+  }
 }

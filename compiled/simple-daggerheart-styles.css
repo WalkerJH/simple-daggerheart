@@ -312,6 +312,29 @@
   color: hsl(40, 10%, 92%);
 }
 
+.simple-daggerheart.card-sheet-header {
+  align-items: start;
+  margin-bottom: 24px;
+}
+.simple-daggerheart.card-sheet-header .card-img {
+  cursor: pointer;
+  max-width: 102px;
+  max-height: 102px;
+  border: 1px solid hsl(48, 75%, 77%);
+  border-radius: 4px;
+}
+
+.simple-daggerheart.card-sheet-body {
+  flex-grow: 1;
+}
+.simple-daggerheart.card-sheet-body prose-mirror {
+  height: 100%;
+}
+
+.simple-daggerheart.card-sheet input {
+  margin-top: 4px;
+}
+
 .application.simple-daggerheart {
   --background: hsl(228, 40%, 4%);
   --color-border: hsl(228, 28%, 16%);
@@ -338,17 +361,28 @@
 .application.simple-daggerheart .window-content input[type=checkbox] {
   margin-bottom: 0;
 }
+.application.simple-daggerheart .window-content prose-mirror {
+  --menu-background: hsl(228, 28%, 16%);
+}
 .application.simple-daggerheart .window-content prose-mirror.active .editor-content {
   background-color: hsl(228, 28%, 16%);
   padding: 0 0.5rem;
+}
+.application.simple-daggerheart .window-content prose-mirror.active button > i:first-child {
+  padding: 0;
+  width: 1.8rem;
+}
+.application.simple-daggerheart .window-content prose-mirror.active button > i:not(:first-child) {
+  padding: 0;
+  width: 1.2rem;
 }
 .application.simple-daggerheart .window-content prose-mirror.inactive .editor-content {
   border: 1px solid hsl(228, 28%, 16%);
   padding: 0 0.5rem;
 }
-.application.simple-daggerheart .window-content prose-mirror.inactive > button.toggle {
-  margin: 5px;
+.application.simple-daggerheart .window-content prose-mirror.inactive > button.toggle > i {
   padding: 0;
+  width: 1.8rem;
 }
 .application.simple-daggerheart .window-content button {
   --button-text-color: hsl(40, 10%, 92%);
@@ -394,6 +428,11 @@
 }
 .application.simple-daggerheart .window-content nav.tabs {
   border: none;
+}
+
+#prosemirror-dropdown {
+  --dropdown-background: hsl(228, 40%, 8%);
+  --dropdown-border: hsl(228, 30%, 50%);
 }
 
 .chat-message {

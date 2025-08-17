@@ -106,7 +106,7 @@ export class SimpleDHCharacterSheet extends api.HandlebarsApplicationMixin(
   };
 
   get title() {
-    return game.i18n.localize('Character Sheet');
+    return game.i18n.localize('SIMPLE_DAGGERHEART.CharacterSheet.Header');
   }
 
   async _prepareContext(_options) {

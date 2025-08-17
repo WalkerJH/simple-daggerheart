@@ -30,21 +30,36 @@
       margin-bottom: 0;
     }
 
-    prose-mirror.active {
-      .editor-content {
-        background-color: variables.$color-dark-2;
-        padding: 0 0.5rem;
-      }
-    }
+    prose-mirror {
+      --menu-background: #{variables.$color-dark-2};
 
-    prose-mirror.inactive {
-      .editor-content {
-        border: 1px solid variables.$color-dark-2;
-        padding: 0 0.5rem;
+      &.active {
+        .editor-content {
+          background-color: variables.$color-dark-2;
+          padding: 0 0.5rem;
+        }
+
+        button > i {
+          &:first-child {
+            padding: 0;
+            width: 1.8rem;
+          }
+          &:not(:first-child) {
+            padding: 0;
+            width: 1.2rem;
+          }
+        }
       }
-      > button.toggle {
-        margin: 5px;
-        padding: 0;
+
+      &.inactive {
+        .editor-content {
+          border: 1px solid variables.$color-dark-2;
+          padding: 0 0.5rem;
+        }
+        > button.toggle > i {
+          padding: 0;
+          width: 1.8rem;
+        }
       }
     }
 
@@ -100,6 +115,11 @@
       border: none;
     }
   }
+}
+
+#prosemirror-dropdown {
+  --dropdown-background: #{variables.$color-dark-3};
+  --dropdown-border: #{variables.$color-blue-accent};
 }
 
 .chat-message {

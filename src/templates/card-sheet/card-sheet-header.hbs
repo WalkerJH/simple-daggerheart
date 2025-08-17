@@ -1,0 +1,55 @@
+<section class='flexrow gap-3 card-sheet-header'>
+  <img
+    class='card-img'
+    src='{{document.img}}'
+    data-action='editImage'
+    data-tooltip='Change Card Image'
+  />
+
+  <div class='flexcol gap-2'>
+    <div class='flexrow gap-2'>
+      <label>
+        {{localize 'SIMPLE_DAGGERHEART.CardSheet.Name'}}
+        <input type='text' name='name' value='{{document.name}}' />
+      </label>
+
+      <label>
+        {{localize 'SIMPLE_DAGGERHEART.CardSheet.Level'}}
+        <input
+          type='number'
+          name='system.level'
+          value='{{document.system.level}}'
+        />
+      </label>
+
+      <label>
+        {{localize 'SIMPLE_DAGGERHEART.CardSheet.Domain'}}
+        <input
+          type='text'
+          name='system.domain'
+          value='{{document.system.domain}}'
+        />
+      </label>
+    </div>
+
+    <div class='flexrow gap-2'>
+      <label>
+        {{localize 'SIMPLE_DAGGERHEART.CardSheet.Type'}}
+        <input
+          type='text'
+          name='system.heritage'
+          value='{{document.system.heritage}}'
+        />
+      </label>
+
+      <label>
+        {{localize 'SIMPLE_DAGGERHEART.CardSheet.RecallCost'}}
+        <input
+          type='number'
+          name='system.recallCost'
+          value='{{document.system.recallCost}}'
+        />
+      </label>
+    </div>
+  </div>
+</section>

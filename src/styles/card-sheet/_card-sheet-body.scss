@@ -1,0 +1,8 @@
+@use '../variables.scss';
+
+.simple-daggerheart.card-sheet-body {
+  flex-grow: 1;
+  prose-mirror {
+    height: 100%;
+  }
+}
