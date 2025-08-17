@@ -25,7 +25,8 @@
   .character-weapons-list {
     flex: 2 1 0;
     padding-right: 4px;
-    overflow-y: scroll;
+    overflow-y: auto;
+    scrollbar-gutter: stable;
     overflow-x: hidden;
 
     .character-weapon {

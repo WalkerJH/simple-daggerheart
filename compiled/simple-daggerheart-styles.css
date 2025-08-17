@@ -160,7 +160,8 @@
 .simple-daggerheart .character-sheet-features .character-features-list {
   flex: 2 1 0;
   padding-right: 4px;
-  overflow-y: scroll;
+  overflow-y: auto;
+  scrollbar-gutter: stable;
 }
 .simple-daggerheart .character-sheet-features .character-features-list .character-feature .character-feature-name {
   flex-grow: 1;
@@ -175,7 +176,8 @@
 .simple-daggerheart .character-sheet-experiences .character-experiences-list {
   flex: 2 1 0;
   padding-right: 4px;
-  overflow-y: scroll;
+  overflow-y: auto;
+  scrollbar-gutter: stable;
 }
 .simple-daggerheart .character-sheet-experiences .character-experiences-list .character-experience .character-experience-bonus {
   max-width: 3rem;
@@ -209,7 +211,8 @@
 .simple-daggerheart .character-sheet-weapons .character-weapons-list {
   flex: 2 1 0;
   padding-right: 4px;
-  overflow-y: scroll;
+  overflow-y: auto;
+  scrollbar-gutter: stable;
   overflow-x: hidden;
 }
 .simple-daggerheart .character-sheet-weapons .character-weapons-list .character-weapon .character-weapon-small-input {
@@ -239,7 +242,8 @@
 .simple-daggerheart .character-sheet-items .character-items-list {
   flex: 2 1 0;
   padding-right: 4px;
-  overflow-y: scroll;
+  overflow-y: auto;
+  scrollbar-gutter: stable;
   overflow-x: hidden;
 }
 .simple-daggerheart .character-sheet-items .character-items-list .character-item .character-item-name {
