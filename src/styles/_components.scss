@@ -33,9 +33,7 @@
       &::before {
         content: '';
         position: relative;
-        left: -12px;
-        width: calc(100% + 24px);
-        box-sizing: content-box;
+        width: 100%;
         border-top: 1px solid variables.$color-dark-2;
       }
     }
