@@ -1,7 +1,11 @@
+@use '../variables.scss';
+
 .simple-daggerheart .character-sheet-weapons {
   height: 100%;
   .weapons-header {
     height: 2rem;
+    border-bottom: 1px solid variables.$color-dark-2;
+
     .section-label {
       flex-grow: 1;
     }
@@ -10,6 +14,7 @@
       flex-grow: 0;
       flex-shrink: 1;
       min-width: max-content;
+
       .character-proficiency-label {
         flex-grow: 0;
       }
@@ -18,6 +23,8 @@
         margin-top: 0;
         max-width: 3rem;
         margin-left: 1ch;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
       }
     }
   }

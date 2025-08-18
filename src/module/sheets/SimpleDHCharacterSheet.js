@@ -257,7 +257,7 @@ export class SimpleDHCharacterSheet extends api.HandlebarsApplicationMixin(
       name: '',
       trait: '',
       range: '',
-      damageDice: '',
+      damage: '',
       feature: '',
       primary: false,
       secondary: false,

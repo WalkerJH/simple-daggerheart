@@ -1,6 +1,9 @@
+@use '../variables.scss';
+
 .simple-daggerheart .character-sheet-armor {
   .armor-header {
-    height: 1rem;
+    padding-bottom: 2px;
+    border-bottom: 1px solid variables.$color-dark-2;
   }
 
   .character-armor-name {

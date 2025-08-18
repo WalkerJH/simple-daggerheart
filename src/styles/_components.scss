@@ -30,7 +30,7 @@
     border-radius: 4px;
 
     .subsection {
-      &::before {
+      &:not(:first-child)::before {
         content: '';
         position: relative;
         width: 100%;

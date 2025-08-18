@@ -1,8 +1,13 @@
+@use '../variables.scss';
+
 .simple-daggerheart .character-sheet-items {
   flex: 1 1 100%;
 
   .items-header {
     height: 2rem;
+    padding-bottom: 2px;
+    border-bottom: 1px solid variables.$color-dark-2;
+    width: calc(100% + 24px);
   }
 
   .character-items-list {

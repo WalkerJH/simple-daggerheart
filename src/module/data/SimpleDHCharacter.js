@@ -67,7 +67,7 @@ export class SimpleDHCharacter extends TypeDataModel {
           name: new StringField(),
           trait: new StringField(),
           range: new StringField(),
-          damageDice: new StringField(),
+          damage: new StringField(),
           description: new HTMLField(),
           feature: new StringField(),
           primary: new BooleanField({ initial: false }),
