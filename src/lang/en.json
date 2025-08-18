@@ -94,11 +94,12 @@
       "Biography": "Biography",
       "Connections": "Connections",
       "Journal": {
-        "Label": "Journal",
-        "Next": "Next Page",
-        "Previous": "Previous Page",
-        "Remove": "Remove Page",
-        "Add": "Add Page"
+        "Label": "Journal"
+      },
+      "Cards": {
+        "Loadout": "Loadout",
+        "Vault": "Vault",
+        "Removed": "Removed"
       }
     },
     "CardSheet": {

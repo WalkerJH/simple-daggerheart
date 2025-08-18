@@ -10,7 +10,8 @@ export class SimpleDHCharacter extends TypeDataModel {
       ArrayField,
       SchemaField,
       HTMLField,
-      BooleanField
+      BooleanField,
+      DocumentUUIDField
     } = foundry.data.fields;
     const { createResourceField, createAttributeField } = DataUtils;
 
@@ -82,10 +83,11 @@ export class SimpleDHCharacter extends TypeDataModel {
         baseMajorThreshold: createResourceField({ min: 0 }),
         minorThreshold: createResourceField({ min: 0 }),
         majorThreshold: createResourceField({ min: 0 }),
-        baseScore: createResourceField({ min: 0 }),
+        baseScore: new NumberField({ integer: true, min: 0, max: 99 }),
         currentScore: createResourceField({ min: 0 }),
         maxScore: createResourceField({ min: 0 })
-      })
+      }),
+      cards: new ArrayField(new DocumentUUIDField({ type: 'Item' }))
     };
   }
 }

@@ -37,6 +37,14 @@
         border-top: 1px solid variables.$color-dark-2;
       }
     }
+
+    .cutout {
+      background: variables.$color-dark-1;
+      border-top: 1px solid black;
+      border-bottom: 1px solid variables.$color-dark-2;
+      display: block;
+      height: 3.5rem;
+    }
   }
 
   .simple-prose-mirror-container {

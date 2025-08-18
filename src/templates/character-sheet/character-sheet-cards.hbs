@@ -1,7 +1,24 @@
 <section
-  class='tab {{tabs.cards.cssClass}}'
+  class='tab flexcol gap-3 {{tabs.cards.cssClass}} character-sheet-cards'
   data-group='primary'
   data-tab='cards'
 >
-  cards will go here.
+  <section class='section'>
+    <label>
+      {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Cards.Loadout'}}
+    </label>
+    <div class='flexrow gap-2'>
+      <div class='cutout'></div>
+    </div>
+  </section>
+  <section class='section'>
+    <label>
+      {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Cards.Vault'}}
+    </label>
+  </section>
+  <section class='section'>
+    <label>
+      {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Cards.Removed'}}
+    </label>
+  </section>
 </section>
