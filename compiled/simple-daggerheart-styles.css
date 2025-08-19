@@ -48,12 +48,10 @@
   padding: 12px;
   border-radius: 4px;
 }
-.simple-daggerheart .section .subsection::before {
+.simple-daggerheart .section .subsection:not(:first-child)::before {
   content: "";
   position: relative;
-  left: -12px;
-  width: calc(100% + 24px);
-  box-sizing: content-box;
+  width: 100%;
   border-top: 1px solid hsl(228, 28%, 16%);
 }
 .simple-daggerheart .simple-prose-mirror-container prose-mirror {
@@ -196,6 +194,7 @@
 }
 .simple-daggerheart .character-sheet-weapons .weapons-header {
   height: 2rem;
+  border-bottom: 1px solid hsl(228, 28%, 16%);
 }
 .simple-daggerheart .character-sheet-weapons .weapons-header .section-label {
   flex-grow: 1;
@@ -212,6 +211,8 @@
   margin-top: 0;
   max-width: 3rem;
   margin-left: 1ch;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
 }
 .simple-daggerheart .character-sheet-weapons .character-weapons-list {
   flex: 2 1 0;
@@ -242,6 +243,9 @@
 }
 .simple-daggerheart .character-sheet-items .items-header {
   height: 2rem;
+  padding-bottom: 2px;
+  border-bottom: 1px solid hsl(228, 28%, 16%);
+  width: calc(100% + 24px);
 }
 .simple-daggerheart .character-sheet-items .character-items-list {
   flex: 2 1 0;
@@ -266,7 +270,8 @@
 }
 
 .simple-daggerheart .character-sheet-armor .armor-header {
-  height: 1rem;
+  padding-bottom: 2px;
+  border-bottom: 1px solid hsl(228, 28%, 16%);
 }
 .simple-daggerheart .character-sheet-armor .character-armor-name {
   flex-grow: 1;
@@ -281,6 +286,29 @@
 }
 .simple-daggerheart .character-sheet-armor .character-armor-base-thresholds input {
   max-width: 3.5rem;
+}
+
+.simple-daggerheart.character-sheet .window-content .tab.character-sheet-cards {
+  padding-right: 4px;
+}
+.simple-daggerheart.character-sheet .window-content .tab.character-sheet-cards .character-cards-scroll-container {
+  height: 100%;
+  overflow-y: scroll;
+  padding-right: 4px;
+}
+.simple-daggerheart.character-sheet .window-content .tab.character-sheet-cards .character-cards-scroll-container section .character-cards-grid {
+  margin-top: 12px;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  gap: 12px;
+}
+.simple-daggerheart.character-sheet .window-content .tab.character-sheet-cards .character-cards-scroll-container section .character-cards-grid .card-spot {
+  background: hsl(228, 40%, 4%);
+  border-top: 1px solid black;
+  border-bottom: 1px solid hsl(228, 28%, 16%);
+  border-radius: 8px;
+  display: block;
+  height: 9rem;
 }
 
 .simple-daggerheart .character-sheet-notes prose-mirror {

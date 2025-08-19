@@ -1,24 +1,38 @@
 <section
-  class='tab flexcol gap-3 {{tabs.cards.cssClass}} character-sheet-cards'
+  class='tab {{tabs.cards.cssClass}} character-sheet-cards'
   data-group='primary'
   data-tab='cards'
 >
-  <section class='section'>
-    <label>
-      {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Cards.Loadout'}}
-    </label>
-    <div class='flexrow gap-2'>
-      <div class='cutout'></div>
-    </div>
-  </section>
-  <section class='section'>
-    <label>
-      {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Cards.Vault'}}
-    </label>
-  </section>
-  <section class='section'>
-    <label>
-      {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Cards.Removed'}}
-    </label>
-  </section>
+  <div class='flexcol gap-3 character-cards-scroll-container'>
+    <section class='section'>
+      <label>
+        {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Cards.Loadout'}}
+      </label>
+      <div class='character-cards-grid'>
+        {{#each cards.loadout}}
+          <div class='card-spot'></div>
+        {{/each}}
+      </div>
+    </section>
+    <section class='section'>
+      <label>
+        {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Cards.Vault'}}
+      </label>
+      <div class='character-cards-grid'>
+        {{#each cards.vault}}
+          <div class='card-spot'></div>
+        {{/each}}
+      </div>
+    </section>
+    <section class='section'>
+      <label>
+        {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Cards.Removed'}}
+      </label>
+      <div class='character-cards-grid'>
+        {{#each cards.removed}}
+          <div class='card-spot'></div>
+        {{/each}}
+      </div>
+    </section>
+  </div>
 </section>

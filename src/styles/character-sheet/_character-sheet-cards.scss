@@ -1,7 +1,29 @@
 @use '../variables.scss';
 
-.simple-daggerheart.character-sheet-cards {
-  section {
-    flex: 1 1 0;
+.simple-daggerheart.character-sheet .window-content .tab.character-sheet-cards {
+  padding-right: 4px;
+
+  .character-cards-scroll-container {
+    height: 100%;
+    overflow-y: scroll;
+    padding-right: 4px;
+
+    section {
+      .character-cards-grid {
+        margin-top: 12px;
+        display: grid;
+        grid-template-columns: repeat(4, auto);
+        gap: 12px;
+
+        .card-spot {
+          background: variables.$color-dark-1;
+          border-top: 1px solid black;
+          border-bottom: 1px solid variables.$color-dark-2;
+          border-radius: 8px;
+          display: block;
+          height: 9rem;
+        }
+      }
+    }
   }
 }

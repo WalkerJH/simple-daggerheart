@@ -68,7 +68,8 @@ export class SimpleDHCharacterSheet extends api.HandlebarsApplicationMixin(
     cards: {
       id: 'cards',
       template: `${this.templatePrefix}/character-sheet-cards.hbs`,
-      classes: ['simple-daggerheart']
+      classes: ['simple-daggerheart'],
+      scrollable: ['.character-cards-scroll-container']
     },
     notes: {
       id: 'notes',
@@ -197,6 +198,12 @@ export class SimpleDHCharacterSheet extends api.HandlebarsApplicationMixin(
       field: this.document.system.schema.fields.armor.fields.feature,
       value: this.document.system.armor.feature,
       name: 'system.armor.feature'
+    };
+
+    context.cards = {
+      vault: Array.from({ length: 8 }),
+      loadout: Array.from({ length: 8 }),
+      removed: Array.from({ length: 8 })
     };
 
     return context;

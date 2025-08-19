@@ -87,7 +87,26 @@ export class SimpleDHCharacter extends TypeDataModel {
         currentScore: createResourceField({ min: 0 }),
         maxScore: createResourceField({ min: 0 })
       }),
-      cards: new ArrayField(new DocumentUUIDField({ type: 'Item' }))
+      cards: new SchemaField({
+        loadout: new ArrayField(
+          new SchemaField({
+            cardId: new DocumentUUIDField({ type: 'Item' }),
+            notes: new HTMLField()
+          })
+        ),
+        vault: new ArrayField(
+          new SchemaField({
+            cardId: new DocumentUUIDField({ type: 'Item' }),
+            notes: new HTMLField()
+          })
+        ),
+        removed: new ArrayField(
+          new SchemaField({
+            cardId: new DocumentUUIDField({ type: 'Item' }),
+            notes: new HTMLField()
+          })
+        )
+      })
     };
   }
 }
