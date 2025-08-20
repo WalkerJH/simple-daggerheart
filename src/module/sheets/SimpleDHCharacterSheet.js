@@ -234,10 +234,17 @@ export class SimpleDHCharacterSheet extends api.HandlebarsApplicationMixin(
 
   async onDropCard(event) {
     const data = TextEditor.implementation.getDragEventData(event);
-    const index = parseInt(event.target.getAttribute('data-index'), 10);
+    const index = parseInt(event.target.getAttribute('data-card-index'), 10);
+    const type = event.target.getAttribute('data-card-type');
+    const item = await foundry.utils.fromUuid(data.uuid);
+    if (!item || item.type !== 'card') return;
+    const updatedCards = this.document.system.cards[type].map(
+      (card, cardIndex) =>
+        cardIndex === index ? { cardId: data.uuid, counter: 0 } : card
+    );
     this.submit({
       updateData: {
-        [`system.cards.loadout.${index}`]: { cardId: data.uuid, counter: 0 }
+        [`system.cards.${type}`]: updatedCards
       }
     });
   }

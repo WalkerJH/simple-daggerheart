@@ -10,20 +10,21 @@
       </label>
       <div class='character-cards-grid'>
         {{#each cards.loadout as |card index|}}
-          <div class='character-card-spot' data-index='{{index}}'>
+          <div
+            class='character-card-spot'
+            data-card-type='loadout'
+            data-card-index='{{index}}'
+          >
             {{#if card}}
               <div>{{card.name}}</div>
               <p>
                 Level
-                {{card.level}}
-                {{card.domain}}
-                {{card.type}}
-              </p>
-              <p>
-                {{card.description}}
+                {{card.system.level}}
+                {{card.system.domain}}
+                {{card.system.type}}
               </p>
               <div>
-                {{card.recallCost}}
+                {{card.system.recallCost}}
               </div>
             {{/if}}
           </div>

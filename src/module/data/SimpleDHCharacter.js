@@ -89,22 +89,40 @@ export class SimpleDHCharacter extends TypeDataModel {
       }),
       cards: new SchemaField({
         loadout: new ArrayField(
-          new SchemaField({
-            cardId: new DocumentUUIDField({ type: 'Item' }),
-            counter: createResourceField({ min: 0 })
-          })
+          new SchemaField(
+            {
+              cardId: new DocumentUUIDField({ type: 'Item' }),
+              counter: createResourceField({ min: 0 })
+            },
+            { nullable: true }
+          ),
+          {
+            initial: Array.from({ length: 8 }).map(() => null)
+          }
         ),
         vault: new ArrayField(
-          new SchemaField({
-            cardId: new DocumentUUIDField({ type: 'Item' }),
-            counter: createResourceField({ min: 0 })
-          })
+          new SchemaField(
+            {
+              cardId: new DocumentUUIDField({ type: 'Item' }),
+              counter: createResourceField({ min: 0 })
+            },
+            { nullable: true }
+          ),
+          {
+            initial: Array.from({ length: 8 }).map(() => null)
+          }
         ),
         removed: new ArrayField(
-          new SchemaField({
-            cardId: new DocumentUUIDField({ type: 'Item' }),
-            counter: createResourceField({ min: 0 })
-          })
+          new SchemaField(
+            {
+              cardId: new DocumentUUIDField({ type: 'Item' }),
+              counter: createResourceField({ min: 0 })
+            },
+            { nullable: true }
+          ),
+          {
+            initial: Array.from({ length: 8 }).map(() => null)
+          }
         )
       })
     };
