@@ -16,17 +16,17 @@
             data-card-index='{{index}}'
           >
             {{#if card}}
-              <div>{{card.name}}</div>
-              <p>
+              <div class='card-title'>{{card.name}}</div>
+              <div class='card-subtitle'>
                 Level
                 {{card.system.level}}
                 {{card.system.domain}}
                 {{card.system.type}}
-              </p>
-              {{card.system.description}}
-              <div>
+              </div>
+              <div class='card-recall-cost'>
                 {{card.system.recallCost}}
               </div>
+              {{card.system.description}}
             {{/if}}
           </div>
         {{/each}}

@@ -12,7 +12,7 @@
       .character-cards-grid {
         margin-top: 12px;
         display: grid;
-        grid-template-columns: repeat(4, auto);
+        grid-template-columns: repeat(3, 1fr);
         gap: 12px;
 
         .character-card-spot {
@@ -21,7 +21,7 @@
           border-bottom: 1px solid variables.$color-dark-2;
           border-radius: 8px;
           display: block;
-          height: 12rem;
+          height: 18rem;
         }
       }
     }

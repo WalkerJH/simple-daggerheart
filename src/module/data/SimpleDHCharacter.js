@@ -92,36 +92,36 @@ export class SimpleDHCharacter extends TypeDataModel {
           new SchemaField(
             {
               cardId: new DocumentUUIDField({ type: 'Item' }),
-              counter: createResourceField({ min: 0 })
+              notes: new HTMLField()
             },
             { nullable: true }
           ),
           {
-            initial: Array.from({ length: 8 }).map(() => null)
+            initial: Array.from({ length: 9 }).map(() => null)
           }
         ),
         vault: new ArrayField(
           new SchemaField(
             {
               cardId: new DocumentUUIDField({ type: 'Item' }),
-              counter: createResourceField({ min: 0 })
+              notes: new HTMLField()
             },
             { nullable: true }
           ),
           {
-            initial: Array.from({ length: 8 }).map(() => null)
+            initial: Array.from({ length: 9 }).map(() => null)
           }
         ),
         removed: new ArrayField(
           new SchemaField(
             {
               cardId: new DocumentUUIDField({ type: 'Item' }),
-              counter: createResourceField({ min: 0 })
+              notes: new HTMLField()
             },
             { nullable: true }
           ),
           {
-            initial: Array.from({ length: 8 }).map(() => null)
+            initial: Array.from({ length: 9 }).map(() => null)
           }
         )
       })

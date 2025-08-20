@@ -218,15 +218,15 @@ export class SimpleDHCharacterSheet extends api.HandlebarsApplicationMixin(
 
     context.cards = {
       loadout: await Promise.all(
-        Array.from({ length: 8 }).map(async (_val, index) => {
+        Array.from({ length: 9 }).map(async (_val, index) => {
           const cardId = this.document.system.cards.loadout[index]?.cardId;
           if (!cardId) return null;
           const item = await foundry.utils.fromUuid(cardId);
           return item;
         })
       ),
-      vault: Array.from({ length: 8 }),
-      removed: Array.from({ length: 8 })
+      vault: Array.from({ length: 9 }),
+      removed: Array.from({ length: 9 })
     };
 
     return context;
