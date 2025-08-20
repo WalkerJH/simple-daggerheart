@@ -9,8 +9,24 @@
         {{localize 'SIMPLE_DAGGERHEART.CharacterSheet.Cards.Loadout'}}
       </label>
       <div class='character-cards-grid'>
-        {{#each cards.loadout}}
-          <div class='card-spot'></div>
+        {{#each cards.loadout as |card index|}}
+          <div class='character-card-spot' data-index='{{index}}'>
+            {{#if card}}
+              <div>{{card.name}}</div>
+              <p>
+                Level
+                {{card.level}}
+                {{card.domain}}
+                {{card.type}}
+              </p>
+              <p>
+                {{card.description}}
+              </p>
+              <div>
+                {{card.recallCost}}
+              </div>
+            {{/if}}
+          </div>
         {{/each}}
       </div>
     </section>
@@ -20,7 +36,7 @@
       </label>
       <div class='character-cards-grid'>
         {{#each cards.vault}}
-          <div class='card-spot'></div>
+          <div class='character-card-spot'></div>
         {{/each}}
       </div>
     </section>
@@ -30,7 +46,7 @@
       </label>
       <div class='character-cards-grid'>
         {{#each cards.removed}}
-          <div class='card-spot'></div>
+          <div class='character-card-spot'></div>
         {{/each}}
       </div>
     </section>

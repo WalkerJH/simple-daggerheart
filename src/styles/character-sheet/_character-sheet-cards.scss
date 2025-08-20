@@ -15,13 +15,13 @@
         grid-template-columns: repeat(4, auto);
         gap: 12px;
 
-        .card-spot {
+        .character-card-spot {
           background: variables.$color-dark-1;
           border-top: 1px solid black;
           border-bottom: 1px solid variables.$color-dark-2;
           border-radius: 8px;
           display: block;
-          height: 9rem;
+          height: 12rem;
         }
       }
     }

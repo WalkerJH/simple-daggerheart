@@ -91,19 +91,19 @@ export class SimpleDHCharacter extends TypeDataModel {
         loadout: new ArrayField(
           new SchemaField({
             cardId: new DocumentUUIDField({ type: 'Item' }),
-            notes: new HTMLField()
+            counter: createResourceField({ min: 0 })
           })
         ),
         vault: new ArrayField(
           new SchemaField({
             cardId: new DocumentUUIDField({ type: 'Item' }),
-            notes: new HTMLField()
+            counter: createResourceField({ min: 0 })
           })
         ),
         removed: new ArrayField(
           new SchemaField({
             cardId: new DocumentUUIDField({ type: 'Item' }),
-            notes: new HTMLField()
+            counter: createResourceField({ min: 0 })
           })
         )
       })

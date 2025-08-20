@@ -1,8 +1,24 @@
-const { api, sheets } = foundry.applications;
+const { api, sheets, ux } = foundry.applications;
+const { DragDrop, TextEditor } = ux;
 
 export class SimpleDHCharacterSheet extends api.HandlebarsApplicationMixin(
   sheets.ActorSheetV2
 ) {
+  constructor(options = {}) {
+    super(options);
+    this.dragDrop = new DragDrop({
+      dropSelector: '.character-card-spot',
+      callbacks: {
+        drop: this.onDropCard.bind(this),
+        dragStart: this.onDragCardStart.bind(this)
+      }
+    });
+
+    this.addEventListener('render', () => {
+      this.dragDrop.bind(this.form);
+    });
+  }
+
   static DEFAULT_OPTIONS = {
     tag: 'form',
     label: '',
@@ -201,12 +217,33 @@ export class SimpleDHCharacterSheet extends api.HandlebarsApplicationMixin(
     };
 
     context.cards = {
+      loadout: await Promise.all(
+        Array.from({ length: 8 }).map(async (_val, index) => {
+          const cardId = this.document.system.cards.loadout[index]?.cardId;
+          if (!cardId) return null;
+          const item = await foundry.utils.fromUuid(cardId);
+          return item;
+        })
+      ),
       vault: Array.from({ length: 8 }),
-      loadout: Array.from({ length: 8 }),
       removed: Array.from({ length: 8 })
     };
 
     return context;
+  }
+
+  async onDropCard(event) {
+    const data = TextEditor.implementation.getDragEventData(event);
+    const index = parseInt(event.target.getAttribute('data-index'), 10);
+    this.submit({
+      updateData: {
+        [`system.cards.loadout.${index}`]: { cardId: data.uuid, counter: 0 }
+      }
+    });
+  }
+
+  async onDragCardStart(event) {
+    console.log(event);
   }
 
   appendItemToSystemArray(key, item) {

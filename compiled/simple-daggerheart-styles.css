@@ -245,7 +245,6 @@
   height: 2rem;
   padding-bottom: 2px;
   border-bottom: 1px solid hsl(228, 28%, 16%);
-  width: calc(100% + 24px);
 }
 .simple-daggerheart .character-sheet-items .character-items-list {
   flex: 2 1 0;
@@ -302,13 +301,13 @@
   grid-template-columns: repeat(4, auto);
   gap: 12px;
 }
-.simple-daggerheart.character-sheet .window-content .tab.character-sheet-cards .character-cards-scroll-container section .character-cards-grid .card-spot {
+.simple-daggerheart.character-sheet .window-content .tab.character-sheet-cards .character-cards-scroll-container section .character-cards-grid .character-card-spot {
   background: hsl(228, 40%, 4%);
   border-top: 1px solid black;
   border-bottom: 1px solid hsl(228, 28%, 16%);
   border-radius: 8px;
   display: block;
-  height: 9rem;
+  height: 12rem;
 }
 
 .simple-daggerheart .character-sheet-notes prose-mirror {
