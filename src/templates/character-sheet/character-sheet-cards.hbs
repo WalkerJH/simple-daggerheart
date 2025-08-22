@@ -16,7 +16,17 @@
             data-card-index='{{index}}'
           >
             {{#if card}}
-              <div class='card-title'>{{card.name}}</div>
+              <div class='flexrow card-title'>{{card.name}}
+                <button
+                  type='button'
+                  data-action='deleteCard'
+                  data-index='{{index}}'
+                  data-tooltip='{{localize
+                    "SIMPLE_DAGGERHEART.CharacterSheet.Cards.Delete"
+                  }}'
+                  data-tooltip-direction='UP'
+                ><span class='fas fa-x'></span></button>
+              </div>
               <div class='card-subtitle'>
                 Level
                 {{card.system.level}}
@@ -29,6 +39,26 @@
                 Stress
               </div>
               {{card.system.description}}
+              <div class='flexrow gap-1'>
+                <button
+                  type='button'
+                  data-action='moveCardToVault'
+                  data-index='{{index}}'
+                  data-tooltip='{{localize
+                    "SIMPLE_DAGGERHEART.CharacterSheet.Cards.MoveToVault"
+                  }}'
+                  data-tooltip-direction='UP'
+                ><span class='fas fa-down'></span></button>
+                <button
+                  type='button'
+                  data-action='moveCardToRemoved'
+                  data-index='{{index}}'
+                  data-tooltip='{{localize
+                    "SIMPLE_DAGGERHEART.CharacterSheet.Cards.MoveToRemoved"
+                  }}'
+                  data-tooltip-direction='UP'
+                ><span class='fas fa-skull'></span></button>
+              </div>
             {{/if}}
           </div>
         {{/each}}

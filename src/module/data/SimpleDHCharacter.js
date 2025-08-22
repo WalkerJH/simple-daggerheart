@@ -92,7 +92,7 @@ export class SimpleDHCharacter extends TypeDataModel {
           new SchemaField(
             {
               cardId: new DocumentUUIDField({ type: 'Item' }),
-              notes: new HTMLField()
+              notes: new StringField()
             },
             { nullable: true }
           ),
@@ -104,7 +104,7 @@ export class SimpleDHCharacter extends TypeDataModel {
           new SchemaField(
             {
               cardId: new DocumentUUIDField({ type: 'Item' }),
-              notes: new HTMLField()
+              notes: new StringField()
             },
             { nullable: true }
           ),
@@ -116,7 +116,7 @@ export class SimpleDHCharacter extends TypeDataModel {
           new SchemaField(
             {
               cardId: new DocumentUUIDField({ type: 'Item' }),
-              notes: new HTMLField()
+              notes: new StringField()
             },
             { nullable: true }
           ),

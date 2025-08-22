@@ -70,7 +70,7 @@
 
 .simple-daggerheart.character-sheet-header {
   align-items: start;
-  margin-bottom: 24px;
+  margin-bottom: 12px;
 }
 .simple-daggerheart.character-sheet-header .character-img {
   cursor: pointer;
@@ -116,7 +116,7 @@
   width: 100%;
   text-align: center;
   padding: 0;
-  margin: 12px 0 0 0;
+  margin: 8px 0 0 0;
 }
 
 .simple-daggerheart .character-sheet-character-tab .character-tab-lower-section {
@@ -318,6 +318,7 @@
   overflow: hidden;
   position: relative;
   background: linear-gradient(to bottom right, hsl(228, 28%, 16%), hsl(228, 40%, 8%));
+  box-shadow: 0 2px 2px black;
 }
 
 .simple-daggerheart .character-sheet-notes prose-mirror {
@@ -467,7 +468,7 @@
   padding: 6px 0.6rem;
 }
 .application.simple-daggerheart .window-content button > .fas {
-  font-size: 0.7rem;
+  font-size: 0.8rem;
 }
 .application.simple-daggerheart .window-content button:not(:disabled):active {
   background-color: hsl(228, 40%, 8%);

@@ -99,7 +99,10 @@
       "Cards": {
         "Loadout": "Loadout",
         "Vault": "Vault",
-        "Removed": "Removed"
+        "Removed": "Removed",
+        "MoveToVault": "Move to Vault",
+        "MoveToRemoved": "Move to Removed",
+        "Delete": "Delete"
       }
     },
     "CardSheet": {
