@@ -11,7 +11,7 @@
       <div class='character-cards-grid'>
         {{#each cards.loadout as |card index|}}
           <div
-            class='character-card-spot'
+            class='{{ifThen card "character-card" "character-card-spot"}}'
             data-card-type='loadout'
             data-card-index='{{index}}'
           >
@@ -24,7 +24,9 @@
                 {{card.system.type}}
               </div>
               <div class='card-recall-cost'>
+                Recall:
                 {{card.system.recallCost}}
+                Stress
               </div>
               {{card.system.description}}
             {{/if}}

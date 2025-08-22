@@ -301,13 +301,23 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 12px;
 }
+.simple-daggerheart.character-sheet .window-content .tab.character-sheet-cards .character-cards-scroll-container section .character-cards-grid .character-card-spot,
+.simple-daggerheart.character-sheet .window-content .tab.character-sheet-cards .character-cards-scroll-container section .character-cards-grid .character-card {
+  border-radius: 8px;
+  display: block;
+  height: 18rem;
+}
 .simple-daggerheart.character-sheet .window-content .tab.character-sheet-cards .character-cards-scroll-container section .character-cards-grid .character-card-spot {
   background: hsl(228, 40%, 4%);
   border-top: 1px solid black;
   border-bottom: 1px solid hsl(228, 28%, 16%);
-  border-radius: 8px;
-  display: block;
-  height: 18rem;
+}
+.simple-daggerheart.character-sheet .window-content .tab.character-sheet-cards .character-cards-scroll-container section .character-cards-grid .character-card {
+  border: 1px solid hsl(228, 28%, 16%);
+  padding: 8px;
+  overflow: hidden;
+  position: relative;
+  background: linear-gradient(to bottom right, hsl(228, 28%, 16%), hsl(228, 40%, 8%));
 }
 
 .simple-daggerheart .character-sheet-notes prose-mirror {
