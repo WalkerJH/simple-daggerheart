@@ -29,14 +29,19 @@ export class SimpleDHCharacterSheet extends api.HandlebarsApplicationMixin(
     },
     actions: {
       modifyHP: this.modifyHP,
+
       addExperience: this.addExperience,
       removeExperience: this.removeExperience,
+
       addFeature: this.addFeature,
       removeFeature: this.removeFeature,
+
       addWeapon: this.addWeapon,
       removeWeapon: this.removeWeapon,
+
       addItem: this.addItem,
       removeItem: this.removeItem,
+
       addJournalPage: this.addJournalPage,
       modifyActiveJournalPage: this.modifyActiveJournalPage,
       removeJournalPage: this.removeJournalPage

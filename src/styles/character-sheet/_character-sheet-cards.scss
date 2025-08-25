@@ -30,7 +30,7 @@
 
         .character-card {
           border: 1px solid variables.$color-dark-2;
-          padding: 8px;
+          padding: 12px;
           overflow: hidden;
           position: relative;
           background: linear-gradient(
@@ -38,7 +38,24 @@
             variables.$color-dark-2,
             variables.$color-dark-3
           );
-          box-shadow: 0 2px 2px black;
+          display: flex;
+          flex-direction: column;
+          align-content: space-between;
+
+          .card-title {
+            justify-content: space-between;
+            padding-bottom: 8px;
+            margin-bottom: 8px;
+            border-bottom: 1px solid variables.$color-purple-accent;
+            button {
+              margin: 0;
+              flex-grow: 0;
+            }
+          }
+
+          .card-description {
+            flex: 2;
+          }
         }
       }
     }
