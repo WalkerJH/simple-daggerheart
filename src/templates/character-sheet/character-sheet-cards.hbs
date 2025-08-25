@@ -41,7 +41,7 @@
               <div class='card-description'>
                 {{{card.system.description}}}
               </div>
-              <div class='flexrow gap-1'>
+              <div class='flexrow gap-1 card-buttons'>
                 <button
                   type='button'
                   data-action='moveCardToVault'
@@ -49,7 +49,6 @@
                   data-tooltip='{{localize
                     "SIMPLE_DAGGERHEART.CharacterSheet.Cards.MoveToVault"
                   }}'
-                  data-tooltip-direction='UP'
                 ><span class='fas fa-down'></span></button>
                 <button
                   type='button'
@@ -58,7 +57,6 @@
                   data-tooltip='{{localize
                     "SIMPLE_DAGGERHEART.CharacterSheet.Cards.MoveToRemoved"
                   }}'
-                  data-tooltip-direction='UP'
                 ><span class='fas fa-skull'></span></button>
               </div>
             {{/if}}

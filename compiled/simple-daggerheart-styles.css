@@ -326,14 +326,19 @@
   justify-content: space-between;
   padding-bottom: 8px;
   margin-bottom: 8px;
-  border-bottom: 1px solid hsl(273, 50%, 40%);
+  border-bottom: 1px solid hsl(228, 28%, 32%);
 }
 .simple-daggerheart.character-sheet .window-content .tab.character-sheet-cards .character-cards-scroll-container section .character-cards-grid .character-card .card-title button {
   margin: 0;
   flex-grow: 0;
 }
 .simple-daggerheart.character-sheet .window-content .tab.character-sheet-cards .character-cards-scroll-container section .character-cards-grid .character-card .card-description {
+  overflow-y: auto;
+  scrollbar-gutter: stable;
+}
+.simple-daggerheart.character-sheet .window-content .tab.character-sheet-cards .character-cards-scroll-container section .character-cards-grid .character-card .card-buttons {
   flex: 2;
+  align-items: flex-end;
 }
 
 .simple-daggerheart .character-sheet-notes prose-mirror {

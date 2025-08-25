@@ -46,7 +46,7 @@
             justify-content: space-between;
             padding-bottom: 8px;
             margin-bottom: 8px;
-            border-bottom: 1px solid variables.$color-purple-accent;
+            border-bottom: 1px solid variables.$color-dark-4;
             button {
               margin: 0;
               flex-grow: 0;
@@ -54,7 +54,13 @@
           }
 
           .card-description {
+            overflow-y: auto;
+            scrollbar-gutter: stable;
+          }
+
+          .card-buttons {
             flex: 2;
+            align-items: flex-end;
           }
         }
       }
