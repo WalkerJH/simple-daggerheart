@@ -44,7 +44,9 @@ export class SimpleDHCharacterSheet extends api.HandlebarsApplicationMixin(
 
       addJournalPage: this.addJournalPage,
       modifyActiveJournalPage: this.modifyActiveJournalPage,
-      removeJournalPage: this.removeJournalPage
+      removeJournalPage: this.removeJournalPage,
+
+      deleteCard: this.deleteCard
     },
     position: {
       width: 800,
@@ -254,8 +256,19 @@ export class SimpleDHCharacterSheet extends api.HandlebarsApplicationMixin(
     });
   }
 
+  static deleteCard(_, button) {
+    // this.submit({
+    //   updateData: {
+    //     [`system.${key}`]: this.document.system[key].filter(
+    //       (_item, itemIndex) => itemIndex !== index
+    //     )
+    //   }
+    // });
+    parseInt(button.dataset.card, 10);
+  }
+
   async onDragCardStart(event) {
-    console.log(event);
+    // TODO: Drag cards to reposition them
   }
 
   appendItemToSystemArray(key, item) {
